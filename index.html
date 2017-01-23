@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html lang="ru">
+
   <head>
     <meta charset="utf-8">
     <title>GllacyShop</title>
   </head>
+
   <body>
-    <header class=main-header>
+    <!-- Шапочка -->
+    <header class="main_header">
+
       <div class="container">
-        <img src="http://placehold.it/200x100" width="200" height="100" alt="Логотип GllacyShop">
-        <nav class="main-nav">
+
+        <nav class="main_nav">
+
           <ul>
             <li>
+              <img src="http://placehold.it/200x100" alt="Логотип GllacyShop">
+            </li>
+            <li>
               <a href="#">Каталог</a>
-              <ul>
+
+              <ul class="catalog_hover">
                 <li>
                   <a href="#">Новинки</a>
                 </li>
@@ -29,6 +38,7 @@
                   <a href="#">Мелорин</a>
                 </li>
               </ul>
+
             </li>
             <li>
               <a href="#">Доставка и оплата</a>
@@ -37,15 +47,31 @@
               <a href="#">О Компании</a>
             </li>
           </ul>
+
         </nav>
+        <!-- Пользовательский блок с ховерами -->
         <div class="user-block">
-          <a class="search" href="#">Поиск</a>
-          <a class="login" href="#">Вход</a>
-          <!-- Не уверен - как правильно сделать корзину - когда там есть товары, то уж наверняка ссылкой, а когда нет? Можно ли как-то сделать ссылку неактивной?  -->
-          <a class="cart" href="#">Пусто</a>
+
+          <ul>
+            <li>
+              <a class="search" href="#">Поиск</a>
+            </li>
+            <li>
+              <a class="login" href="#">Вход</a>
+            </li>
+            <li>
+              <a class="cart" href="#">Пусто</a>
+            </li>
+          </ul>
+
         </div>
+        <!-- Конец пользовательского блока -->
       </div>
+
     </header>
+    <!-- Конец шапочки -->
+
+    <!-- Основная часть -->
     <main class="container">
       <!-- разметка слайдера -->
       <section class="slider">
