@@ -26,7 +26,7 @@
                   <a href="#">Новинки</a>
                 </li>
                 <li>
-                  <a href="#">Сливочное</a>
+                  <a href="catalog.html">Сливочное</a>
                 </li>
                 <li>
                   <a href="#">Щербеты</a>
@@ -50,17 +50,32 @@
 
         </nav>
         <!-- Пользовательский блок с ховерами -->
-        <div class="user-block">
+        <div class="user_block">
 
           <ul>
             <li>
               <a class="search" href="#">Поиск</a>
+              <form class="search_hover" action="https://echo.htmlacademy.ru" method="get">
+                <input type="text" name="search" value="" placeholder="Что ищем?">
+              </form>
             </li>
+
             <li>
               <a class="login" href="#">Вход</a>
+              <form class="login_hover" action="https://echo.htmlacademy.ru" method="post">
+                <input type="email" name="email" value="" placeholder="Электронная почта">
+                <input type="password" name="password" value="" placeholder="Пароль">
+                <button class="btn btn-small" type="submit">Войти</button>
+                <p>
+                  <a href="#">Забыли пароль?</a><br>
+                  <a href="#">Новая регистрация</a>
+                </p>
+              </form>
             </li>
+
             <li>
               <a class="cart" href="#">Пусто</a>
+              <!-- Здесь будет ховер карзины -->
             </li>
           </ul>
 
@@ -148,7 +163,7 @@
         </div>
         <div class="news-mail">
           <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-          <form action="#" method="post">
+          <form action="https://echo.htmlacademy.ru" method="post">
             <input type="email" name="email" value="" placeholder="Электронная почта">
             <button class="btn btn-small" type="submit">Отправить</button>
           </form>
