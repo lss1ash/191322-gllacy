@@ -7,6 +7,7 @@
   </head>
 
   <body>
+
     <!-- Шапочка -->
     <header class="main_header">
 
@@ -49,6 +50,7 @@
           </ul>
 
         </nav>
+
         <!-- Пользовательский блок с ховерами -->
         <div class="user_block">
 
@@ -65,7 +67,7 @@
               <form class="login_hover" action="https://echo.htmlacademy.ru" method="post">
                 <input type="email" name="email" value="" placeholder="Электронная почта">
                 <input type="password" name="password" value="" placeholder="Пароль">
-                <button class="btn btn-small" type="submit">Войти</button>
+                <button class="btn btn_small" type="submit">Войти</button>
                 <p>
                   <a href="#">Забыли пароль?</a><br>
                   <a href="#">Новая регистрация</a>
@@ -88,102 +90,131 @@
 
     <!-- Основная часть -->
     <main class="container">
+
       <!-- разметка слайдера -->
       <section class="slider">
-        <div class="slide-1">
+
+        <div class="slide one">
           <img src="http://placehold.it/320x320" width="320" height="320" alt="Крем-брюле и пломбир с малиновым джемом">
           <h2>Крем-брюле и пломбир с малиновым джемом</h2>
-          <a class="btn btn-large" href="#">Давайте оба!</a>
+          <a class="btn btn_large" href="#">Давайте оба!</a>
         </div>
-        <div class="slide-2">
+
+        <div class="slide two">
           <img src="http://placehold.it/320x320" width="320" height="320" alt="Шоколадный пломбир и лимонный сорбет">
           <h2>Шоколадный пломбир и лимонный сорбет</h2>
-          <a class="btn btn-large" href="#">Давайте оба!</a>
+          <a class="btn btn_large" href="#">Давайте оба!</a>
         </div>
-        <div class="slide-3">
+
+        <div class="slide three">
           <img src="http://placehold.it/320x320" width="320" height="320" alt="Пломбир с помадкой и клубничный щербет">
           <h2>Пломбир с помадкой и клубничный щербет</h2>
-          <a class="btn btn-large" href="#">Давайте оба!</a>
+          <a class="btn btn_large" href="#">Давайте оба!</a>
         </div>
-        <div class="slider-controls">
-          <input type="radio" name="slider-control" value="slider-1" checked>
-          <input type="radio" name="slider-control" value="slider-1">
-          <input type="radio" name="slider-control" value="slider-1">
+
+        <div class="slider_controls">
+          <input type="radio" name="slider_control" value="" checked>
+          <input type="radio" name="slider_control" value="">
+          <input type="radio" name="slider_control" value="">
         </div>
+
       </section>
+
       <!-- разметка промо-акций -->
       <section class="promo">
-        <div class="promo-left">
+
+        <div class="promo_left">
           <h3>Малинка даром!</h3>
           <p>При покупке 2 кг любого фруктового мороженого добавим в ваш заказ банку малинового варенья бесплатно.</p>
-          <a class="btn btn-small" href="#">Хочу варенье!</a>
+          <a class="btn btn_small" href="#">Хочу варенье!</a>
         </div>
-        <div class="promo-right">
+
+        <div class="promo_right">
           <h3>Шоколадки даром!</h3>
           <p>При покупке 2 кг пломбира добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-          <a class="btn btn-small" href="#">Хочу шоколадки!</a>
+          <a class="btn btn_small" href="#">Хочу шоколадки!</a>
         </div>
+
       </section>
+
       <!-- разметка хитов -->
       <section class="bestseller">
-        <article class="item">
+
+        <div class="item">
           <img src="http://placehold.it/100x100" width="100" height="100" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-          <p class="item-cost">310₽<span>/кг</span></p>
-          <p class="item-description">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
-        </article>
-        <article class="item">
+          <p class="item_cost">310₽<span>/кг</span></p>
+          <p class="item_description">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
+        </div>
+
+        <div class="item">
           <img src="http://placehold.it/100x100" width="100" height="100" alt="Сливочно-кофейное с кусочками шоколада">
-          <p class="item-cost">380₽<span>/кг</span></p>
-          <p class="item-description">Сливочно-кофейное с кусочками шоколада</p>
-        </article>
-        <article class="item">
+          <p class="item_cost">380₽<span>/кг</span></p>
+          <p class="item_description">Сливочно-кофейное с кусочками шоколада</p>
+        </div>
+
+        <div class="item">
           <img src="http://placehold.it/100x100" width="100" height="100" alt="Сливочно-клубничное с присыпкой из белого шоколада">
-          <p class="item-cost">355₽<span>/кг</span></p>
-          <p class="item-description">Сливочно-клубничное с присыпкой из белого шоколада</p>
-        </article>
-        <article class="item">
+          <p class="item_cost">355₽<span>/кг</span></p>
+          <p class="item_description">Сливочно-клубничное с присыпкой из белого шоколада</p>
+        </div>
+
+        <div class="item">
           <img src="http://placehold.it/100x100" width="100" height="100" alt="Сливочное крем-брюле с карамельной подливкой">
-          <p class="item-cost">415₽<span>/кг</span></p>
-          <p class="item-description">Сливочное крем-брюле с карамельной подливкой</p>
-        </article>
+          <p class="item_cost">415₽<span>/кг</span></p>
+          <p class="item_description">Сливочное крем-брюле с карамельной подливкой</p>
+        </div>
+
       </section>
+
       <!-- разметка вафельки с описанием компании -->
-      <section class="main-description">
+      <section class="main_description">
+
         <h3>Магазин Глейси — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h3>
-        <p class="ice-cream">Все наше мороженое изготавливается на собственном производстве с использованием современного оборудования и проверенных временем технологий.</p>
+        <p class="ice_cream">Все наше мороженое изготавливается на собственном производстве с использованием современного оборудования и проверенных временем технологий.</p>
         <p class="leaf">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
         <p class="cow">Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
         <p class="termo">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
+
       </section>
+
       <!-- блок новостей и подписки -->
       <section class="news">
-        <div class="news-blog">
+
+        <div class="blog">
           <h3>Новое в нашем блоге</h3>
           <a href="#">10 способов сервировки фруктовых щербетов к столу</a>
         </div>
-        <div class="news-mail">
+
+        <div class="mail">
           <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
           <form action="https://echo.htmlacademy.ru" method="post">
             <input type="email" name="email" value="" placeholder="Электронная почта">
-            <button class="btn btn-small" type="submit">Отправить</button>
+            <button class="btn btn_small" type="submit">Отправить</button>
           </form>
         </div>
+
       </section>
+
+      <!-- блок карты и адреса -->
       <section class="map">
-        <div class="map-address">
+
+        <div class="address_area">
           <h3>Адрес главного офиса и офлайн магазина:</h3>
-          <p class="address-important">
+          <p class="address">
             ул. Большая Конюшенная<br>
             19/8, Санкт-Петербург
           </p>
           <h3>Для заказов по телефону:</h3>
-          <p class="address-important">8 812 450-25-25</p>
+          <p class="phone">8 812 450-25-25</p>
           <p>(с 10 до 20 ежедневно)</p>
-          <a class="btn btn-small" href="#">Форма обратной связи</a>
+          <a class="btn btn_small" href="#">Форма обратной связи</a>
         </div>
+
       </section>
+
     </main>
-    <!-- footer -->
+
+    <!-- Подвальчик -->
     <footer class="main-footer">
       <div class="container">
         <section class="footer-social">
