@@ -58,15 +58,15 @@
             <li>
               <a class="search" href="#">Поиск</a>
               <form class="search_hover" action="https://echo.htmlacademy.ru" method="get">
-                <input type="search" name="search" value="" placeholder="Что ищем?">
+                <input type="search" name="search" value="" placeholder="Что ищем?"required>
               </form>
             </li>
 
             <li>
               <a class="login" href="#">Вход</a>
               <form class="login_hover" action="https://echo.htmlacademy.ru" method="post">
-                <input type="email" name="email" value="" placeholder="Электронная почта">
-                <input type="password" name="password" value="" placeholder="Пароль">
+                <input type="email" name="email" value="" placeholder="Электронная почта" required>
+                <input type="password" name="password" value="" placeholder="Пароль" required>
                 <button class="btn btn_small" type="submit">Войти</button>
                 <p>
                   <a href="#">Забыли пароль?</a><br>
@@ -215,7 +215,7 @@
           <div class="mail">
             <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
             <form action="https://echo.htmlacademy.ru" method="post">
-              <input type="email" name="email" value="" placeholder="Электронная почта">
+              <input type="email" name="email" value="" placeholder="Электронная почта" required>
               <button class="btn btn_small" type="submit">Отправить</button>
             </form>
           </div>
@@ -298,9 +298,9 @@
 
       <form class="contact" action="https://echo.htmlacademy.ru" method="post">
         <h3>Мы обязательно Вам ответим!</h3>
-        <input type="text" name="name" value="" placeholder="Как Вас зовут?">
-        <input type="email" name="email" value="" placeholder="Ваша почта для ответа?">
-        <textarea name="message" rows="8" cols="80" placeholder="Напишите что-нибудь..."></textarea>
+        <input type="text" name="name" value="" placeholder="Как Вас зовут?" required>
+        <input type="email" name="email" value="" placeholder="Ваша почта для ответа?" required>
+        <textarea name="message" rows="8" cols="80" placeholder="Напишите что-нибудь..." required></textarea>
         <button class="btn btn_small" type="submit">Отправить</button>
       </form>
 
