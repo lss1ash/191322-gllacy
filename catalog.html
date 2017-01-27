@@ -9,7 +9,7 @@
   <body>
 
     <!-- Шапка -->
-    <header class="main_header">
+    <header>
 
       <div class="container">
 
@@ -143,7 +143,7 @@
 
           <form class="filter_form" action="https://echo.htmlacademy.ru" method="post">
 
-            <div>
+            <div class="form_group">
               <p>Сортировка:</p>
               <select name="select">
                 <option value="popular_first" selected>по популярности</option>
@@ -153,13 +153,13 @@
               </select>
             </div>
 
-            <div>
+            <div class="form_group">
               <p>Цена: 100 руб. - 500 руб.</p>
               <input type="range" name="range1" min="0" max="1000" step="100" value="100">
               <input type="range" name="range2" min="0" max="1000" step="100" value="500">
             </div>
 
-            <div>
+            <div class="form_group">
               <p>Жирность:</p>
               <label>
                 <input type="radio" name="fat" value="zero">0%
@@ -175,7 +175,7 @@
               </label>
             </div>
 
-            <div>
+            <div class="form_group">
               <p>Наполнители:</p>
               <label>
                 <input type="checkbox" name="choco" checked>шоколадные
@@ -194,7 +194,7 @@
               </label>
             </div>
 
-            <div>
+            <div class="form_group">
               <button class="btn" type="submit">Применить</button>
             </div>
 
@@ -369,7 +369,7 @@
     </main>
 
     <!-- Подвальчик -->
-    <footer class="main_footer">
+    <footer>
 
       <div class="container">
 
