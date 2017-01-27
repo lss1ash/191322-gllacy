@@ -8,7 +8,7 @@
 
   <body>
 
-    <!-- Шапочка -->
+    <!-- Шапка -->
     <header class="main_header">
 
       <div class="container">
@@ -17,16 +17,12 @@
 
           <ul>
             <li>
-
-              <a href="#">
-                <img src="http://placehold.it/200x100" alt="Логотип GllacyShop">
-              </a>
-
+              <img src="http://placehold.it/200x100" alt="Логотип GllacyShop">
             </li>
-            <li class="active">
+            <li>
               <a href="#">Каталог</a>
 
-              <ul class="catalog_hover">
+              <ul class="sub_nav">
                 <li>
                   <a href="#">Новинки</a>
                 </li>
@@ -55,65 +51,64 @@
 
         </nav>
 
-        <!-- Пользовательский блок с ховерами -->
+        <!-- Пользовательский блок -->
         <div class="user_block">
 
-          <ul>
-            <!-- Поиск -->
-            <li>
-              <a class="search" href="#">Поиск</a>
-              <form class="search_hover" action="https://echo.htmlacademy.ru" method="get">
-                <input type="search" name="search" value="" placeholder="Что ищем?" required>
+          <div class="search">
+              <p>Поиск</p>
+              <form class="search_form" action="https://echo.htmlacademy.ru" method="get">
+                <input type="search" name="search" value="" placeholder="Что ищем?"required>
               </form>
-            </li>
+          </div>
 
-            <!-- Вход -->
-            <li>
-              <a class="login" href="#">Вход</a>
-              <form class="login_hover" action="https://echo.htmlacademy.ru" method="post">
-                <input type="email" name="email" value="" placeholder="Электронная почта" required>
-                <input type="password" name="password" value="" placeholder="Пароль" required>
-                <button class="btn btn_small" type="submit">Войти</button>
-                <p>
-                  <a href="#">Забыли пароль?</a><br>
-                  <a href="#">Новая регистрация</a>
-                </p>
-              </form>
-            </li>
+          <div class="login">
+            <p>Вход</p>
+            <form class="login_form" action="https://echo.htmlacademy.ru" method="post">
+              <input type="email" name="email" value="" placeholder="Электронная почта" required>
+              <input type="password" name="password" value="" placeholder="Пароль" required>
+              <button class="btn btn_small" type="submit">Войти</button>
+              <p>
+                <a href="#">Забыли пароль?</a><br>
+                <a href="#">Новая регистрация</a>
+              </p>
+            </form>
+          </div>
 
-            <!-- Корзина -->
-            <li>
-              <a class="cart filled" href="#">2 товара</a>
+          <!-- Корзина -->
+          <div class="cart filled">
+            <a href="#">2 товара</a>
 
-              <div class="cart_hover">
+            <div class="cart_window">
 
-                <table>
+              <table>
 
-                  <tr>
-                    <td><a class="remove" href="#"></a></td>
-                    <td><img src="#" alt="Пломбир с апельсиновым джемом"></td>
-                    <td>Пломбир с апельсиновым джемом</td>
-                    <td>1,5 кг х <span>200 руб.</span></td>
-                    <td>300 руб.</td>
-                  </tr>
+                <tr>
+                  <td><a class="remove" href="#"></a></td>
+                  <td><a href="#"><img src="#" alt="Пломбир с апельсиновым джемом"></a></td>
+                  <td><a href="#">Пломбир с апельсиновым джемом</a></td>
+                  <td>1,5 кг х <span>200 руб.</span></td>
+                  <td>300 руб.</td>
+                </tr>
 
-                  <tr>
-                    <td><a class="remove" href="#"></a></td>
-                    <td><img src="#" alt="Клубничный пломбир с присыпкой из белого шоколада"></td>
-                    <td>Клубничный пломбир с присыпкой из белого шоколада</td>
-                    <td>1,5 кг х <span>300 руб.</span></td>
-                    <td>450 руб.</td>
-                  </tr>
+                <tr>
+                  <td><a class="remove" href="#"></a></td>
+                  <td><a href="#"><img src="#" alt="Клубничный пломбир с присыпкой из белого шоколада"></a></td>
+                  <td><a href="#">Клубничный пломбир с присыпкой из белого шоколада</a></td>
+                  <td>1,5 кг х <span>300 руб.</span></td>
+                  <td>450 руб.</td>
+                </tr>
 
-                </table>
+              </table>
 
+              <!-- Обернул, только не понял, для чего это нужно -->
+              <div class="checkout">
                 <p>Итого: 750 руб.</p>
                 <a class="btn" href="#">Оформить заказ</a>
-
               </div>
 
-            </li>
-          </ul>
+            </div>
+
+          </div>
 
         </div>
         <!-- Режим работы и контакты -->
@@ -125,7 +120,6 @@
       </div>
 
     </header>
-    <!-- Конец шапочки -->
 
     <!-- Основная часть -->
     <main>
