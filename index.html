@@ -8,87 +8,92 @@
 
   <body>
 
-    <!-- А нельзя без wrapper-a обойтись? Семантически лишняя конструкция, разве нет?
-         Я просто планировал для body изменять цвет фона - или это плохая практика? -->
     <div class="wrapper">
-
       <!-- Шапка -->
-      <header class="main_header">
+      <header>
 
         <div class="container">
 
-          <nav class="main_nav">
+          <section class="top_line">
 
-            <ul>
-              <li>
-                <img src="http://placehold.it/200x100" alt="Логотип GllacyShop">
-              </li>
-              <li>
-                <a href="#">Каталог</a>
+            <nav class="main_nav">
 
-                <ul class="sub_nav">
-                  <li>
-                    <a href="#">Новинки</a>
-                  </li>
-                  <li>
-                    <a href="catalog.html">Сливочное</a>
-                  </li>
-                  <li>
-                    <a href="#">Щербеты</a>
-                  </li>
-                  <li>
-                    <a href="#">Фруктовый лёд</a>
-                  </li>
-                  <li>
-                    <a href="#">Мелорин</a>
-                  </li>
-                </ul>
+              <ul>
+                <li>
+                  <img src="http://placehold.it/200x100" alt="Логотип GllacyShop">
+                </li>
+                <li>
+                  <a href="#">Каталог</a>
 
-              </li>
-              <li>
-                <a href="#">Доставка и оплата</a>
-              </li>
-              <li>
-                <a href="#">О Компании</a>
-              </li>
-            </ul>
+                  <ul class="sub_nav">
+                    <li>
+                      <a href="#">Новинки</a>
+                    </li>
+                    <li>
+                      <a href="catalog.html">Сливочное</a>
+                    </li>
+                    <li>
+                      <a href="#">Щербеты</a>
+                    </li>
+                    <li>
+                      <a href="#">Фруктовый лёд</a>
+                    </li>
+                    <li>
+                      <a href="#">Мелорин</a>
+                    </li>
+                  </ul>
 
-          </nav>
+                </li>
+                <li>
+                  <a href="#">Доставка и оплата</a>
+                </li>
+                <li>
+                  <a href="#">О Компании</a>
+                </li>
+              </ul>
 
-          <!-- Пользовательский блок -->
-          <div class="user_block">
+            </nav>
 
-            <div class="search">
-                <p>Поиск</p>
-                <form class="search_form" action="https://echo.htmlacademy.ru" method="get">
-                  <input type="search" name="search" value="" placeholder="Что ищем?"required>
+            <!-- Пользовательский блок -->
+            <div class="user_block">
+
+              <div class="search">
+                  <p>Поиск</p>
+                  <form class="search_form" action="https://echo.htmlacademy.ru" method="get">
+                    <input type="search" name="search" value="" placeholder="Что ищем?"required>
+                  </form>
+              </div>
+
+              <div class="login">
+                <p>Вход</p>
+                <form class="login_form" action="https://echo.htmlacademy.ru" method="post">
+                  <input type="email" name="email" value="" placeholder="Электронная почта" required>
+                  <input type="password" name="password" value="" placeholder="Пароль" required>
+                  <button class="btn btn_small" type="submit">Войти</button>
+                  <p>
+                    <a href="#">Забыли пароль?</a><br>
+                    <a href="#">Новая регистрация</a>
+                  </p>
                 </form>
+              </div>
+
+              <div class="cart">
+                <p>Пусто</p>
+              </div>
+
             </div>
 
-            <div class="login">
-              <p>Вход</p>
-              <form class="login_form" action="https://echo.htmlacademy.ru" method="post">
-                <input type="email" name="email" value="" placeholder="Электронная почта" required>
-                <input type="password" name="password" value="" placeholder="Пароль" required>
-                <button class="btn btn_small" type="submit">Войти</button>
-                <p>
-                  <a href="#">Забыли пароль?</a><br>
-                  <a href="#">Новая регистрация</a>
-                </p>
-              </form>
-            </div>
-
-            <div class="cart">
-              <p>Пусто</p>
-            </div>
-
-          </div>
+          </section>
 
           <!-- Режим работы и контакты -->
-          <div class="contacts">
-            <p>С 10 до 20, ежедневно</p>
-            <p class="phone">8 812 450-25-25</p>
-          </div>
+          <section class="bottom_line">
+
+            <div class="contacts">
+              <p class="time">С 10 до 20, ежедневно</p>
+              <p class="phone">8 812 450-25-25</p>
+            </div>
+
+          </section>
 
         </div>
 
@@ -186,8 +191,8 @@
 
           <!-- Разметка блока с описанием преимуществ компании -->
           <section class="main_description">
-
-            <h3>Магазин Глейси — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h3>
+            <!-- Наиболее значимая часть сайта, отражает всю суть страницы, поэтому h1 -->
+            <h1>Магазин Глейси — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h1>
             <ul>
               <li class="ice_cream">Все наше мороженое изготавливается на собственном производстве с использованием современного оборудования и проверенных временем технологий.</li>
               <li class="leaf">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</li>
@@ -243,8 +248,7 @@
 
       </main>
 
-
-      <footer class="main_footer">
+      <footer>
 
         <div class="container">
 
@@ -265,14 +269,13 @@
           </div>
 
           <div class="copyright">
-            <img src="http://placehold.it/150x100" alt="Логотип HTML Academy">
+            <a class="btn" href="https://htmlacademy.ru"><img src="http://placehold.it/150x100" alt="Логотип HTML Academy"></a>
             <p>Сделано в <a class="btn" href="https://htmlacademy.ru">HTML Academy</a> &copy; 2017</p>
           </div>
 
         </div>
 
       </footer>
-
 
     </div>
 
