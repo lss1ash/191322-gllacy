@@ -1,0 +1,132 @@
+body {
+  font-size: 16px;
+  line-height: 22px;
+  color: #fff;
+  font-weight: bold;
+  font-family: "Roboto", Arial, sans-serif;
+}
+
+.main_nav {
+  line-height: 18px;
+}
+
+.sub_nav {
+  font-size: 14px;
+  line-height: 16px;
+  color: #323232;
+  font-weight: normal; /* или regular? */
+}
+
+.sub_nav li:first-child  {
+  font-weight: bold;
+}
+
+.user_block {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: medium;
+}
+
+.contacts > .time {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.contacts > .phone {
+  font-size: 22px;
+  line-height: 24px;
+}
+
+.slider h2 {
+  font-size: 60px;
+  line-height: 60px;
+}
+
+.slider btn {
+  font-size: 32px;
+}
+
+.promo h3 {
+  font-size: 35px;
+  line-height: 41px;
+}
+
+.promo p {
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.btn {
+  font-size: 18px;
+}
+
+.catalog_item .cost {
+  font-size: 45px;
+}
+
+.catalog_item .kilo {
+  font-size: 30px;
+}
+
+.catalog_item .description {
+  font-weight: medium;
+}
+
+.main_description > h1 {
+  font-size: 24px;
+  line-height: 30px;
+  color: #323232;
+  font-weight: medium;
+}
+
+.main_description li {
+  font-size: 16px;
+  line-height: 22px;
+  color: #323232;
+  font-weight: normal;
+}
+
+.blog > h3 {
+  font-size: 16px;
+  line-height: 22px;
+  color: #323232;
+  font-weight: medium;
+}
+
+.blog > a {
+  font-size: 24px;
+  line-height: 30px;
+  color: #323232;
+}
+
+.main > p {
+  font-size: 16px;
+  line-height: 22px;
+  color: #323232;
+  font-weight: medium;
+}
+
+.address_area h3, .address_area p {
+  font-size: 16px;
+  line-height: 22px;
+  color: #323232;
+  font-weight: normal;
+}
+
+.address_area address, .address_area .phone {
+  font-size: 18px;
+  line-height: 24px;
+  color: #323232;
+  font-weight: bold;
+}
+
+.links a {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: normal;
+}
+.links .heart {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: bold;
+}
