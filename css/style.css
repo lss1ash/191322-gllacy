@@ -1,9 +1,13 @@
+/*
+1) Поставил пропущенную точку у класса "btn"
+*/
+
 body {
   font-size: 16px;
   line-height: 22px;
   color: #fff;
   font-weight: bold;
-  font-family: "Roboto", Arial, sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
 }
 
 .main_nav {
@@ -14,7 +18,7 @@ body {
   font-size: 14px;
   line-height: 16px;
   color: #323232;
-  font-weight: normal; /* или regular? */
+  font-weight: normal;
 }
 
 .sub_nav li:first-child  {
@@ -24,15 +28,15 @@ body {
 .user_block {
   font-size: 14px;
   line-height: 16px;
-  font-weight: medium;
+/* font-weight: medium;*/
 }
 
-.contacts > .time {
+.contacts .time {
   font-size: 14px;
   line-height: 16px;
 }
 
-.contacts > .phone {
+.contacts .phone {
   font-size: 22px;
   line-height: 24px;
 }
@@ -42,7 +46,7 @@ body {
   line-height: 60px;
 }
 
-.slider btn {
+.slider .btn {
   font-size: 32px;
 }
 
@@ -72,7 +76,7 @@ body {
   font-weight: medium;
 }
 
-.main_description > h1 {
+.main_description h1 {
   font-size: 24px;
   line-height: 30px;
   color: #323232;
@@ -86,20 +90,20 @@ body {
   font-weight: normal;
 }
 
-.blog > h3 {
+.blog h3 {
   font-size: 16px;
   line-height: 22px;
   color: #323232;
   font-weight: medium;
 }
 
-.blog > a {
+.blog a {
   font-size: 24px;
   line-height: 30px;
   color: #323232;
 }
 
-.main > p {
+.main p {
   font-size: 16px;
   line-height: 22px;
   color: #323232;
