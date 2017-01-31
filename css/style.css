@@ -1,3 +1,6 @@
+/* Всплывающие окна пока не трогал
+   Знак рубля пока не ставил */
+
 /* font-family: "RobotoRegular"; */
 @font-face {
     font-family: "RobotoRegular";
@@ -39,11 +42,9 @@
     font-weight: normal;
 }
 
-/* Общие свойства */
+/* Общие */
 body {
-  /* ЧТОБЫ БЫЛО ВИДНО, ПОТОМ УБРАТЬ */
   background-color: #849d8f;
-
 }
 
 /* Шапка */
@@ -68,7 +69,8 @@ body {
 /* Хотел вот так, но там вроде критерий по селекторам
 .sub_nav li:first-child a {
 поэтому просто дал класс
-*/.sub_nav a.news {
+*/
+.sub_nav a.news {
   font-family: "RobotoBold", "Arial", sans-serif;
 }
 
@@ -125,8 +127,8 @@ body {
 }
 
 .btn_small {
-  font-size: 32px;
-  line-height: 44px;
+  font-size: 18px;
+  line-height: 24px;
 }
 
 /* Промо (даром) */
@@ -140,77 +142,148 @@ body {
   line-height: 22px;
 }
 
-.btn {
-  font-size: 18px;
+/* Карточки товаров */
+.catalog_item a {
+  font-family: "RobotoBold", "Arial", sans-serif;
+
+  color: #fff;
+  text-decoration: none;
 }
 
 .catalog_item .cost {
   font-size: 45px;
+  line-height: 45px;
 }
 
 .catalog_item .kilo {
   font-size: 30px;
+  line-height: 45px;
 }
 
 .catalog_item .description {
-  font-weight: medium;
+  font-family: "RobotoMedium", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+/* Описание преимуществ (вафля) */
+.main_description {
+  color: #323232;
 }
 
 .main_description h1 {
+  font-family: "RobotoMedium", "Arial", sans-serif;
   font-size: 24px;
   line-height: 30px;
-  color: #323232;
-  font-weight: medium;
 }
 
 .main_description li {
+  font-family: "RobotoRegular", "Arial", sans-serif;
   font-size: 16px;
   line-height: 22px;
-  color: #323232;
-  font-weight: normal;
+}
+
+/* Новости */
+.blog {
+
 }
 
 .blog h3 {
+  font-family: "RobotoMedium", "Arial", sans-serif;
   font-size: 16px;
   line-height: 22px;
+
   color: #323232;
-  font-weight: medium;
 }
 
 .blog a {
+  font-family: "RobotoBold", "Arial", sans-serif;
   font-size: 24px;
   line-height: 30px;
+
   color: #323232;
 }
 
-.main p {
+/* Рассылка */
+.mail {
+  font-family: "RobotoRegular", "Arial", sans-serif;
   font-size: 16px;
-  line-height: 22px;
-  color: #323232;
-  font-weight: medium;
+  line-height: 24px;
+
+  color: #5a5a5a;
 }
 
+/* Адрес на карте */
 .address_area h3, .address_area p {
-  font-size: 16px;
-  line-height: 22px;
+  font-family: "RobotoRegular", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+
   color: #323232;
-  font-weight: normal;
 }
 
 .address_area address, .address_area .phone {
+  font-family: "RobotoBold", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
+  font-style: normal;
+
   color: #323232;
-  font-weight: bold;
 }
 
+/* Ссылки */
 .links a {
+  font-family: "RobotoRegular", "Arial", sans-serif;
   font-size: 13px;
   line-height: 18px;
-  font-weight: normal;
+
+  color: #fff;
+  text-decoration: none;
 }
 .links .heart {
-  font-size: 13px;
+  font-family: "RobotoBold", "Arial", sans-serif;
+}
+
+/* HTMLAcademy */
+.copyright p,
+.copyright a {
+  font-family: "RobotoRegular", "Arial", sans-serif;
+  font-size: 12px;
   line-height: 18px;
-  font-weight: bold;
+
+  color: #fefefe;
+  text-decoration: none;
+}
+
+/* Крошки */
+.breadcrumbs,
+.breadcrumbs a {
+  font-family: "RobotoRegular", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+
+  color: #fff;
+}
+
+.breadcrumbs a {
+  text-decoration: none;
+}
+
+/* Главный заголовок на catalog.html */
+main h1 {
+  font-family: "RobotoBold", "Arial", sans-serif;
+  font-size: 35px;
+  line-height: 41px;
+
+  color: #fff;
+}
+
+/* Пагинатор */
+.pagination,
+.pagination a {
+  font-family: "RobotoMedium", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+
+  color: #fff;
 }
