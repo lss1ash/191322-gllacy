@@ -41,32 +41,50 @@
 
 /* Общие свойства */
 body {
+  /* ЧТОБЫ БЫЛО ВИДНО, ПОТОМ УБРАТЬ */
+  background-color: #849d8f;
+
+}
+
+/* Шапка */
+.main_nav a {
+  font-style: normal;
   font-size: 16px;
-  line-height: 22px;
-  color: #fff;
-  font-weight: bold;
-  font-family: "Roboto", "Arial", sans-serif;
-}
-
-.main_nav {
   line-height: 18px;
+  font-family: "RobotoBold", "Arial", sans-serif;
+
+  color: #fff;
+  text-decoration: none;
 }
 
-.sub_nav {
+.sub_nav a {
   font-size: 14px;
   line-height: 16px;
+  font-family: "RobotoRegular", "Arial", sans-serif;
+
   color: #323232;
-  font-weight: normal;
 }
 
-.sub_nav li:first-child  {
-  font-weight: bold;
+/* Хотел вот так, но там вроде критерий по селекторам
+.sub_nav li:first-child a {
+поэтому просто дал класс
+*/.sub_nav a.news {
+  font-family: "RobotoBold", "Arial", sans-serif;
 }
 
 .user_block {
   font-size: 14px;
   line-height: 16px;
-/* font-weight: medium;*/
+  font-family: "RobotoMedium", "Arial", sans-serif;
+
+  color: #fff;
+}
+
+/* Вторая линия - информация о контактах */
+.contacts {
+  font-family: "RobotoBold", "Arial", sans-serif;
+
+  color: #fff;
 }
 
 .contacts .time {
@@ -79,15 +97,39 @@ body {
   line-height: 24px;
 }
 
+/* Слайдер */
+.slider,
+.promo {
+  font-family: "RobotoBold", "Arial", sans-serif;
+
+  color: #fff;
+}
+
 .slider h2 {
   font-size: 60px;
   line-height: 60px;
+  text-align: center;
 }
 
-.slider .btn {
+/* Кнопки */
+.btn {
+  font-family: "RobotoBold", "Arial", sans-serif;
+
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn_large {
   font-size: 32px;
+  line-height: 44px;
 }
 
+.btn_small {
+  font-size: 32px;
+  line-height: 44px;
+}
+
+/* Промо (даром) */
 .promo h3 {
   font-size: 35px;
   line-height: 41px;
