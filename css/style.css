@@ -12,6 +12,7 @@
   font-weight: normal;
 }
 /* font-family: "RobotoLight"; */
+/* Пока не требуется
 @font-face {
   font-family: "RobotoLight";
   src: url("../fonts/RobotoLight/RobotoLight.eot");
@@ -21,6 +22,7 @@
   font-style: normal;
   font-weight: normal;
 }
+*/
 /* font-family: "RobotoMedium"; */
 @font-face {
   font-family: "RobotoMedium";
@@ -41,6 +43,15 @@
   font-style: normal;
   font-weight: normal;
 }
+
+/* Спрячу пока что окошки, менюшки и радиобатоны */
+  input[name="slides"],
+  .sub_nav,
+  .search_form,
+  .login_form,
+  .modal {
+    display: none;
+  }
 
 /* Общие */
 body {
@@ -259,4 +270,50 @@ main h1 {
   font-family: "RobotoMedium", "Arial", sans-serif;
   font-size: 16px;
   line-height: 18px;
+}
+
+/* === Сетка === */
+/* Общее */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 1200px;
+  /* min-height: ??? */
+}
+
+
+.clearfix::after {
+  content: "";
+
+  display: table;
+  clear: both;
+}
+
+/* header */
+.top_line {
+  min-height: 60px;
+}
+
+.container {
+  width: 1146px;
+  margin: 0 auto;
+  padding: 0 27px;
+
+  min-height: 60px;
+}
+
+.top-line,
+.bottom_line {
+  min-height: 60px;
+}
+
+.main_nav {
+  width: 560px;
+  float: left;
+}
+
+.user_block {
+  float: right;
+  width: 267px;
 }
