@@ -55,12 +55,19 @@ body {
 }
 
 /* styleguide.psd - все ссылки */
-a,
+a:link,
 a:visited {
-  color: #fff;
-  text-decoration-color: rgba(255,255,255,0.3);
-}
+  font-family: "RobotoMedium", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
 
+  color: #fff;
+  text-decoration: none;
+}
+a:hover,
+a:active {
+  color: #ffbc9e;
+}
 
 /* Шапка */
 .main_nav a {
@@ -83,25 +90,19 @@ a:visited {
 .sub_nav li:first-child a {
 поэтому просто дал класс
 */
+
 .sub_nav a.news {
   font-family: "RobotoBold", "Arial", sans-serif;
 }
+
 
 .user_block {
   font-family: "RobotoMedium", "Arial", sans-serif;
   font-size: 14px;
   line-height: 16px;
-
-  color: #fff;
 }
 
 /* Вторая линия - информация о контактах */
-.contacts {
-  font-family: "RobotoBold", "Arial", sans-serif;
-
-  color: #fff;
-}
-
 .contacts .time {
   font-size: 14px;
   line-height: 16px;
@@ -113,13 +114,6 @@ a:visited {
 }
 
 /* Слайдер */
-.slider,
-.promo {
-  font-family: "RobotoBold", "Arial", sans-serif;
-
-  color: #fff;
-}
-
 .slider h2 {
   font-size: 60px;
   line-height: 60px;
@@ -127,12 +121,6 @@ a:visited {
 }
 
 /* Кнопки */
-.btn {
-  font-family: "RobotoBold", "Arial", sans-serif;
-
-  color: #fff;
-}
-
 .btn_large {
   font-size: 32px;
   line-height: 44px;
@@ -155,10 +143,6 @@ a:visited {
 }
 
 /* Карточки товаров */
-.catalog_item a {
-  font-family: "RobotoBold", "Arial", sans-serif;
-}
-
 .catalog_item .cost {
   font-size: 45px;
   line-height: 45px;
@@ -193,10 +177,6 @@ a:visited {
 }
 
 /* Новости */
-.blog {
-
-}
-
 .blog h3 {
   font-family: "RobotoMedium", "Arial", sans-serif;
   font-size: 16px;
@@ -206,7 +186,6 @@ a:visited {
 }
 
 .blog a {
-  font-family: "RobotoBold", "Arial", sans-serif;
   font-size: 24px;
   line-height: 30px;
 
@@ -232,7 +211,6 @@ a:visited {
 }
 
 .address_area address, .address_area .phone {
-  font-family: "RobotoBold", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-style: normal;
@@ -266,21 +244,12 @@ a:visited {
   font-family: "RobotoRegular", "Arial", sans-serif;
   font-size: 14px;
   line-height: 16px;
-
-  color: #fff;
-}
-
-.breadcrumbs a {
-  text-decoration: none;
 }
 
 /* Главный заголовок на catalog.html */
 main h1 {
-  font-family: "RobotoBold", "Arial", sans-serif;
   font-size: 35px;
   line-height: 41px;
-
-  color: #fff;
 }
 
 /* Пагинатор */
@@ -289,6 +258,4 @@ main h1 {
   font-family: "RobotoMedium", "Arial", sans-serif;
   font-size: 16px;
   line-height: 18px;
-
-  color: #fff;
 }
