@@ -54,7 +54,7 @@ body {
   background-color: #849d8f;
 }
 
-/* styleguide.psd - все ссылки */
+/* Ссылки */
 a:link,
 a:visited {
   font-family: "RobotoMedium", "Arial", sans-serif;
@@ -64,11 +64,12 @@ a:visited {
   color: #fff;
   text-decoration: none;
 }
+/* На будущее
 a:hover,
 a:active {
   color: #ffbc9e;
 }
-
+*/
 /* Шапка */
 .main_nav a {
   font-family: "RobotoBold", "Arial", sans-serif;
