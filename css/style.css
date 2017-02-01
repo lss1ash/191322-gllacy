@@ -1,0 +1,262 @@
+/* Всплывающие окна пока не трогал
+ Знак рубля пока не ставил */
+
+/* font-family: "RobotoRegular"; */
+@font-face {
+  font-family: "RobotoRegular";
+  src: url("../fonts/RobotoRegular/RobotoRegular.eot");
+  src: url("../fonts/RobotoRegular/RobotoRegular.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/RobotoRegular/RobotoRegular.woff") format("woff"),
+  url("../fonts/RobotoRegular/RobotoRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+/* font-family: "RobotoLight"; */
+@font-face {
+  font-family: "RobotoLight";
+  src: url("../fonts/RobotoLight/RobotoLight.eot");
+  src: url("../fonts/RobotoLight/RobotoLight.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/RobotoLight/RobotoLight.woff") format("woff"),
+  url("../fonts/RobotoLight/RobotoLight.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+/* font-family: "RobotoMedium"; */
+@font-face {
+  font-family: "RobotoMedium";
+  src: url("../fonts/RobotoMedium/RobotoMedium.eot");
+  src: url("../fonts/RobotoMedium/RobotoMedium.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/RobotoMedium/RobotoMedium.woff") format("woff"),
+  url("../fonts/RobotoMedium/RobotoMedium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+/* font-family: "RobotoBold"; */
+@font-face {
+  font-family: "RobotoBold";
+  src: url("../fonts/RobotoBold/RobotoBold.eot");
+  src: url("../fonts/RobotoBold/RobotoBold.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/RobotoBold/RobotoBold.woff") format("woff"),
+  url("../fonts/RobotoBold/RobotoBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* Общие */
+body {
+  font-family: "RobotoBold", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  font-style: normal;
+  font-weight: normal;
+
+  color: #fff;
+  background-color: #849d8f;
+}
+
+/* Ссылки */
+a:link,
+a:visited {
+  font-family: "RobotoMedium", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+
+  color: #fff;
+  text-decoration: none;
+}
+/* На будущее
+a:hover,
+a:active {
+  color: #ffbc9e;
+}
+*/
+/* Шапка */
+.main_nav a {
+  font-family: "RobotoBold", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+
+  color: #fff;
+}
+
+.sub_nav a {
+  font-family: "RobotoRegular", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+
+  color: #323232;
+}
+
+/* Хотел вот так, но там вроде критерий по селекторам
+.sub_nav li:first-child a {
+поэтому просто дал класс
+*/
+
+.sub_nav a.news {
+  font-family: "RobotoBold", "Arial", sans-serif;
+}
+
+
+.user_block {
+  font-family: "RobotoMedium", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+/* Вторая линия - информация о контактах */
+.contacts .time {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.contacts .phone {
+  font-size: 22px;
+  line-height: 24px;
+}
+
+/* Слайдер */
+.slider h2 {
+  font-size: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+
+/* Кнопки */
+.btn_large {
+  font-size: 32px;
+  line-height: 44px;
+}
+
+.btn_small {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+/* Промо (даром) */
+.promo h3 {
+  font-size: 35px;
+  line-height: 41px;
+}
+
+.promo p {
+  font-size: 18px;
+  line-height: 22px;
+}
+
+/* Карточки товаров */
+.catalog_item .cost {
+  font-size: 45px;
+  line-height: 45px;
+}
+
+.catalog_item .kilo {
+  font-size: 30px;
+  line-height: 45px;
+}
+
+.catalog_item .description {
+  font-family: "RobotoMedium", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+/* Описание преимуществ (вафля) */
+.main_description {
+  color: #323232;
+}
+
+.main_description h1 {
+  font-family: "RobotoMedium", "Arial", sans-serif;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.main_description li {
+  font-family: "RobotoRegular", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+/* Новости */
+.blog h3 {
+  font-family: "RobotoMedium", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #323232;
+}
+
+.blog a {
+  font-size: 24px;
+  line-height: 30px;
+
+  color: #323232;
+}
+
+/* Рассылка */
+.mail {
+  font-family: "RobotoRegular", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+
+  color: #5a5a5a;
+}
+
+/* Адрес на карте */
+.address_area h3, .address_area p {
+  font-family: "RobotoRegular", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+
+  color: #323232;
+}
+
+.address_area address, .address_area .phone {
+  font-size: 18px;
+  line-height: 24px;
+  font-style: normal;
+
+  color: #323232;
+}
+
+/* Ссылки */
+.links a {
+  font-family: "RobotoRegular", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+.links .heart {
+  font-family: "RobotoBold", "Arial", sans-serif;
+}
+
+/* HTMLAcademy */
+.copyright p,
+.copyright a {
+  font-family: "RobotoRegular", "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+
+  color: #fefefe;
+}
+
+/* Крошки */
+.breadcrumbs,
+.breadcrumbs a {
+  font-family: "RobotoRegular", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+/* Главный заголовок на catalog.html */
+main h1 {
+  font-size: 35px;
+  line-height: 41px;
+}
+
+/* Пагинатор */
+.pagination,
+.pagination a {
+  font-family: "RobotoMedium", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+}
