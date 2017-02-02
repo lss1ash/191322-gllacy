@@ -54,13 +54,6 @@
   }
 
 /* Общие */
-html,
-body {
-  margin: 0;
-  padding: 0;
-  min-width: 1200px;
-}
-
 body {
   font-family: "RobotoBold", "Arial", sans-serif;
   font-size: 16px;
@@ -69,16 +62,7 @@ body {
   font-weight: normal;
 
   color: #fff;
-  background-color: #849d8f; /* Для теста - потом врапперу добавить!!!! */
-
-  background: #849d8f url("../../gllacy/gllacy/preview/gllacy-index-1200.jpg") no-repeat 50% 3px;
-  background-size: 1200px auto;
-}
-
-.clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
+  background-color: #849d8f;
 }
 
 /* Ссылки */
@@ -97,39 +81,13 @@ a:active {
   color: #ffbc9e;
 }
 */
-
-.container {
-  width: 1146px;
-  margin: 0 auto;
-}
-
 /* Шапка */
-.top-line,
-.bottom_line {
-  min-height: 60px;
-}
-
-.bottom_line {
-  text-align: right;
-  margin-bottom: 255px;
-}
-
 .main_nav a {
   font-family: "RobotoBold", "Arial", sans-serif;
   font-size: 16px;
   line-height: 18px;
 
   color: #fff;
-
-  float: left;
-  width: 560px;
-}
-
-.main_nav ul {
-  list-style: none;
-
-  margin: 12px 0 0;
-  padding: 0;
 }
 
 .sub_nav a {
@@ -140,25 +98,20 @@ a:active {
   color: #323232;
 }
 
+/* Хотел вот так, но там вроде критерий по селекторам
+.sub_nav li:first-child a {
+поэтому просто дал класс
+*/
+
 .sub_nav a.news {
   font-family: "RobotoBold", "Arial", sans-serif;
 }
 
-.main_nav li,
-.user_block .search,
-.user_block .login,
-.user_block .cart {
-  display: inline-block;
-}
 
 .user_block {
   font-family: "RobotoMedium", "Arial", sans-serif;
   font-size: 14px;
   line-height: 16px;
-
-  float: right;
-  width: 267px;
-  text-align: right;
 }
 
 /* Вторая линия - информация о контактах */
@@ -170,11 +123,6 @@ a:active {
 .contacts .phone {
   font-size: 22px;
   line-height: 24px;
-}
-
-.contacts p {
-  margin: 0;
-  padding: 0;
 }
 
 /* Слайдер */
@@ -230,23 +178,6 @@ a.btn_small {
 .promo p {
   font-size: 18px;
   line-height: 22px;
-}
-
-.promo_left,
-.promo_right {
-  width: 520px;
-  margin: 0 auto;
-  padding: 22px 20px;
-  border: 1px solid black;
-  border-radius: 10px;
-}
-
-.promo_left {
-  float: left;
-}
-
-.promo_right {
-  float: right;
 }
 
 /* Карточки товаров */
@@ -365,4 +296,104 @@ main h1 {
   font-family: "RobotoMedium", "Arial", sans-serif;
   font-size: 16px;
   line-height: 18px;
+}
+
+/* УБРАТЬ -- ТЕСТ
+header section,
+header section div {
+  border: 1px solid black;
+}
+*/
+/* === Сетка === */
+/* Общее */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 1200px;
+  /* min-height: ??? */
+}
+
+body {
+  background: #849d8f url("../../gllacy/gllacy/preview/gllacy-index-1200.jpg") no-repeat 50% 3px;
+  background-size: 1200px auto;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* header */
+
+.container {
+  width: 1146px;
+  margin: 0 auto;
+}
+
+/* Логотип немного за пределами контейнера
+header .container {
+  width: 1150px;
+}*/
+
+.top-line,
+.bottom_line {
+  min-height: 60px;
+}
+
+.main_nav {
+  float: left;
+  width: 560px;
+}
+
+.main_nav ul {
+  list-style: none;
+
+  margin: 12px 0 0;
+  padding: 0;
+}
+
+.user_block {
+  float: right;
+  width: 267px;
+  text-align: right;
+}
+
+.main_nav li,
+.user_block .search,
+.user_block .login,
+.user_block .cart {
+  display: inline-block;
+}
+
+.bottom_line {
+  text-align: right;
+  margin-bottom: 255px;
+}
+
+.contacts p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Слайды */
+
+
+/* Промо */
+.promo_left,
+.promo_right {
+  width: 520px;
+  margin: 0 auto;
+  padding: 22px 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.promo_left {
+  float: left;
+}
+
+.promo_right {
+  float: right;
 }
