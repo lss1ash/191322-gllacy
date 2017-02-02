@@ -272,6 +272,12 @@ main h1 {
   line-height: 18px;
 }
 
+/* УБРАТЬ -- ТЕСТ
+header section,
+header section div {
+  border: 1px solid black;
+}
+*/
 /* === Сетка === */
 /* Общее */
 html,
@@ -282,6 +288,10 @@ body {
   /* min-height: ??? */
 }
 
+body {
+  background: #849d8f url("../../gllacy/gllacy/preview/gllacy-index-1200.jpg") no-repeat 50% 3px;
+  background-size: 1200px auto;
+}
 
 .clearfix::after {
   content: "";
@@ -291,17 +301,16 @@ body {
 }
 
 /* header */
-.top_line {
-  min-height: 60px;
-}
 
 .container {
   width: 1146px;
   margin: 0 auto;
-  padding: 0 27px;
-
-  min-height: 60px;
 }
+
+/* Логотип немного за пределами контейнера
+header .container {
+  width: 1150px;
+}*/
 
 .top-line,
 .bottom_line {
@@ -313,7 +322,24 @@ body {
   float: left;
 }
 
-.user_block {
+.main_nav ul {
+  margin: 10px 0;
+  padding: 0;
+}
+
+.main_nav li,
+.user_block .search,
+.user_block .login,
+.user_block .cart {
+  list-style: none;
+
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.user_block,
+.contacts {
   float: right;
   width: 267px;
+  text-align: right;
 }
