@@ -77,7 +77,7 @@ body {
 
 .wrapper {
   /* заменить на нужный фон позже !! */
-  background: #849d8f url("../../gllacy/gllacy/preview/gllacy-index-1200.jpg") no-repeat 50% 3px;
+  background: #849d8f url("../../gllacy/gllacy/preview/gllacy-index-1200.jpg") no-repeat 50% 0px;
   background-size: 1200px auto;
 }
 
@@ -125,7 +125,7 @@ a:active {
 .main_nav ul {
   list-style: none;
 
-  margin: 12px 0 0;
+  margin: 10px 0 0;
   padding: 0;
 }
 
@@ -188,7 +188,7 @@ a:active {
 .slider {
   width: 680px;
   margin: 0 auto;
-  margin-bottom: 42px;
+  margin-bottom: 43px;
   padding: 0;
   text-align: center;
 }
@@ -203,7 +203,7 @@ a:active {
   line-height: 60px;
   text-align: center;
 
-  margin-bottom: 32px;
+  margin-bottom: 30px;
 }
 
 /* Кнопки */
@@ -211,6 +211,7 @@ a.btn_large {
   font-size: 32px;
   line-height: 44px;
   width: 280px;
+
   min-height: 57px;
 
 
@@ -231,7 +232,7 @@ a.btn_small {
 
 /* Промо (даром) */
 .promo {
-
+  margin-bottom: 40px;
 }
 .promo h3 {
   font-size: 35px;
@@ -262,9 +263,38 @@ a.btn_small {
 }
 
 /* Карточки товаров */
+.bestseller {
+  margin-bottom: 48px;
+}
+
+.catalog_item {
+  position: relative;
+  display: inline-block;
+  width: 267px;
+  margin-right: 22px;
+  padding: 0;
+}
+
+.catalog_item p {
+  margin: 0;
+  padding: 0;
+}
+
+.catalog_item:nth-child(4n) {
+  margin-right: 0;
+}
+
+.catalog_item .btn {
+  display: none;  /* Показывать будем при наведении на catalog_item */
+}
+
 .catalog_item .cost {
   font-size: 45px;
   line-height: 45px;
+
+  position: absolute;
+  top: 205px;
+  left: 0;
 }
 
 .catalog_item .kilo {
@@ -281,12 +311,18 @@ a.btn_small {
 /* Описание преимуществ (вафля) */
 .main_description {
   color: #323232;
+  width: 1106px;
+  min-height: 302px;
+
+  padding: 4px 20px 0;
+  margin: 0;
 }
 
 .main_description h1 {
   font-family: "RobotoMedium", "Arial", sans-serif;
   font-size: 24px;
   line-height: 30px;
+  font-weight: normal;;
 }
 
 .main_description li {
@@ -378,40 +414,3 @@ main h1 {
   font-size: 16px;
   line-height: 18px;
 }
-
-/* УБРАТЬ -- ТЕСТ
-header section,
-header section div {
-  border: 1px solid black;
-}
-*/
-/* === Сетка === */
-/* Общее */
-
-
-
-
-
-
-/* header */
-
-
-
-/* Логотип немного за пределами контейнера
-header .container {
-  width: 1150px;
-}*/
-
-
-
-
-
-
-
-/* Слайды */
-
-
-/* Промо */
-
-
-/* Отсортировать по селекторам */
