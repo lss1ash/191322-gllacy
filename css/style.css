@@ -225,7 +225,7 @@ a.btn_large {
   padding          : 5px 0 0;
   border-radius    : 30px;
   background-image : linear-gradient(
-                       90deg,
+                       0deg,
                        rgb(231,74,53) 0%,
                        rgb(242,104,67) 100%
                      );
