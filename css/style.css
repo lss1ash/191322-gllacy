@@ -54,6 +54,17 @@
   }
 
 /* Общие */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 1200px;
+  /* min-height: ??? */
+}
+
+body {
+
+}
 body {
   font-family: "RobotoBold", "Arial", sans-serif;
   font-size: 16px;
@@ -62,7 +73,23 @@ body {
   font-weight: normal;
 
   color: #fff;
-  background-color: #849d8f;
+}
+
+.wrapper {
+  /* заменить на нужный фон позже !! */
+  background: #849d8f url("../../gllacy/gllacy/preview/gllacy-index-1200.jpg") no-repeat 50% 3px;
+  background-size: 1200px auto;
+}
+
+.container {
+  width: 1146px;
+  margin: 0 auto;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 /* Ссылки */
@@ -90,6 +117,18 @@ a:active {
   color: #fff;
 }
 
+.main_nav {
+  float: left;
+  width: 560px;
+}
+
+.main_nav ul {
+  list-style: none;
+
+  margin: 12px 0 0;
+  padding: 0;
+}
+
 .sub_nav a {
   font-family: "RobotoRegular", "Arial", sans-serif;
   font-size: 14px;
@@ -98,20 +137,35 @@ a:active {
   color: #323232;
 }
 
-/* Хотел вот так, но там вроде критерий по селекторам
-.sub_nav li:first-child a {
-поэтому просто дал класс
-*/
-
 .sub_nav a.news {
   font-family: "RobotoBold", "Arial", sans-serif;
 }
 
+.top-line,
+.bottom_line {
+  min-height: 60px;
+}
+
+.bottom_line {
+  text-align: right;
+  margin-bottom: 255px;
+}
 
 .user_block {
   font-family: "RobotoMedium", "Arial", sans-serif;
   font-size: 14px;
   line-height: 16px;
+
+  float: right;
+  width: 267px;
+  text-align: right;
+}
+
+.main_nav li,
+.user_block .search,
+.user_block .login,
+.user_block .cart {
+  display: inline-block;
 }
 
 /* Вторая линия - информация о контактах */
@@ -125,11 +179,16 @@ a:active {
   line-height: 24px;
 }
 
+.contacts p {
+  margin: 0;
+  padding: 0;
+}
+
 /* Слайдер */
 .slider {
   width: 680px;
   margin: 0 auto;
-  margin-bottom: 40px;
+  margin-bottom: 42px;
   padding: 0;
   text-align: center;
 }
@@ -138,6 +197,7 @@ a:active {
 .slider .three {
   display: none;
 }
+
 .slider h2 {
   font-size: 60px;
   line-height: 60px;
@@ -170,14 +230,35 @@ a.btn_small {
 }
 
 /* Промо (даром) */
+.promo {
+
+}
 .promo h3 {
   font-size: 35px;
   line-height: 41px;
+  margin: 0;
 }
 
 .promo p {
   font-size: 18px;
   line-height: 22px;
+}
+
+.promo_left,
+.promo_right {
+  width: 520px;
+  min-height: 201px;
+
+  padding: 14px 20px;
+  border-radius: 15px;
+}
+
+.promo_left {
+  float: left;
+}
+
+.promo_right {
+  float: right;
 }
 
 /* Карточки товаров */
@@ -306,96 +387,31 @@ header section div {
 */
 /* === Сетка === */
 /* Общее */
-html,
-body {
-  margin: 0;
-  padding: 0;
-  min-width: 1200px;
-  /* min-height: ??? */
-}
 
-body {
-  background: #849d8f url("../../gllacy/gllacy/preview/gllacy-index-1200.jpg") no-repeat 50% 3px;
-  background-size: 1200px auto;
-}
 
-.clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
-}
+
+
+
 
 /* header */
 
-.container {
-  width: 1146px;
-  margin: 0 auto;
-}
+
 
 /* Логотип немного за пределами контейнера
 header .container {
   width: 1150px;
 }*/
 
-.top-line,
-.bottom_line {
-  min-height: 60px;
-}
 
-.main_nav {
-  float: left;
-  width: 560px;
-}
 
-.main_nav ul {
-  list-style: none;
 
-  margin: 12px 0 0;
-  padding: 0;
-}
 
-.user_block {
-  float: right;
-  width: 267px;
-  text-align: right;
-}
 
-.main_nav li,
-.user_block .search,
-.user_block .login,
-.user_block .cart {
-  display: inline-block;
-}
-
-.bottom_line {
-  text-align: right;
-  margin-bottom: 255px;
-}
-
-.contacts p {
-  margin: 0;
-  padding: 0;
-}
 
 /* Слайды */
 
 
 /* Промо */
-.promo_left,
-.promo_right {
-  width: 520px;
-  margin: 0 auto;
-  padding: 22px 20px;
-  border: 1px solid black;
-  border-radius: 10px;
-}
 
-.promo_left {
-  float: left;
-}
-
-.promo_right {
-  float: right;
-}
 
 /* Отсортировать по селекторам */
