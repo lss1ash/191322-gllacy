@@ -377,8 +377,22 @@ a.btn_small {
 
 /* Карта и адрес */
 .map {
-  outline: 1px solid red;
+  min-height: 429px;
 }
+
+.map .container {
+  position: relative;
+}
+
+.address_area {
+  position: absolute;
+  top: 62px;
+  right: 0;
+
+  width: 250px;
+  padding: 30px 25px;
+}
+
 .address_area h3, .address_area p {
   font-family: "RobotoRegular", "Arial", sans-serif;
   font-size: 14px;
@@ -393,6 +407,22 @@ a.btn_small {
   font-style: normal;
 
   color: #323232;
+}
+
+/* Footer */
+.social {
+  width: 267px;
+  float: left;
+}
+
+.copyright {
+  width: 267px;
+  float: right;
+}
+
+.links {
+  width: 560px;
+  float: left;
 }
 
 /* Ссылки */
