@@ -315,7 +315,7 @@ a.btn_small {
   min-height: 302px;
 
   padding: 4px 20px 0;
-  margin: 0;
+  margin: 0 0 40px;
 }
 
 .main_description h1 {
@@ -332,10 +332,26 @@ a.btn_small {
 }
 
 /* Новости */
+.news {
+  margin-bottom: 40px;
+}
+.blog,
+.mail {
+  width: 520px;
+  min-height: 176px;
+  margin: 0;
+  padding: 22px 20px;
+}
+
+.blog {
+  float: left;
+}
+
 .blog h3 {
   font-family: "RobotoMedium", "Arial", sans-serif;
   font-size: 16px;
   line-height: 22px;
+  margin: 0 0 5px;
 
   color: #323232;
 }
@@ -343,6 +359,7 @@ a.btn_small {
 .blog a {
   font-size: 24px;
   line-height: 30px;
+  text-decoration: underline;
 
   color: #323232;
 }
@@ -354,9 +371,14 @@ a.btn_small {
   line-height: 24px;
 
   color: #5a5a5a;
+
+  float: right;
 }
 
-/* Адрес на карте */
+/* Карта и адрес */
+.map {
+  outline: 1px solid red;
+}
 .address_area h3, .address_area p {
   font-family: "RobotoRegular", "Arial", sans-serif;
   font-size: 14px;
