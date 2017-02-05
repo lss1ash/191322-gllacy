@@ -1,111 +1,130 @@
-/* Всплывающие окна пока не трогал
- Знак рубля пока не ставил */
+@font-face {
+  font-family : "RobotoRegular";
+  font-style  : normal;
+  font-weight : normal;
+  src         : url("../fonts/RobotoRegular/RobotoRegular.eot");
+  src         : url("../fonts/RobotoRegular/RobotoRegular.eot?#iefix")format("embedded-opentype"),
+                url("../fonts/RobotoRegular/RobotoRegular.woff") format("woff"),
+                url("../fonts/RobotoRegular/RobotoRegular.ttf") format("truetype");
+}
 
-/* font-family: "RobotoRegular"; */
 @font-face {
-  font-family: "RobotoRegular";
-  src: url("../fonts/RobotoRegular/RobotoRegular.eot");
-  src: url("../fonts/RobotoRegular/RobotoRegular.eot?#iefix")format("embedded-opentype"),
-  url("../fonts/RobotoRegular/RobotoRegular.woff") format("woff"),
-  url("../fonts/RobotoRegular/RobotoRegular.ttf") format("truetype");
-  font-style: normal;
-  font-weight: normal;
+  font-family : "RobotoMedium";
+  font-style  : normal;
+  font-weight : normal;
+  src         : url("../fonts/RobotoMedium/RobotoMedium.eot");
+  src         : url("../fonts/RobotoMedium/RobotoMedium.eot?#iefix")format("embedded-opentype"),
+                url("../fonts/RobotoMedium/RobotoMedium.woff") format("woff"),
+                url("../fonts/RobotoMedium/RobotoMedium.ttf") format("truetype");
 }
-/* font-family: "RobotoLight"; */
-/* Пока не требуется
+
 @font-face {
-  font-family: "RobotoLight";
-  src: url("../fonts/RobotoLight/RobotoLight.eot");
-  src: url("../fonts/RobotoLight/RobotoLight.eot?#iefix")format("embedded-opentype"),
-  url("../fonts/RobotoLight/RobotoLight.woff") format("woff"),
-  url("../fonts/RobotoLight/RobotoLight.ttf") format("truetype");
-  font-style: normal;
-  font-weight: normal;
+  font-family : "RobotoBold";
+  font-style  : normal;
+  font-weight : normal;
+  src         : url("../fonts/RobotoBold/RobotoBold.eot");
+  src         : url("../fonts/RobotoBold/RobotoBold.eot?#iefix")format("embedded-opentype"),
+                url("../fonts/RobotoBold/RobotoBold.woff") format("woff"),
+                url("../fonts/RobotoBold/RobotoBold.ttf") format("truetype");
 }
-*/
-/* font-family: "RobotoMedium"; */
-@font-face {
-  font-family: "RobotoMedium";
-  src: url("../fonts/RobotoMedium/RobotoMedium.eot");
-  src: url("../fonts/RobotoMedium/RobotoMedium.eot?#iefix")format("embedded-opentype"),
-  url("../fonts/RobotoMedium/RobotoMedium.woff") format("woff"),
-  url("../fonts/RobotoMedium/RobotoMedium.ttf") format("truetype");
-  font-style: normal;
-  font-weight: normal;
-}
-/* font-family: "RobotoBold"; */
-@font-face {
-  font-family: "RobotoBold";
-  src: url("../fonts/RobotoBold/RobotoBold.eot");
-  src: url("../fonts/RobotoBold/RobotoBold.eot?#iefix")format("embedded-opentype"),
-  url("../fonts/RobotoBold/RobotoBold.woff") format("woff"),
-  url("../fonts/RobotoBold/RobotoBold.ttf") format("truetype");
-  font-style: normal;
-  font-weight: normal;
-}
+
+/**
+ * Пока не требуется @font-face { font-family: "RobotoLight"; src:
+ * url("../fonts/RobotoLight/RobotoLight.eot"); src:
+ * url("../fonts/RobotoLight/RobotoLight.eot?#iefix")format("embedded-opentype"),
+ * url("../fonts/RobotoLight/RobotoLight.woff") format("woff"),
+ * url("../fonts/RobotoLight/RobotoLight.ttf") format("truetype"); font-style:
+ * normal; font-weight: normal; }
+ */
 
 /* Спрячу пока что окошки, менюшки и радиобатоны */
-  input[name="slides"],
-  .sub_nav,
-  .search_form,
-  .login_form,
-  .modal {
-    display: none;
-  }
+
+.login_form,
+.modal,
+.search_form,
+.sub_nav,
+input[name="slides"],
+.cart_window {
+  display : none;
+}
 
 /* Общие */
-html,
-body {
-  margin: 0;
-  padding: 0;
-  min-width: 1200px;
+
+body,
+html {
+  min-width : 1200px;
+  margin    : 0;
+  padding   : 0;
   /* min-height: ??? */
 }
 
+<<<<<<< HEAD
 body {
   font-family: "RobotoBold", "Arial", sans-serif;
   font-size: 16px;
   line-height: 18px;
   font-style: normal;
   font-weight: normal;
+=======
+body {}
 
-  color: #fff;
+body {
+  color       : #fff;
+  font-family : "RobotoBold",
+                "Arial",
+                sans-serif;
+  font-size   : 16px;
+  font-style  : normal;
+  font-weight : normal;
+  line-height : 18px;
+>>>>>>> origin/master
+
+  background-color: #849d8f; /* Убрать в конце */
+
+  /*  Для проверки по макету
+  background      : #849d8f url("../../gllacy/gllacy/preview/gllacy-catalog-1200.jpg") no-repeat 50% 0px;
+  background-size : 1200px auto;
+  */
 }
 
 .wrapper {
+<<<<<<< HEAD
   /* заменить на нужный фон позже !! */
   background: #849d8f url("../../gllacy/gllacy/preview/gllacy-catalog-1200.jpg") no-repeat 50% 0px;
   background-size: 1200px auto;
+=======
+  /* Тут будет нужный фон позже */
+>>>>>>> origin/master
 }
 
 .container {
-  width: 1146px;
-  margin: 0 auto;
+  width  : 1146px;
+  margin : 0 auto;
 }
 
 .clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
+  content : "";
+  display : table;
+  clear   : both;
 }
 
 /* Ссылки */
+
 a:link,
 a:visited {
-  font-family: "RobotoMedium", "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 18px;
+  color           : #fff;
+  text-decoration : none;
+  font-family     : "RobotoMedium",
+                    "Arial",
+                    sans-serif;
+  font-size       : 16px;
+  line-height     : 18px;
+}
 
-  color: #fff;
-  text-decoration: none;
-}
-/* На будущее
-a:hover,
-a:active {
-  color: #ffbc9e;
-}
-*/
+/* На будущее a:hover, a:active { color: #ffbc9e; } */
+
 /* Шапка */
+<<<<<<< HEAD
 
 .main_nav {
   float: left;
@@ -143,40 +162,69 @@ a:active {
 
 .main_nav li:first-child {
   margin: 9px 7px 0 -1px;
+=======
+
+.main_nav a {
+  color       : #fff;
+  font-family : "RobotoBold",
+                "Arial",
+                sans-serif;
+  font-size   : 16px;
+  line-height : 18px;
+}
+
+.main_nav {
+  width : 560px;
+  float : left;
+}
+
+.main_nav ul {
+  margin     : 10px 0 0;
+  padding    : 0;
+  list-style : none;
+>>>>>>> origin/master
 }
 
 .sub_nav a {
-  font-family: "RobotoRegular", "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 16px;
-
-  color: #323232;
+  color       : #323232;
+  font-family : "RobotoRegular",
+                "Arial",
+                sans-serif;
+  font-size   : 14px;
+  line-height : 16px;
 }
 
 .sub_nav a.news {
-  font-family: "RobotoBold", "Arial", sans-serif;
+  font-family : "RobotoBold",
+                "Arial",
+                sans-serif;
 }
 
-.top-line,
-.bottom_line {
-  min-height: 60px;
+.bottom_line,
+.top-line {
+  min-height : 60px;
 }
 
 .bottom_line {
-  text-align: right;
-  margin-bottom: 255px;
+  text-align    : right;
+}
+
+header.index {
+  margin-bottom : 255px; /* Большой отступ для главной */
 }
 
 .user_block {
-  font-family: "RobotoMedium", "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 16px;
-
-  float: right;
-  width: 267px;
-  text-align: right;
+  width       : 267px;
+  float       : right;
+  text-align  : right;
+  font-family : "RobotoMedium",
+                "Arial",
+                sans-serif;
+  font-size   : 14px;
+  line-height : 16px;
 }
 
+<<<<<<< HEAD
 
 .user_block .search,
 .user_block .login,
@@ -186,253 +234,345 @@ a:active {
   margin: 10px 10px 0;
 
   outline: 1px solid red;
+=======
+.main_nav li,
+.user_block .cart,
+.user_block .login,
+.user_block .search {
+  display : inline-block;
+>>>>>>> origin/master
 }
 
 
 /* Вторая линия - информация о контактах */
+
 .contacts .time {
-  font-size: 14px;
-  line-height: 16px;
+  font-size   : 14px;
+  line-height : 16px;
 }
 
 .contacts .phone {
-  font-size: 22px;
-  line-height: 24px;
+  font-size   : 22px;
+  line-height : 24px;
 }
 
 .contacts p {
-  margin: 0;
-  padding: 0;
+  margin  : 0;
+  padding : 0;
 }
 
 /* Слайдер */
+
 .slider {
-  width: 680px;
-  margin: 0 auto;
-  margin-bottom: 42px;
-  padding: 0;
-  text-align: center;
+  width         : 680px;
+  margin        : 0 auto;
+  margin-bottom : 43px;
+  padding       : 0;
+  text-align    : center;
 }
 
-.slider .two,
-.slider .three {
-  display: none;
+.slider .three,
+.slider .two {
+  display : none;
 }
 
 .slider h2 {
-  font-size: 60px;
-  line-height: 60px;
-  text-align: center;
-
-  margin-bottom: 32px;
+  margin-bottom : 30px;
+  text-align    : center;
+  font-size     : 60px;
+  line-height   : 60px;
 }
 
 /* Кнопки */
+
 a.btn_large {
-  font-size: 32px;
-  line-height: 44px;
-  width: 280px;
-  min-height: 57px;
-
-
-  display: block;
-  border-radius: 30px;
-  margin: 0 auto;
-  padding: 5px 0 0;
-
-  background-image: linear-gradient(90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
-  box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
-  text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+  display          : block;
+  width            : 280px;
+  min-height       : 57px;
+  margin           : 0 auto;
+  padding          : 5px 0 0;
+  border-radius    : 30px;
+  background-image : linear-gradient(
+                       0deg,
+                       rgb(231,74,53) 0%,
+                       rgb(242,104,67) 100%
+                     );
+  box-shadow       : 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
+  text-shadow      : 0px 2px 5px rgba(160, 32, 11, 0.76);
+  font-size        : 32px;
+  line-height      : 44px;
 }
 
 a.btn_small {
-  font-size: 18px;
-  line-height: 24px;
+  font-size   : 18px;
+  line-height : 24px;
 }
 
 /* Промо (даром) */
-.promo {
 
+.promo {
+  margin-bottom : 40px;
 }
+
 .promo h3 {
-  font-size: 35px;
-  line-height: 41px;
-  margin: 0;
+  margin      : 0;
+  font-size   : 35px;
+  line-height : 41px;
 }
 
 .promo p {
-  font-size: 18px;
-  line-height: 22px;
+  font-size   : 18px;
+  line-height : 22px;
 }
 
 .promo_left,
 .promo_right {
-  width: 520px;
-  min-height: 201px;
-
-  padding: 14px 20px;
-  border-radius: 15px;
+  width         : 520px;
+  min-height    : 201px;
+  padding       : 14px 20px;
+  border-radius : 15px;
 }
 
 .promo_left {
-  float: left;
+  float : left;
 }
 
 .promo_right {
-  float: right;
+  float : right;
 }
 
 /* Карточки товаров */
+
+.bestseller {
+  margin-bottom : 48px;
+}
+
+.catalog_item {
+  display      : inline-block;
+  position     : relative;
+  width        : 267px;
+  margin-right : 22px;
+  padding      : 0;
+}
+
+.catalog_item p {
+  margin  : 0;
+  padding : 0;
+}
+
+.catalog_item:nth-child(4n) {
+  margin-right : 0;
+}
+
+.catalog_item .btn {
+  display : none;
+  /* Показывать будем при наведении на catalog_item */
+}
+
 .catalog_item .cost {
-  font-size: 45px;
-  line-height: 45px;
+  position    : absolute;
+  top         : 205px;
+  left        : 0;
+  font-size   : 45px;
+  line-height : 45px;
 }
 
 .catalog_item .kilo {
-  font-size: 30px;
-  line-height: 45px;
+  font-size   : 30px;
+  line-height : 45px;
 }
 
 .catalog_item .description {
-  font-family: "RobotoMedium", "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 22px;
+  font-family : "RobotoMedium",
+                "Arial",
+                sans-serif;
+  font-size   : 16px;
+  line-height : 22px;
 }
 
 /* Описание преимуществ (вафля) */
+
 .main_description {
-  color: #323232;
+  width      : 1106px;
+  min-height : 302px;
+  margin     : 0 0 40px;
+  padding    : 4px 20px 0;
+  color      : #323232;
 }
 
 .main_description h1 {
-  font-family: "RobotoMedium", "Arial", sans-serif;
-  font-size: 24px;
-  line-height: 30px;
+  font-family : "RobotoMedium",
+                "Arial",
+                sans-serif;
+  font-size   : 24px;
+  font-weight : normal;
+  line-height : 30px;
 }
 
 .main_description li {
-  font-family: "RobotoRegular", "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 22px;
+  font-family : "RobotoRegular",
+                "Arial",
+                sans-serif;
+  font-size   : 16px;
+  line-height : 22px;
 }
 
 /* Новости */
-.blog h3 {
-  font-family: "RobotoMedium", "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 22px;
 
-  color: #323232;
+.news {
+  margin-bottom : 40px;
+}
+
+.blog,
+.mail {
+  width      : 520px;
+  min-height : 176px;
+  margin     : 0;
+  padding    : 22px 20px;
+}
+
+.blog {
+  float : left;
+}
+
+.blog h3 {
+  margin      : 0 0 5px;
+  color       : #323232;
+  font-family : "RobotoMedium",
+                "Arial",
+                sans-serif;
+  font-size   : 16px;
+  line-height : 22px;
 }
 
 .blog a {
-  font-size: 24px;
-  line-height: 30px;
-
-  color: #323232;
+  color           : #323232;
+  text-decoration : underline;
+  font-size       : 24px;
+  line-height     : 30px;
 }
 
 /* Рассылка */
+
 .mail {
-  font-family: "RobotoRegular", "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-
-  color: #5a5a5a;
+  float       : right;
+  color       : #5a5a5a;
+  font-family : "RobotoRegular",
+                "Arial",
+                sans-serif;
+  font-size   : 16px;
+  line-height : 24px;
 }
 
-/* Адрес на карте */
-.address_area h3, .address_area p {
-  font-family: "RobotoRegular", "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 20px;
+/* Карта и адрес */
 
-  color: #323232;
+.map {
+  min-height : 429px;
 }
 
-.address_area address, .address_area .phone {
-  font-size: 18px;
-  line-height: 24px;
-  font-style: normal;
+.map .container {
+  position : relative;
+}
 
-  color: #323232;
+.address_area {
+  position : absolute;
+  top      : 62px;
+  right    : 0;
+  width    : 250px;
+  padding  : 30px 25px;
+}
+
+.address_area h3,
+.address_area p {
+  color       : #323232;
+  font-family : "RobotoRegular",
+                "Arial",
+                sans-serif;
+  font-size   : 14px;
+  line-height : 20px;
+}
+
+.address_area .phone,
+.address_area address {
+  color       : #323232;
+  font-size   : 18px;
+  font-style  : normal;
+  line-height : 24px;
+}
+
+/* Footer */
+
+.social {
+  width : 267px;
+  float : left;
+}
+
+.copyright {
+  width : 267px;
+  float : right;
+}
+
+.links {
+  width : 560px;
+  float : left;
 }
 
 /* Ссылки */
+
 .links a {
-  font-family: "RobotoRegular", "Arial", sans-serif;
-  font-size: 13px;
-  line-height: 18px;
+  font-family : "RobotoRegular",
+                "Arial",
+                sans-serif;
+  font-size   : 13px;
+  line-height : 18px;
 }
+
 .links .heart {
-  font-family: "RobotoBold", "Arial", sans-serif;
+  font-family : "RobotoBold",
+                "Arial",
+                sans-serif;
 }
 
 /* HTMLAcademy */
-.copyright p,
-.copyright a {
-  font-family: "RobotoRegular", "Arial", sans-serif;
-  font-size: 12px;
-  line-height: 18px;
 
-  color: #fefefe;
+.copyright a,
+.copyright p {
+  color       : #fefefe;
+  font-family : "RobotoRegular",
+                "Arial",
+                sans-serif;
+  font-size   : 12px;
+  line-height : 18px;
 }
 
 /* Крошки */
+
 .breadcrumbs,
 .breadcrumbs a {
-  font-family: "RobotoRegular", "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 16px;
+  font-family : "RobotoRegular",
+                "Arial",
+                sans-serif;
+  font-size   : 14px;
+  line-height : 16px;
 }
 
+
+/*           catalog.html            */
+
 /* Главный заголовок на catalog.html */
+
 main h1 {
-  font-size: 35px;
-  line-height: 41px;
+  font-size   : 35px;
+  line-height : 41px;
 }
 
 /* Пагинатор */
+
 .pagination,
 .pagination a {
-  font-family: "RobotoMedium", "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 18px;
+  font-family : "RobotoMedium",
+                "Arial",
+                sans-serif;
+  font-size   : 16px;
+  line-height : 18px;
 }
-
-/* УБРАТЬ -- ТЕСТ
-header section,
-header section div {
-  border: 1px solid black;
-}
-*/
-/* === Сетка === */
-/* Общее */
-
-
-
-
-
-
-/* header */
-
-
-
-/* Логотип немного за пределами контейнера
-header .container {
-  width: 1150px;
-}*/
-
-
-
-
-
-
-
-/* Слайды */
-
-
-/* Промо */
-
-
-/* Отсортировать по селекторам */
