@@ -58,8 +58,6 @@ html {
   /* min-height: ??? */
 }
 
-body {}
-
 body {
   color       : #fff;
   font-family : "RobotoBold",
@@ -72,10 +70,10 @@ body {
 
   background-color: #849d8f; /* Убрать в конце */
 
-  /*  Для проверки по макету
-  background      : #849d8f url("../../gllacy/gllacy/preview/gllacy-catalog-1200.jpg") no-repeat 50% 0px;
+  /*  Для проверки по макету */
+  background      : #849d8f url("../../gllacy/gllacy/preview/gllacy-index-1200.jpg") no-repeat 50% 0px;
   background-size : 1200px auto;
-  */
+
 }
 
 .wrapper {
@@ -110,6 +108,11 @@ a:visited {
 
 /* Шапка */
 
+.main_nav {
+  width : 560px;
+  float : left;
+}
+
 .main_nav a {
   color       : #fff;
   font-family : "RobotoBold",
@@ -117,17 +120,30 @@ a:visited {
                 sans-serif;
   font-size   : 16px;
   line-height : 18px;
-}
 
-.main_nav {
-  width : 560px;
-  float : left;
+  display: block;
+  padding: 7px 13px;
+  /*background-color: rgba(50,50,250,0.4);
+  border-radius: 15px;*/
 }
 
 .main_nav ul {
-  margin     : 10px 0 0;
+  margin     : 0;
   padding    : 0;
   list-style : none;
+
+  outline: 1px solid red;
+}
+
+.main_nav li {
+  display: inline-block;
+  vertical-align: top;
+  margin: 43px -2px 0 0;  /* методом научного тыка выявлены маргины и паддинги. Ничего, что числа неровные? Но в макет входят... */
+  padding: 0;
+}
+
+.main_nav li:first-child {
+  margin: 9px 8px 0 -1px;
 }
 
 .sub_nav a {
@@ -169,7 +185,6 @@ header.index {
   line-height : 16px;
 }
 
-.main_nav li,
 .user_block .cart,
 .user_block .login,
 .user_block .search {
