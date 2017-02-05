@@ -58,14 +58,6 @@ html {
   /* min-height: ??? */
 }
 
-<<<<<<< HEAD
-body {
-  font-family: "RobotoBold", "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 18px;
-  font-style: normal;
-  font-weight: normal;
-=======
 body {}
 
 body {
@@ -77,7 +69,6 @@ body {
   font-style  : normal;
   font-weight : normal;
   line-height : 18px;
->>>>>>> origin/master
 
   background-color: #849d8f; /* Убрать в конце */
 
@@ -88,13 +79,7 @@ body {
 }
 
 .wrapper {
-<<<<<<< HEAD
-  /* заменить на нужный фон позже !! */
-  background: #849d8f url("../../gllacy/gllacy/preview/gllacy-catalog-1200.jpg") no-repeat 50% 0px;
-  background-size: 1200px auto;
-=======
   /* Тут будет нужный фон позже */
->>>>>>> origin/master
 }
 
 .container {
@@ -124,45 +109,6 @@ a:visited {
 /* На будущее a:hover, a:active { color: #ffbc9e; } */
 
 /* Шапка */
-<<<<<<< HEAD
-
-.main_nav {
-  float: left;
-  width: 560px;
-}
-
-.main_nav a {
-  font-family: "RobotoBold", "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 18px;
-
-  color: #fff;
-
-  display: block;
-  padding: 7px 13px;
-  background-color: rgba(50,50,250,0.4);
-  border-radius: 15px;
-}
-
-.main_nav ul {
-  list-style: none;
-
-  margin: 0;
-  padding: 0;
-
-  outline: 1px solid red;
-}
-
-.main_nav li {
-  display: inline-block;
-  vertical-align: top;
-  margin: 23px 4px 0 0;  /* методом научного тыка выявлены маргины и паддинги. Ничего, что числа неровные? Но в макет входят... */
-
-}
-
-.main_nav li:first-child {
-  margin: 9px 7px 0 -1px;
-=======
 
 .main_nav a {
   color       : #fff;
@@ -182,7 +128,6 @@ a:visited {
   margin     : 10px 0 0;
   padding    : 0;
   list-style : none;
->>>>>>> origin/master
 }
 
 .sub_nav a {
@@ -224,25 +169,12 @@ header.index {
   line-height : 16px;
 }
 
-<<<<<<< HEAD
-
-.user_block .search,
-.user_block .login,
-.user_block .cart {
-  display: inline-block;
-  vertical-align: top;
-  margin: 10px 10px 0;
-
-  outline: 1px solid red;
-=======
 .main_nav li,
 .user_block .cart,
 .user_block .login,
 .user_block .search {
   display : inline-block;
->>>>>>> origin/master
 }
-
 
 /* Вторая линия - информация о контактах */
 
@@ -293,7 +225,7 @@ a.btn_large {
   padding          : 5px 0 0;
   border-radius    : 30px;
   background-image : linear-gradient(
-                       0deg,
+                       180deg,
                        rgb(231,74,53) 0%,
                        rgb(242,104,67) 100%
                      );
