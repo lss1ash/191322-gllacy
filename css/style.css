@@ -63,9 +63,6 @@ body {
 }
 
 body {
-
-}
-body {
   font-family: "RobotoBold", "Arial", sans-serif;
   font-size: 16px;
   line-height: 18px;
@@ -77,7 +74,7 @@ body {
 
 .wrapper {
   /* заменить на нужный фон позже !! */
-  background: #849d8f url("../../gllacy/gllacy/preview/gllacy-index-1200.jpg") no-repeat 50% 3px;
+  background: #849d8f url("../../gllacy/gllacy/preview/gllacy-catalog-1200.jpg") no-repeat 50% 0px;
   background-size: 1200px auto;
 }
 
@@ -109,24 +106,43 @@ a:active {
 }
 */
 /* Шапка */
-.main_nav a {
-  font-family: "RobotoBold", "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 18px;
-
-  color: #fff;
-}
 
 .main_nav {
   float: left;
   width: 560px;
 }
 
+.main_nav a {
+  font-family: "RobotoBold", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+
+  color: #fff;
+
+  display: block;
+  padding: 7px 13px;
+  background-color: rgba(50,50,250,0.4);
+  border-radius: 15px;
+}
+
 .main_nav ul {
   list-style: none;
 
-  margin: 12px 0 0;
+  margin: 0;
   padding: 0;
+
+  outline: 1px solid red;
+}
+
+.main_nav li {
+  display: inline-block;
+  vertical-align: top;
+  margin: 23px 4px 0 0;  /* методом научного тыка выявлены маргины и паддинги. Ничего, что числа неровные? Но в макет входят... */
+
+}
+
+.main_nav li:first-child {
+  margin: 9px 7px 0 -1px;
 }
 
 .sub_nav a {
@@ -161,12 +177,17 @@ a:active {
   text-align: right;
 }
 
-.main_nav li,
+
 .user_block .search,
 .user_block .login,
 .user_block .cart {
   display: inline-block;
+  vertical-align: top;
+  margin: 10px 10px 0;
+
+  outline: 1px solid red;
 }
+
 
 /* Вторая линия - информация о контактах */
 .contacts .time {
