@@ -110,8 +110,9 @@ a:visited
 /* На будущее a:hover, a:active { color: #ffbc9e; } */
 
 /* Для старых IE */
-a img {
-  border: none;
+a img
+{
+    border: none;
 }
 
 /* Шапка */
@@ -252,10 +253,12 @@ header.index
 .search p
 {
     font-size: 0;
-width: 32px;
-height: 32px;
-box-sizing: border-box;
-border-radius: 50%;
+
+    box-sizing: border-box;
+    width: 32px;
+    height: 32px;
+
+    border-radius: 50%;
 }
 
 
