@@ -118,25 +118,11 @@ a:visited
     width: 560px;
 }
 
-.main_nav a
-{
-    font-family: 'RobotoBold', 'Arial', sans-serif;
-    font-size: 16px;
-    line-height: 18px;
-
-    display: block;
-
-    padding: 7px 13px;
-
-    color: #fff;
-    /*background-color: rgba(50,50,250,0.4);
-  border-radius: 15px;*/
-}
-
 .main_nav ul
 {
     margin: 0;
     padding: 0;
+    font-size: 0;
 
     list-style: none;
 
@@ -146,16 +132,32 @@ a:visited
 .main_nav li
 {
     display: inline-block;
-
-    margin: 43px -2px 0 0;  /* методом научного тыка выявлены маргины и паддинги. Ничего, что числа неровные? Но в макет входят... */
+    margin: 43px 0 0 0;
     padding: 0;
 
     vertical-align: top;
+
+    outline: 1px solid red;
 }
 
 .main_nav li:first-child
 {
-    margin: 9px 8px 0 -1px;
+    margin: 9px 8px 0 0;
+}
+
+.main_nav a
+{
+  font-family: 'RobotoBold', 'Arial', sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+
+  display: block;
+
+  padding: 7px 13px;
+
+  color: #fff;
+  /*background-color: rgba(50,50,250,0.4);
+  border-radius: 15px;*/
 }
 
 .sub_nav a
