@@ -602,7 +602,7 @@ a.btn_small
 
     border-radius: 15px;
 
-    //background-color: white;
+    background-color: white;
 }
 .mail_body p
 {
@@ -613,8 +613,6 @@ a.btn_small
 {
     font-size: 0;
     line-height: 1;
-
-    opacity: .5;
 }
 
 .mail_body input,
@@ -637,7 +635,6 @@ a.btn_small
     margin-right: 11px;
     padding: 10px 13px;
 
-    opacity: .6;
     border: 1px solid #b2b2b2;
     border-radius: 5px;
 }
