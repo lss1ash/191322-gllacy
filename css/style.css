@@ -328,7 +328,7 @@ a.btn_large
 
     border: none;
     border-radius: 30px;
-    background-image: linear-gradient( 180deg, rgb(231,74,53) 0%, rgb(242,104,67) 100% );
+    background-image: linear-gradient( 0deg, rgb(231,74,53) 0%, rgb(242,104,67) 100% );
     box-shadow: 0 2px 2px 0 rgba(172, 16, 0, .64);
     text-shadow: 0 2px 5px rgba(160, 32, 11, .76);
 }
@@ -350,7 +350,7 @@ a.btn_small
     color: #fff;
     border: none;
     border-radius: 30px;
-    background-image: linear-gradient( 180deg, rgb(231,74,53) 0%, rgb(242,104,67) 100% );
+    background-image: linear-gradient( 0deg, rgb(231,74,53) 0%, rgb(242,104,67) 100% );
     box-shadow: 0 2px 2px 0 rgba(172, 16, 0, .64);
 }
 
@@ -387,6 +387,7 @@ a.btn_small
 .promo h3
 {
     font-size: 35px;
+    font-weight: normal;
     line-height: 41px;
 
     margin: 0;
@@ -558,6 +559,7 @@ a.btn_small
 {
     font-family: 'RobotoMedium', 'Arial', sans-serif;
     font-size: 16px;
+    font-weight: normal;
     line-height: 22px;
 
     margin: 0 0 5px;
@@ -601,7 +603,6 @@ a.btn_small
     padding: 11px 11px 0 20px;
 
     border-radius: 15px;
-
     background-color: white;
 }
 .mail_body p
@@ -621,6 +622,9 @@ a.btn_small
     display: inline-block;
 
     vertical-align: top;
+
+    border: none;
+    box-shadow: none;
 }
 
 .mail_body input[type='email']
@@ -649,13 +653,17 @@ a.btn_small
     padding: 0 19px 8px 19px;
 
     background-image: linear-gradient( 0deg, rgb(231,74,53) 0%, rgb(242,104,67) 100% );
+    box-shadow: 0 2px 2px 0 rgba(172, 16, 0, .64);
 }
 
 /* Карта и адрес */
 
 .map
 {
+    box-sizing: border-box;
     min-height: 429px;
+
+    outline: 1px solid red;
 }
 
 .map .container
@@ -667,10 +675,13 @@ a.btn_small
 {
     position: absolute;
     top: 62px;
-    right: 0;
+    right: 27px;
 
-    width: 250px;
-    padding: 30px 25px;
+    box-sizing: border-box;
+    width: 302px;
+    padding: 28px 25px;
+
+    outline: 1px dotted blue;
 }
 
 .address_area h3,
@@ -678,7 +689,11 @@ a.btn_small
 {
     font-family: 'RobotoRegular', 'Arial', sans-serif;
     font-size: 14px;
+    font-weight: normal;
     line-height: 20px;
+
+    margin: 0;
+    padding: 0;
 
     color: #323232;
 }
@@ -690,7 +705,21 @@ a.btn_small
     font-style: normal;
     line-height: 24px;
 
+    margin-bottom: 20px;
+
     color: #323232;
+}
+
+.address_area .phone
+{
+    margin-top: 3px;
+    margin-bottom: 2px;
+}
+
+.address_area a.btn
+{
+    margin-top: 25px;
+    margin-bottom: 2px;
 }
 
 /* Footer */
