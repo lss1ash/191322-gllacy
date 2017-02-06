@@ -520,7 +520,7 @@ a.btn_small
 
 .main_description li:nth-child(2n)
 {
-  padding-left: 70px;
+    padding-left: 70px;
 }
 
 /* Новости */
