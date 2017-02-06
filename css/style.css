@@ -310,7 +310,7 @@ header.index
 }
 
 /* Кнопки */
-
+.btn_large,
 a.btn_large
 {
     font-size: 32px;
@@ -324,12 +324,15 @@ a.btn_large
     margin: 0 auto;
     padding: 7px 0 12px 0;
 
+    cursor: pointer;
+
+    border: none;
     border-radius: 30px;
     background-image: linear-gradient( 180deg, rgb(231,74,53) 0%, rgb(242,104,67) 100% );
     box-shadow: 0 2px 2px 0 rgba(172, 16, 0, .64);
     text-shadow: 0 2px 5px rgba(160, 32, 11, .76);
 }
-
+.btn_small,
 a.btn_small
 {
     font-size: 18px;
@@ -342,6 +345,10 @@ a.btn_small
     margin: 0 0;
     padding: 8px 23px;
 
+    cursor: pointer;
+
+    color: #fff;
+    border: none;
     border-radius: 30px;
     background-image: linear-gradient( 180deg, rgb(231,74,53) 0%, rgb(242,104,67) 100% );
     box-shadow: 0 2px 2px 0 rgba(172, 16, 0, .64);
@@ -533,8 +540,9 @@ a.btn_small
 .blog,
 .mail
 {
-    width: 520px;
-    min-height: 176px;
+    box-sizing: border-box;
+    width: 560px;
+    min-height: 220px;
     margin: 0;
     padding: 22px 20px;
 }
@@ -542,6 +550,8 @@ a.btn_small
 .blog
 {
     float: left;
+
+    padding-right: 235px;
 }
 
 .blog h3
@@ -575,7 +585,73 @@ a.btn_small
 
     float: right;
 
+    box-sizing: border-box;
+    padding: 6px;
+
     color: #5a5a5a;
+}
+
+.mail_body
+{
+    font-size: 16px;
+    line-height: 22px;
+
+    box-sizing: border-box;
+    min-height: 208px;
+    padding: 11px 11px 0 20px;
+
+    border-radius: 15px;
+
+    //background-color: white;
+}
+.mail_body p
+{
+    margin: 16px 0 37px;
+}
+
+.mail_body form
+{
+    font-size: 0;
+    line-height: 1;
+
+    opacity: .5;
+}
+
+.mail_body input,
+.mail_body button
+{
+    display: inline-block;
+
+    vertical-align: top;
+}
+
+.mail_body input[type='email']
+{
+    font-family: 'RobotoRegular', 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+
+    box-sizing: border-box;
+    width: 368px;
+    margin: 0;
+    margin-right: 11px;
+    padding: 10px 13px;
+
+    opacity: .6;
+    border: 1px solid #b2b2b2;
+    border-radius: 5px;
+}
+
+.mail_body .btn_small
+{
+    font-family: 'RobotoBold', 'Arial', sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+
+    margin: 0 0;
+    padding: 0 19px 8px 19px;
+
+    background-image: linear-gradient( 0deg, rgb(231,74,53) 0%, rgb(242,104,67) 100% );
 }
 
 /* Карта и адрес */
