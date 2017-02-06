@@ -233,7 +233,7 @@ header.index
 
     display: block;
 
-    margin: 21px 0 8px 10px;
+    margin: 22px 0 8px 10px;
 
     color: #fff;
     border-radius: 17px;
@@ -242,12 +242,12 @@ header.index
 
 .cart p
 {
-    padding: 9px 34px 9px 44px;
+    padding: 8px 34px 9px 44px;
 }
 
 .login p
 {
-    padding: 9px 16px 9px 43px;
+    padding: 8px 16px 9px 43px;
 }
 
 .search p
