@@ -261,27 +261,23 @@ header.index
     border-radius: 50%;
 }
 
-
-
-
-
 /* Вторая линия - информация о контактах */
 
 .contacts .time
 {
     font-size: 14px;
     line-height: 16px;
+
+    margin: 0;
+    padding: 0;
 }
 
 .contacts .phone
 {
     font-size: 22px;
     line-height: 24px;
-}
 
-.contacts p
-{
-    margin: 0;
+    margin: 2px 0 0 0;
     padding: 0;
 }
 
