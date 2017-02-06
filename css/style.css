@@ -357,11 +357,12 @@ a.btn_small
 .promo_left,
 .promo_right
 {
+    position: relative;
+
     box-sizing: border-box;
     width: 560px;
     min-height: 229px;
     padding: 13px 19px;
-    position: relative;
 
     border-radius: 15px;
 }
@@ -390,19 +391,21 @@ a.btn_small
     line-height: 22px;
 }
 
-.promo a.btn_small {
-  position: absolute;
-  bottom: 25px;
-  right: 20px;
+.promo a.btn_small
+{
+    position: absolute;
+    right: 20px;
+    bottom: 25px;
 }
 
 /* Карточки товаров */
 
 .bestseller
 {
-    margin-bottom: 48px;
     font-size: 0;
     line-height: 1;
+
+    margin-bottom: 39px;
 }
 
 .catalog_item
@@ -410,15 +413,12 @@ a.btn_small
     position: relative;
 
     display: inline-block;
-    vertical-align: top;
 
     width: 267px;
     margin-right: 26px;
     padding: 0;
 
-
-    opacity: 0.4;
-
+    vertical-align: top;
 }
 
 .catalog_item p
@@ -427,9 +427,11 @@ a.btn_small
     padding: 0;
 }
 
-.catalog_item p.description {
-  margin: 9px 0;
-  text-align: center;
+.catalog_item p.description
+{
+    margin: 9px 0 0 0;
+
+    text-align: center;
 }
 
 .catalog_item:nth-child(4n)
@@ -470,8 +472,9 @@ a.btn_small
 
 .main_description
 {
-    width: 1106px;
-    min-height: 302px;
+    box-sizing: border-box;
+    width: 1146px;
+    min-height: 306px;
     margin: 0 0 40px;
     padding: 4px 20px 0;
 
@@ -484,6 +487,20 @@ a.btn_small
     font-size: 24px;
     font-weight: normal;
     line-height: 30px;
+
+    margin: 19px 0 0 0;
+    padding: 0;
+}
+
+.main_description ul
+{
+    font-size: 0;
+    line-height: 1;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
 }
 
 .main_description li
@@ -491,6 +508,19 @@ a.btn_small
     font-family: 'RobotoRegular', 'Arial', sans-serif;
     font-size: 16px;
     line-height: 22px;
+
+    display: inline-block;
+
+    box-sizing: border-box;
+    width: 50%;
+    padding: 22px 0 0 56px;
+
+    vertical-align: top;
+}
+
+.main_description li:nth-child(2n)
+{
+  padding-left: 70px;
 }
 
 /* Новости */
