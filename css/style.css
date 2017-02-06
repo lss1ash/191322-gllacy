@@ -1,41 +1,38 @@
-@font-face {
-  font-family : "RobotoRegular";
-  font-style  : normal;
-  font-weight : normal;
-  src         : url("../fonts/RobotoRegular/RobotoRegular.eot");
-  src         : url("../fonts/RobotoRegular/RobotoRegular.eot?#iefix")format("embedded-opentype"),
-                url("../fonts/RobotoRegular/RobotoRegular.woff") format("woff"),
-                url("../fonts/RobotoRegular/RobotoRegular.ttf") format("truetype");
+@font-face
+{
+    font-family: 'RobotoRegular';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('../fonts/RobotoRegular/RobotoRegular.eot');
+    src: url('../fonts/RobotoRegular/RobotoRegular.eot?#iefix')format('embedded-opentype'),
+    url('../fonts/RobotoRegular/RobotoRegular.woff') format('woff'),
+    url('../fonts/RobotoRegular/RobotoRegular.ttf') format('truetype');
 }
 
-@font-face {
-  font-family : "RobotoMedium";
-  font-style  : normal;
-  font-weight : normal;
-  src         : url("../fonts/RobotoMedium/RobotoMedium.eot");
-  src         : url("../fonts/RobotoMedium/RobotoMedium.eot?#iefix")format("embedded-opentype"),
-                url("../fonts/RobotoMedium/RobotoMedium.woff") format("woff"),
-                url("../fonts/RobotoMedium/RobotoMedium.ttf") format("truetype");
+@font-face
+{
+    font-family: 'RobotoMedium';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('../fonts/RobotoMedium/RobotoMedium.eot');
+    src: url('../fonts/RobotoMedium/RobotoMedium.eot?#iefix')format('embedded-opentype'),
+    url('../fonts/RobotoMedium/RobotoMedium.woff') format('woff'),
+    url('../fonts/RobotoMedium/RobotoMedium.ttf') format('truetype');
 }
 
-@font-face {
-  font-family : "RobotoBold";
-  font-style  : normal;
-  font-weight : normal;
-  src         : url("../fonts/RobotoBold/RobotoBold.eot");
-  src         : url("../fonts/RobotoBold/RobotoBold.eot?#iefix")format("embedded-opentype"),
-                url("../fonts/RobotoBold/RobotoBold.woff") format("woff"),
-                url("../fonts/RobotoBold/RobotoBold.ttf") format("truetype");
-}
+@font-face
+{
+    font-family: 'RobotoBold';
+    font-weight: normal;
+    font-style: normal;
 
-/**
- * Пока не требуется @font-face { font-family: "RobotoLight"; src:
- * url("../fonts/RobotoLight/RobotoLight.eot"); src:
- * url("../fonts/RobotoLight/RobotoLight.eot?#iefix")format("embedded-opentype"),
- * url("../fonts/RobotoLight/RobotoLight.woff") format("woff"),
- * url("../fonts/RobotoLight/RobotoLight.ttf") format("truetype"); font-style:
- * normal; font-weight: normal; }
- */
+    src: url('../fonts/RobotoBold/RobotoBold.eot');
+    src: url('../fonts/RobotoBold/RobotoBold.eot?#iefix')format('embedded-opentype'),
+    url('../fonts/RobotoBold/RobotoBold.woff') format('woff'),
+    url('../fonts/RobotoBold/RobotoBold.ttf') format('truetype');
+}
 
 /* Спрячу пока что окошки, менюшки и радиобатоны */
 
@@ -43,464 +40,528 @@
 .modal,
 .search_form,
 .sub_nav,
-input[name="slides"],
-.cart_window {
-  display : none;
+input[name='slides'],
+.cart_window
+{
+    display: none;
 }
 
 /* Общие */
 
 body,
-html {
-  min-width : 1200px;
-  margin    : 0;
-  padding   : 0;
-  /* min-height: ??? */
+html
+{
+    min-width: 1200px;
+    margin: 0;
+    padding: 0;
+    /* min-height: ??? */
 }
 
-body {
-  color       : #fff;
-  font-family : "RobotoBold",
-                "Arial",
-                sans-serif;
-  font-size   : 16px;
-  font-style  : normal;
-  font-weight : normal;
-  line-height : 18px;
+body
+{
+    font-family: 'RobotoBold', 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 18px;
 
-  background-color: #849d8f; /* Убрать в конце */
-
-  /*  Для проверки по макету */
-  background      : #849d8f url("../../gllacy/gllacy/preview/gllacy-index-1200.jpg") no-repeat 50% 0px;
-  background-size : 1200px auto;
-
+    color: #fff;
+    /*  Для проверки по макету */
+    background: #849d8f url('../../gllacy/gllacy/preview/gllacy-index-1200.jpg') no-repeat 50% 0;
+    background-color: #849d8f; /* Убрать в конце */
+    background-size: 1200px auto;
 }
 
-.wrapper {
-  /* Тут будет нужный фон позже */
+.wrapper
+{
+    /* Тут будет нужный фон позже */
 }
 
-.container {
-  width  : 1146px;
-  margin : 0 auto;
+.container
+{
+    box-sizing: border-box;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 27px;
 }
 
-.clearfix::after {
-  content : "";
-  display : table;
-  clear   : both;
+.clearfix::after
+{
+    display: table;
+    clear: both;
+
+    content: '';
 }
 
 /* Ссылки */
 
 a:link,
-a:visited {
-  color           : #fff;
-  text-decoration : none;
-  font-family     : "RobotoMedium",
-                    "Arial",
-                    sans-serif;
-  font-size       : 16px;
-  line-height     : 18px;
+a:visited
+{
+    font-family: 'RobotoMedium', 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+
+    text-decoration: none;
+
+    color: #fff;
 }
 
 /* На будущее a:hover, a:active { color: #ffbc9e; } */
 
 /* Шапка */
 
-.main_nav {
-  width : 560px;
-  float : left;
+.main_nav
+{
+    float: left;
+
+    width: 560px;
 }
 
-.main_nav a {
-  color       : #fff;
-  font-family : "RobotoBold",
-                "Arial",
-                sans-serif;
-  font-size   : 16px;
-  line-height : 18px;
+.main_nav a
+{
+    font-family: 'RobotoBold', 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 18px;
 
-  display: block;
-  padding: 7px 13px;
-  /*background-color: rgba(50,50,250,0.4);
+    display: block;
+
+    padding: 7px 13px;
+
+    color: #fff;
+    /*background-color: rgba(50,50,250,0.4);
   border-radius: 15px;*/
 }
 
-.main_nav ul {
-  margin     : 0;
-  padding    : 0;
-  list-style : none;
+.main_nav ul
+{
+    margin: 0;
+    padding: 0;
 
-  outline: 1px solid red;
+    list-style: none;
+
+    outline: 1px solid red;
 }
 
-.main_nav li {
-  display: inline-block;
-  vertical-align: top;
-  margin: 43px -2px 0 0;  /* методом научного тыка выявлены маргины и паддинги. Ничего, что числа неровные? Но в макет входят... */
-  padding: 0;
+.main_nav li
+{
+    display: inline-block;
+
+    margin: 43px -2px 0 0;  /* методом научного тыка выявлены маргины и паддинги. Ничего, что числа неровные? Но в макет входят... */
+    padding: 0;
+
+    vertical-align: top;
 }
 
-.main_nav li:first-child {
-  margin: 9px 8px 0 -1px;
+.main_nav li:first-child
+{
+    margin: 9px 8px 0 -1px;
 }
 
-.sub_nav a {
-  color       : #323232;
-  font-family : "RobotoRegular",
-                "Arial",
-                sans-serif;
-  font-size   : 14px;
-  line-height : 16px;
+.sub_nav a
+{
+    font-family: 'RobotoRegular', 'Arial', sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+
+    color: #323232;
 }
 
-.sub_nav a.news {
-  font-family : "RobotoBold",
-                "Arial",
-                sans-serif;
+.sub_nav a.news
+{
+    font-family: 'RobotoBold', 'Arial', sans-serif;
 }
 
 .bottom_line,
-.top-line {
-  min-height : 60px;
+.top-line
+{
+    min-height: 60px;
 }
 
-.bottom_line {
-  text-align    : right;
+.bottom_line
+{
+    text-align: right;
 }
 
-header.index {
-  margin-bottom : 255px; /* Большой отступ для главной */
+header.index
+{
+    margin-bottom: 255px; /* Большой отступ для главной */
 }
 
-.user_block {
-  width       : 267px;
-  float       : right;
-  text-align  : right;
-  font-family : "RobotoMedium",
-                "Arial",
-                sans-serif;
-  font-size   : 14px;
-  line-height : 16px;
+.user_block
+{
+    font-family: 'RobotoMedium', 'Arial', sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+
+    float: right;
+
+    width: 267px;
+
+    text-align: right;
 }
 
 .user_block .cart,
 .user_block .login,
-.user_block .search {
-  display : inline-block;
+.user_block .search
+{
+    display: inline-block;
 }
 
 /* Вторая линия - информация о контактах */
 
-.contacts .time {
-  font-size   : 14px;
-  line-height : 16px;
+.contacts .time
+{
+    font-size: 14px;
+    line-height: 16px;
 }
 
-.contacts .phone {
-  font-size   : 22px;
-  line-height : 24px;
+.contacts .phone
+{
+    font-size: 22px;
+    line-height: 24px;
 }
 
-.contacts p {
-  margin  : 0;
-  padding : 0;
+.contacts p
+{
+    margin: 0;
+    padding: 0;
 }
 
 /* Слайдер */
 
-.slider {
-  width         : 680px;
-  margin        : 0 auto;
-  margin-bottom : 43px;
-  padding       : 0;
-  text-align    : center;
+.slider
+{
+    width: 680px;
+    margin: 0 auto;
+    margin-bottom: 43px;
+    padding: 0;
+
+    text-align: center;
 }
 
 .slider .three,
-.slider .two {
-  display : none;
+.slider .two
+{
+    display: none;
 }
 
-.slider h2 {
-  margin-bottom : 30px;
-  text-align    : center;
-  font-size     : 60px;
-  line-height   : 60px;
+.slider h2
+{
+    font-size: 60px;
+    line-height: 60px;
+
+    margin-bottom: 30px;
+
+    text-align: center;
 }
 
 /* Кнопки */
 
-a.btn_large {
-  display          : block;
-  width            : 280px;
-  min-height       : 57px;
-  margin           : 0 auto;
-  padding          : 5px 0 0;
-  border-radius    : 30px;
-  background-image : linear-gradient(
-                       180deg,
-                       rgb(231,74,53) 0%,
-                       rgb(242,104,67) 100%
-                     );
-  box-shadow       : 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
-  text-shadow      : 0px 2px 5px rgba(160, 32, 11, 0.76);
-  font-size        : 32px;
-  line-height      : 44px;
+a.btn_large
+{
+    font-size: 32px;
+    line-height: 44px;
+
+    display: block;
+
+    width: 280px;
+    min-height: 57px;
+    margin: 0 auto;
+    padding: 5px 0 0;
+
+    border-radius: 30px;
+    background-image: linear-gradient( 180deg, rgb(231,74,53) 0%, rgb(242,104,67) 100% );
+    box-shadow: 0 2px 2px 0 rgba(172, 16, 0, .64);
+    text-shadow: 0 2px 5px rgba(160, 32, 11, .76);
 }
 
-a.btn_small {
-  font-size   : 18px;
-  line-height : 24px;
+a.btn_small
+{
+    font-size: 18px;
+    line-height: 24px;
 }
 
 /* Промо (даром) */
 
-.promo {
-  margin-bottom : 40px;
+.promo
+{
+    margin-bottom: 40px;
 }
 
-.promo h3 {
-  margin      : 0;
-  font-size   : 35px;
-  line-height : 41px;
+.promo h3
+{
+    font-size: 35px;
+    line-height: 41px;
+
+    margin: 0;
 }
 
-.promo p {
-  font-size   : 18px;
-  line-height : 22px;
+.promo p
+{
+    font-size: 18px;
+    line-height: 22px;
 }
 
 .promo_left,
-.promo_right {
-  width         : 520px;
-  min-height    : 201px;
-  padding       : 14px 20px;
-  border-radius : 15px;
+.promo_right
+{
+    width: 520px;
+    min-height: 201px;
+    padding: 14px 20px;
+
+    border-radius: 15px;
 }
 
-.promo_left {
-  float : left;
+.promo_left
+{
+    float: left;
 }
 
-.promo_right {
-  float : right;
+.promo_right
+{
+    float: right;
 }
 
 /* Карточки товаров */
 
-.bestseller {
-  margin-bottom : 48px;
+.bestseller
+{
+    margin-bottom: 48px;
 }
 
-.catalog_item {
-  display      : inline-block;
-  position     : relative;
-  width        : 267px;
-  margin-right : 22px;
-  padding      : 0;
+.catalog_item
+{
+    position: relative;
+
+    display: inline-block;
+
+    width: 267px;
+    margin-right: 22px;
+    padding: 0;
 }
 
-.catalog_item p {
-  margin  : 0;
-  padding : 0;
+.catalog_item p
+{
+    margin: 0;
+    padding: 0;
 }
 
-.catalog_item:nth-child(4n) {
-  margin-right : 0;
+.catalog_item:nth-child(4n)
+{
+    margin-right: 0;
 }
 
-.catalog_item .btn {
-  display : none;
-  /* Показывать будем при наведении на catalog_item */
+.catalog_item .btn
+{
+    display: none;
+    /* Показывать будем при наведении на catalog_item */
 }
 
-.catalog_item .cost {
-  position    : absolute;
-  top         : 205px;
-  left        : 0;
-  font-size   : 45px;
-  line-height : 45px;
+.catalog_item .cost
+{
+    font-size: 45px;
+    line-height: 45px;
+
+    position: absolute;
+    top: 205px;
+    left: 0;
 }
 
-.catalog_item .kilo {
-  font-size   : 30px;
-  line-height : 45px;
+.catalog_item .kilo
+{
+    font-size: 30px;
+    line-height: 45px;
 }
 
-.catalog_item .description {
-  font-family : "RobotoMedium",
-                "Arial",
-                sans-serif;
-  font-size   : 16px;
-  line-height : 22px;
+.catalog_item .description
+{
+    font-family: 'RobotoMedium', 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 22px;
 }
 
 /* Описание преимуществ (вафля) */
 
-.main_description {
-  width      : 1106px;
-  min-height : 302px;
-  margin     : 0 0 40px;
-  padding    : 4px 20px 0;
-  color      : #323232;
+.main_description
+{
+    width: 1106px;
+    min-height: 302px;
+    margin: 0 0 40px;
+    padding: 4px 20px 0;
+
+    color: #323232;
 }
 
-.main_description h1 {
-  font-family : "RobotoMedium",
-                "Arial",
-                sans-serif;
-  font-size   : 24px;
-  font-weight : normal;
-  line-height : 30px;
+.main_description h1
+{
+    font-family: 'RobotoMedium', 'Arial', sans-serif;
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 30px;
 }
 
-.main_description li {
-  font-family : "RobotoRegular",
-                "Arial",
-                sans-serif;
-  font-size   : 16px;
-  line-height : 22px;
+.main_description li
+{
+    font-family: 'RobotoRegular', 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 22px;
 }
 
 /* Новости */
 
-.news {
-  margin-bottom : 40px;
+.news
+{
+    margin-bottom: 40px;
 }
 
 .blog,
-.mail {
-  width      : 520px;
-  min-height : 176px;
-  margin     : 0;
-  padding    : 22px 20px;
+.mail
+{
+    width: 520px;
+    min-height: 176px;
+    margin: 0;
+    padding: 22px 20px;
 }
 
-.blog {
-  float : left;
+.blog
+{
+    float: left;
 }
 
-.blog h3 {
-  margin      : 0 0 5px;
-  color       : #323232;
-  font-family : "RobotoMedium",
-                "Arial",
-                sans-serif;
-  font-size   : 16px;
-  line-height : 22px;
+.blog h3
+{
+    font-family: 'RobotoMedium', 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+
+    margin: 0 0 5px;
+
+    color: #323232;
 }
 
-.blog a {
-  color           : #323232;
-  text-decoration : underline;
-  font-size       : 24px;
-  line-height     : 30px;
+.blog a
+{
+    font-size: 24px;
+    line-height: 30px;
+
+    text-decoration: underline;
+
+    color: #323232;
 }
 
 /* Рассылка */
 
-.mail {
-  float       : right;
-  color       : #5a5a5a;
-  font-family : "RobotoRegular",
-                "Arial",
-                sans-serif;
-  font-size   : 16px;
-  line-height : 24px;
+.mail
+{
+    font-family: 'RobotoRegular', 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+
+    float: right;
+
+    color: #5a5a5a;
 }
 
 /* Карта и адрес */
 
-.map {
-  min-height : 429px;
+.map
+{
+    min-height: 429px;
 }
 
-.map .container {
-  position : relative;
+.map .container
+{
+    position: relative;
 }
 
-.address_area {
-  position : absolute;
-  top      : 62px;
-  right    : 0;
-  width    : 250px;
-  padding  : 30px 25px;
+.address_area
+{
+    position: absolute;
+    top: 62px;
+    right: 0;
+
+    width: 250px;
+    padding: 30px 25px;
 }
 
 .address_area h3,
-.address_area p {
-  color       : #323232;
-  font-family : "RobotoRegular",
-                "Arial",
-                sans-serif;
-  font-size   : 14px;
-  line-height : 20px;
+.address_area p
+{
+    font-family: 'RobotoRegular', 'Arial', sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+
+    color: #323232;
 }
 
 .address_area .phone,
-.address_area address {
-  color       : #323232;
-  font-size   : 18px;
-  font-style  : normal;
-  line-height : 24px;
+.address_area address
+{
+    font-size: 18px;
+    font-style: normal;
+    line-height: 24px;
+
+    color: #323232;
 }
 
 /* Footer */
 
-.social {
-  width : 267px;
-  float : left;
+.social
+{
+    float: left;
+
+    width: 267px;
 }
 
-.copyright {
-  width : 267px;
-  float : right;
+.copyright
+{
+    float: right;
+
+    width: 267px;
 }
 
-.links {
-  width : 560px;
-  float : left;
+.links
+{
+    float: left;
+
+    width: 560px;
 }
 
 /* Ссылки */
 
-.links a {
-  font-family : "RobotoRegular",
-                "Arial",
-                sans-serif;
-  font-size   : 13px;
-  line-height : 18px;
+.links a
+{
+    font-family: 'RobotoRegular', 'Arial', sans-serif;
+    font-size: 13px;
+    line-height: 18px;
 }
 
-.links .heart {
-  font-family : "RobotoBold",
-                "Arial",
-                sans-serif;
+.links .heart
+{
+    font-family: 'RobotoBold', 'Arial', sans-serif;
 }
 
 /* HTMLAcademy */
 
 .copyright a,
-.copyright p {
-  color       : #fefefe;
-  font-family : "RobotoRegular",
-                "Arial",
-                sans-serif;
-  font-size   : 12px;
-  line-height : 18px;
+.copyright p
+{
+    font-family: 'RobotoRegular', 'Arial', sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+
+    color: #fefefe;
 }
 
 /* Крошки */
 
 .breadcrumbs,
-.breadcrumbs a {
-  font-family : "RobotoRegular",
-                "Arial",
-                sans-serif;
-  font-size   : 14px;
-  line-height : 16px;
+.breadcrumbs a
+{
+    font-family: 'RobotoRegular', 'Arial', sans-serif;
+    font-size: 14px;
+    line-height: 16px;
 }
 
 
@@ -508,18 +569,18 @@ a.btn_small {
 
 /* Главный заголовок на catalog.html */
 
-main h1 {
-  font-size   : 35px;
-  line-height : 41px;
+main h1
+{
+    font-size: 35px;
+    line-height: 41px;
 }
 
 /* Пагинатор */
 
 .pagination,
-.pagination a {
-  font-family : "RobotoMedium",
-                "Arial",
-                sans-serif;
-  font-size   : 16px;
-  line-height : 18px;
+.pagination a
+{
+    font-family: 'RobotoMedium', 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 18px;
 }
