@@ -109,6 +109,11 @@ a:visited
 
 /* На будущее a:hover, a:active { color: #ffbc9e; } */
 
+/* Для старых IE */
+a img {
+  border: none;
+}
+
 /* Шапка */
 
 .main_nav
@@ -200,13 +205,12 @@ header.index
 
 .user_block
 {
-    font-family: 'RobotoMedium', 'Arial', sans-serif;
-    font-size: 14px;
-    line-height: 16px;
+    font-size: 0;
+    line-height: 1;
 
     float: right;
 
-    width: 267px;
+    max-width: 293px;
 
     text-align: right;
 }
@@ -216,7 +220,47 @@ header.index
 .user_block .search
 {
     display: inline-block;
+
+    vertical-align: top;
 }
+
+.user_block p
+{
+    font-family: 'RobotoMedium', 'Arial', sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+
+    display: block;
+
+    margin: 21px 0 8px 10px;
+
+    color: #fff;
+    border-radius: 17px;
+    background-color: rgba(255,255,255,.2);
+}
+
+.cart p
+{
+    padding: 9px 34px 9px 44px;
+}
+
+.login p
+{
+    padding: 9px 16px 9px 43px;
+}
+
+.search p
+{
+    font-size: 0;
+width: 32px;
+height: 32px;
+box-sizing: border-box;
+border-radius: 50%;
+}
+
+
+
+
 
 /* Вторая линия - информация о контактах */
 
