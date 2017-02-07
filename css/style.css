@@ -734,8 +734,8 @@ a.btn_small
 
     box-sizing: border-box;
     width: 267px;
-    padding: 19px 0 0 77px;
     margin: 0;
+    padding: 19px 0 0 77px;
 }
 
 .links
@@ -760,30 +760,34 @@ a.btn_small
     font-family: 'RobotoBold', 'Arial', sans-serif;
 }
 
-.links ul {
-  font-size: 0;
-  line-height: 1;
+.links ul
+{
+    font-size: 0;
+    line-height: 1;
 
-  margin: 31px 7px 0 0;
+    margin: 31px 7px 0 0;
 
-  list-style: none;
+    list-style: none;
 }
 
-.links li {
-  font-family: 'RobotoRegular', 'Arial', sans-serif;
-  font-size: 13px;
-  line-height: 18px;
-  display: inline-block;
+.links li
+{
+    font-family: 'RobotoRegular', 'Arial', sans-serif;
+    font-size: 13px;
+    line-height: 18px;
 
-  box-sizing: border-box;
-  width: 50%;
-  padding: 0;
-  margin:3px 0 0 0;
+    display: inline-block;
 
-  vertical-align: top;
+    box-sizing: border-box;
+    width: 50%;
+    margin: 3px 0 0 0;
+    padding: 0;
+
+    vertical-align: top;
 }
 
-.links li:nth-child(2n+1) {
+.links li:nth-child(2n+1)
+{
     padding-left: 115px;
 }
 
@@ -794,8 +798,9 @@ a.btn_small
     font-family: 'RobotoRegular', 'Arial', sans-serif;
     font-size: 12px;
     line-height: 18px;
-    padding:0;
+
     margin: 0;
+    padding: 0;
 
     color: #fefefe;
 }
