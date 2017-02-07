@@ -166,12 +166,14 @@ a img
     line-height: 18px;
 
     display: block;
-
     padding: 7px 13px;
 
     color: #fff;
     /*background-color: rgba(50,50,250,0.4);
   border-radius: 15px;*/
+}
+.main_nav .main_logo {
+  padding: 0;
 }
 
 .sub_nav a
@@ -220,7 +222,8 @@ a img
     vertical-align: top;
 }
 
-.user_block p
+.user_block p,
+.user_block a
 {
     font-family: 'RobotoMedium', 'Arial', sans-serif;
     font-size: 14px;
@@ -237,8 +240,14 @@ a img
 
 .cart p
 {
-    padding: 8px 34px 9px 44px;
+      padding: 8px 34px 9px 44px;
 }
+
+.cart a
+{
+      padding: 8px 16px 9px 44px;
+}
+
 
 .login p
 {
@@ -408,7 +417,8 @@ a.btn_small
 
 /* Карточки товаров */
 
-.bestseller
+.bestseller,
+.catalog
 {
     font-size: 0;
     line-height: 1;
@@ -728,14 +738,32 @@ a.btn_small
     width: 267px;
 }
 
+/* HTMLAcademy */
 .copyright
 {
-    float: right;
+  float: right;
 
-    box-sizing: border-box;
-    width: 267px;
+  box-sizing: border-box;
+  width: 267px;
+  margin: 0;
+  text-align: right;
+}
+
+.copyright a,
+.copyright p
+{
+    font-family: 'RobotoRegular', 'Arial', sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+
     margin: 0;
-    padding: 19px 0 0 77px;
+    padding: 0;
+
+    color: #fefefe;
+}
+
+.copyright .academy_logo {
+  margin-right: 82px;
 }
 
 .links
@@ -791,19 +819,7 @@ a.btn_small
     padding-left: 115px;
 }
 
-/* HTMLAcademy */
-.copyright a,
-.copyright p
-{
-    font-family: 'RobotoRegular', 'Arial', sans-serif;
-    font-size: 12px;
-    line-height: 18px;
 
-    margin: 0;
-    padding: 0;
-
-    color: #fefefe;
-}
 
 /* Крошки */
 
