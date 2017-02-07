@@ -67,7 +67,7 @@ body
 
     color: #fff;
     /*  Для проверки по макету */
-    background: #849d8f url('../../gllacy/gllacy/preview/gllacy-index-1200.jpg') no-repeat 50% 0;
+    background: #849d8f url('../../gllacy/gllacy/preview/gllacy-catalog-1200.jpg') no-repeat 50% 0;
     background-color: #849d8f; /* Убрать в конце */
     background-size: 1200px auto;
 }
@@ -182,6 +182,8 @@ a img
 .main_nav .main_logo
 {
     padding: 0;
+    line-height: 1;
+    font-size: 0;
 }
 
 .sub_nav a
@@ -497,7 +499,7 @@ a.btn_small
     width: 1146px;
     min-height: 306px;
     margin: 0 0 40px;
-    padding: 23px 20px;
+    padding: 23px 20px 25px;
 
     color: #323232;
 }
@@ -613,14 +615,14 @@ a.btn_small
 
     box-sizing: border-box;
     min-height: 208px;
-    padding: 11px 11px 0 20px;
+    padding: 27px 11px;
 
     border-radius: 15px;
     background-color: white;
 }
 .mail_body p
 {
-    margin: 16px 0 37px;
+    margin: 0 0 37px;
 }
 
 .mail_body form
@@ -655,19 +657,8 @@ a.btn_small
     border: 1px solid #b2b2b2;
     border-radius: 5px;
 }
-
-.mail_body .btn_small
-{
-    font-family: 'RobotoBold', 'Arial', sans-serif;
-    font-size: 18px;
-    line-height: 24px;
-
-    margin: 0 0;
-    padding: 0 19px 8px 19px;
-
-    background-image: linear-gradient( 0deg, rgb(231,74,53) 0%, rgb(242,104,67) 100% );
-    box-shadow: 0 2px 2px 0 rgba(172, 16, 0, .64);
-}
+/* .mail_body .btn_small настроен на btn и btn_small. Нкнопка немного не вписывается в макет,
+    однако сделана с учётом стайлгайда */
 
 /* Карта и адрес */
 
@@ -728,7 +719,8 @@ a.btn_small
 .address_area a.btn
 {
     margin-top: 25px;
-    margin-bottom: 2px;
+    display: block; /* кнопка тянется на весь родительский контейнер */
+    text-align: center;
 }
 
 /* Footer */
