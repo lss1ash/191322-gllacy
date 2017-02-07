@@ -4,6 +4,10 @@
   <head>
     <meta charset="utf-8">
     <title>GllacyShop</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <!-- Альтернативный вариант
+      <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    -->
     <link href="css/style.css" rel="stylesheet">
   </head>
 
@@ -15,11 +19,11 @@
 
     <div class="wrapper">
       <!-- Шапка -->
-      <header>
+      <header class="index">
 
         <div class="container">
 
-          <section class="top_line">
+          <section class="top_line clearfix">
 
             <nav class="main_nav">
 
@@ -113,17 +117,17 @@
           <section class="slider">
 
             <div class="slide one">
-              <h2>Крем-брюле и пломбир с малиновым джемом</h2>
+              <h2>Крем-брюле и пломбир<br>с малиновым джемом</h2>
               <a class="btn btn_large" href="#">Давайте оба!</a>
             </div>
 
             <div class="slide two">
-              <h2>Шоколадный пломбир и лимонный сорбет</h2>
+              <h2>Шоколадный пломбир<br>и лимонный сорбет</h2>
               <a class="btn btn_large" href="#">Давайте оба!</a>
             </div>
 
             <div class="slide three">
-              <h2>Пломбир с помадкой и клубничный щербет</h2>
+              <h2>Пломбир с помадкой<br>и клубничный щербет</h2>
               <a class="btn btn_large" href="#">Давайте оба!</a>
             </div>
 
@@ -136,7 +140,7 @@
           </section>
 
           <!-- Разметка промо-акций -->
-          <section class="promo">
+          <section class="promo clearfix">
             <!-- Планировал общие стили описать в .promo > div -->
             <!-- А фоны добавить через .promo_left и .promo_right -->
             <div class="promo_left">
@@ -200,15 +204,15 @@
             <h1>Магазин Глейси — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h1>
             <ul>
               <li class="ice_cream">Все наше мороженое изготавливается на собственном производстве с использованием современного оборудования и проверенных временем технологий.</li>
-              <li class="leaf">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</li>
               <li class="cow">Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</li>
+              <li class="leaf">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</li>
               <li class="termo">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
             </ul>
 
           </section>
 
           <!-- Блок новостей и подписки -->
-          <section class="news">
+          <section class="news clearfix">
 
             <div class="blog">
               <h3>Новое в нашем блоге</h3>
@@ -216,11 +220,13 @@
             </div>
 
             <div class="mail">
-              <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-              <form action="https://echo.htmlacademy.ru" method="post">
-                <input type="email" name="email" value="" placeholder="Электронная почта" required>
-                <button class="btn btn_small" type="submit">Отправить</button>
-              </form>
+              <div class="mail_body">
+                <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+                <form action="https://echo.htmlacademy.ru" method="post">
+                  <input type="email" name="email" value="" placeholder="Электронная почта" required>
+                  <button class="btn btn_small" type="submit">Отправить</button>
+                </form>
+              </div>
             </div>
 
           </section>
@@ -234,7 +240,7 @@
 
             <div class="address_area">
 
-              <h3>Адрес главного офиса и офлайн магазина:</h3>
+              <h3>Адрес главного офиса<br>и офлайн магазина:</h3>
               <address>
                 ул. Большая Конюшенная<br>
                 19/8, Санкт-Петербург
@@ -255,7 +261,7 @@
 
       <footer>
 
-        <div class="container">
+        <div class="container clearfix">
 
           <div class="social">
             <a class="social_btn social_btn_tw" href="#">Твиттер</a>
@@ -267,14 +273,14 @@
           <div class="links">
             <ul>
               <li><a href="#" class="heart">Для поставщиков</a></li>
-              <li><a href="#">О производстве</a></li>
               <li><a href="#">Наши документы</a></li>
+              <li><a href="#">О производстве</a></li>
               <li><a href="#">Экологические стандарты</a></li>
             </ul>
           </div>
 
           <div class="copyright">
-            <a href="https://htmlacademy.ru"><img src="img/logo_htmlacademy.png" width="108" height="38" alt="Логотип HTML Academy"></a>
+            <a class="academy_logo" href="https://htmlacademy.ru"><img src="img/logo_htmlacademy.png" width="108" height="38" alt="Логотип HTML Academy"></a>
             <p>Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> &copy; 2017</p>
           </div>
 

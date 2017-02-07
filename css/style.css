@@ -1,262 +1,854 @@
-/* Всплывающие окна пока не трогал
- Знак рубля пока не ставил */
+@font-face
+{
+    font-family: 'RobotoRegular';
+    font-weight: normal;
+    font-style: normal;
 
-/* font-family: "RobotoRegular"; */
-@font-face {
-  font-family: "RobotoRegular";
-  src: url("../fonts/RobotoRegular/RobotoRegular.eot");
-  src: url("../fonts/RobotoRegular/RobotoRegular.eot?#iefix")format("embedded-opentype"),
-  url("../fonts/RobotoRegular/RobotoRegular.woff") format("woff"),
-  url("../fonts/RobotoRegular/RobotoRegular.ttf") format("truetype");
-  font-style: normal;
-  font-weight: normal;
+    src: url('../fonts/RobotoRegular/RobotoRegular.eot');
+    src: url('../fonts/RobotoRegular/RobotoRegular.eot?#iefix')format('embedded-opentype'),
+    url('../fonts/RobotoRegular/RobotoRegular.woff') format('woff'),
+    url('../fonts/RobotoRegular/RobotoRegular.ttf') format('truetype');
 }
-/* font-family: "RobotoLight"; */
-@font-face {
-  font-family: "RobotoLight";
-  src: url("../fonts/RobotoLight/RobotoLight.eot");
-  src: url("../fonts/RobotoLight/RobotoLight.eot?#iefix")format("embedded-opentype"),
-  url("../fonts/RobotoLight/RobotoLight.woff") format("woff"),
-  url("../fonts/RobotoLight/RobotoLight.ttf") format("truetype");
-  font-style: normal;
-  font-weight: normal;
+
+@font-face
+{
+    font-family: 'RobotoMedium';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('../fonts/RobotoMedium/RobotoMedium.eot');
+    src: url('../fonts/RobotoMedium/RobotoMedium.eot?#iefix')format('embedded-opentype'),
+    url('../fonts/RobotoMedium/RobotoMedium.woff') format('woff'),
+    url('../fonts/RobotoMedium/RobotoMedium.ttf') format('truetype');
 }
-/* font-family: "RobotoMedium"; */
-@font-face {
-  font-family: "RobotoMedium";
-  src: url("../fonts/RobotoMedium/RobotoMedium.eot");
-  src: url("../fonts/RobotoMedium/RobotoMedium.eot?#iefix")format("embedded-opentype"),
-  url("../fonts/RobotoMedium/RobotoMedium.woff") format("woff"),
-  url("../fonts/RobotoMedium/RobotoMedium.ttf") format("truetype");
-  font-style: normal;
-  font-weight: normal;
+
+@font-face
+{
+    font-family: 'RobotoBold';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('../fonts/RobotoBold/RobotoBold.eot');
+    src: url('../fonts/RobotoBold/RobotoBold.eot?#iefix')format('embedded-opentype'),
+    url('../fonts/RobotoBold/RobotoBold.woff') format('woff'),
+    url('../fonts/RobotoBold/RobotoBold.ttf') format('truetype');
 }
-/* font-family: "RobotoBold"; */
-@font-face {
-  font-family: "RobotoBold";
-  src: url("../fonts/RobotoBold/RobotoBold.eot");
-  src: url("../fonts/RobotoBold/RobotoBold.eot?#iefix")format("embedded-opentype"),
-  url("../fonts/RobotoBold/RobotoBold.woff") format("woff"),
-  url("../fonts/RobotoBold/RobotoBold.ttf") format("truetype");
-  font-style: normal;
-  font-weight: normal;
+
+/* Спрячу пока что окошки, менюшки и радиобатоны */
+
+.login_form,
+.modal,
+.search_form,
+.sub_nav,
+input[name='slides'],
+.cart_window
+{
+    display: none;
 }
 
 /* Общие */
-body {
-  font-family: "RobotoBold", "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 18px;
-  font-style: normal;
-  font-weight: normal;
 
-  color: #fff;
-  background-color: #849d8f;
+body,
+html
+{
+    min-width: 1200px;
+    margin: 0;
+    padding: 0;
+    /* min-height: ??? */
+}
+
+body
+{
+    font-family: 'RobotoBold', 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 18px;
+
+    color: #fff;
+    /*  Для проверки по макету */
+    background: #849d8f url('../../gllacy/gllacy/preview/gllacy-index-1200.jpg') no-repeat 50% 0;
+    background-color: #849d8f; /* Убрать в конце */
+    background-size: 1200px auto;
+}
+
+.wrapper
+{
+    /* Тут будет нужный фон позже */
+}
+
+.container
+{
+    box-sizing: border-box;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 27px;
+}
+
+.clearfix::after
+{
+    display: table;
+    clear: both;
+
+    content: '';
 }
 
 /* Ссылки */
+
 a:link,
-a:visited {
-  font-family: "RobotoMedium", "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 18px;
+a:visited
+{
+    font-family: 'RobotoMedium', 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 18px;
 
-  color: #fff;
-  text-decoration: none;
+    text-decoration: none;
+
+    color: #fff;
 }
-/* На будущее
-a:hover,
-a:active {
-  color: #ffbc9e;
+
+/* На будущее a:hover, a:active { color: #ffbc9e; } */
+
+/* Для старых IE */
+a img
+{
+    border: none;
 }
-*/
+
 /* Шапка */
-.main_nav a {
-  font-family: "RobotoBold", "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 18px;
 
-  color: #fff;
+.main_nav
+{
+    float: left;
+
+    box-sizing: border-box;
+    min-width: 560px;
+    max-width: 853px;
+    margin: 0;
+    padding: 0;
 }
 
-.sub_nav a {
-  font-family: "RobotoRegular", "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 16px;
+.main_nav ul
+{
+    font-size: 0;
+    line-height: 1;
 
-  color: #323232;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
 }
 
-/* Хотел вот так, но там вроде критерий по селекторам
-.sub_nav li:first-child a {
-поэтому просто дал класс
-*/
+.main_nav li
+{
+    display: inline-block;
 
-.sub_nav a.news {
-  font-family: "RobotoBold", "Arial", sans-serif;
+    margin: 22px 2px 0 0;
+    padding: 0;
+
+    vertical-align: top;
+}
+
+.main_nav li:first-child
+{
+    margin: 9px 11px 0 -1px;
+}
+
+.main_nav li:last-child
+{
+    margin-right: 0;
+}
+
+.main_nav a
+{
+    font-family: 'RobotoBold', 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+
+    display: block;
+    padding: 7px 13px;
+
+    color: #fff;
+    /*background-color: rgba(50,50,250,0.4);
+  border-radius: 15px;*/
+}
+.main_nav .main_logo {
+  padding: 0;
+}
+
+.sub_nav a
+{
+    font-family: 'RobotoRegular', 'Arial', sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+
+    color: #323232;
+}
+
+.sub_nav a.news
+{
+    font-family: 'RobotoBold', 'Arial', sans-serif;
+}
+
+.bottom_line,
+.top-line
+{
+    min-height: 64px;
+}
+
+.bottom_line
+{
+    text-align: right;
+}
+
+.user_block
+{
+    font-size: 0;
+    line-height: 1;
+
+    float: right;
+
+    max-width: 293px;
+
+    text-align: right;
+}
+
+.user_block .cart,
+.user_block .login,
+.user_block .search
+{
+    display: inline-block;
+
+    vertical-align: top;
+}
+
+.user_block p,
+.user_block a
+{
+    font-family: 'RobotoMedium', 'Arial', sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+
+    display: block;
+
+    margin: 22px 0 8px 10px;
+
+    color: #fff;
+    border-radius: 17px;
+    background-color: rgba(255,255,255,.2);
+}
+
+.cart p
+{
+      padding: 8px 34px 9px 44px;
+}
+
+.cart a
+{
+      padding: 8px 16px 9px 44px;
 }
 
 
-.user_block {
-  font-family: "RobotoMedium", "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 16px;
+.login p
+{
+    padding: 8px 16px 9px 43px;
+}
+
+.search p
+{
+    font-size: 0;
+
+    box-sizing: border-box;
+    width: 32px;
+    height: 32px;
+
+    border-radius: 50%;
 }
 
 /* Вторая линия - информация о контактах */
-.contacts .time {
-  font-size: 14px;
-  line-height: 16px;
+
+.contacts .time
+{
+    font-size: 14px;
+    line-height: 16px;
+
+    margin: 0;
+    padding: 0;
 }
 
-.contacts .phone {
-  font-size: 22px;
-  line-height: 24px;
+.contacts .phone
+{
+    font-size: 22px;
+    line-height: 24px;
+
+    margin: 2px 0 0 0;
+    padding: 0;
+}
+
+header.index
+{
+    margin-bottom: 253px; /* Большой отступ для главной */
 }
 
 /* Слайдер */
-.slider h2 {
-  font-size: 60px;
-  line-height: 60px;
-  text-align: center;
+
+.slider
+{
+    min-width: 680px;
+    margin: 0 auto;
+    margin-bottom: 41px;
+    padding: 0;
+
+    text-align: center;
+}
+
+.slider .three,
+.slider .two
+{
+    display: none;
+}
+
+.slider h2
+{
+    font-size: 60px;
+    line-height: 60px;
+
+    margin-bottom: 33px;
+
+    text-align: center;
 }
 
 /* Кнопки */
-.btn_large {
-  font-size: 32px;
-  line-height: 44px;
-}
+.btn_large,
+a.btn_large
+{
+    font-size: 32px;
+    line-height: 44px;
 
-.btn_small {
-  font-size: 18px;
-  line-height: 24px;
+    display: block;
+
+    box-sizing: border-box;
+    width: 280px;
+    min-height: 57px;
+    margin: 0 auto;
+    padding: 7px 0 12px 0;
+
+    cursor: pointer;
+
+    border: none;
+    border-radius: 30px;
+    background-image: linear-gradient( 0deg, rgb(231,74,53) 0%, rgb(242,104,67) 100% );
+    box-shadow: 0 2px 2px 0 rgba(172, 16, 0, .64);
+    text-shadow: 0 2px 5px rgba(160, 32, 11, .76);
+}
+.btn_small,
+a.btn_small
+{
+    font-size: 18px;
+    line-height: 24px;
+
+    display: block;
+
+    box-sizing: border-box;
+    min-height: 45px;
+    margin: 0 0;
+    padding: 8px 23px;
+
+    cursor: pointer;
+
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    background-image: linear-gradient( 0deg, rgb(231,74,53) 0%, rgb(242,104,67) 100% );
+    box-shadow: 0 2px 2px 0 rgba(172, 16, 0, .64);
 }
 
 /* Промо (даром) */
-.promo h3 {
-  font-size: 35px;
-  line-height: 41px;
+
+.promo
+{
+    margin-bottom: 40px;
 }
 
-.promo p {
-  font-size: 18px;
-  line-height: 22px;
+.promo_left,
+.promo_right
+{
+    position: relative;
+
+    box-sizing: border-box;
+    width: 560px;
+    min-height: 229px;
+    padding: 13px 19px;
+
+    border-radius: 15px;
+}
+
+.promo_left
+{
+    float: left;
+}
+
+.promo_right
+{
+    float: right;
+}
+
+.promo h3
+{
+    font-size: 35px;
+    font-weight: normal;
+    line-height: 41px;
+
+    margin: 0;
+}
+
+.promo p
+{
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.promo a.btn_small
+{
+    position: absolute;
+    right: 20px;
+    bottom: 25px;
 }
 
 /* Карточки товаров */
-.catalog_item .cost {
-  font-size: 45px;
-  line-height: 45px;
+
+.bestseller,
+.catalog
+{
+    font-size: 0;
+    line-height: 1;
+
+    margin-bottom: 39px;
 }
 
-.catalog_item .kilo {
-  font-size: 30px;
-  line-height: 45px;
+.catalog_item
+{
+    position: relative;
+
+    display: inline-block;
+
+    width: 267px;
+    margin-right: 26px;
+    padding: 0;
+
+    vertical-align: top;
 }
 
-.catalog_item .description {
-  font-family: "RobotoMedium", "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 22px;
+.catalog_item p
+{
+    margin: 0;
+    padding: 0;
+}
+
+.catalog_item p.description
+{
+    margin: 9px 0 0 0;
+
+    text-align: center;
+}
+
+.catalog_item:nth-child(4n)
+{
+    margin-right: 0;
+}
+
+.catalog_item .btn
+{
+    display: none;
+    /* Показывать будем при наведении на catalog_item */
+}
+
+.catalog_item .cost
+{
+    font-size: 45px;
+    line-height: 45px;
+
+    position: absolute;
+    top: 205px;
+    left: 0;
+}
+
+.catalog_item .kilo
+{
+    font-size: 30px;
+    line-height: 45px;
+}
+
+.catalog_item .description
+{
+    font-family: 'RobotoMedium', 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 22px;
 }
 
 /* Описание преимуществ (вафля) */
-.main_description {
-  color: #323232;
+
+.main_description
+{
+    box-sizing: border-box;
+    width: 1146px;
+    min-height: 306px;
+    margin: 0 0 40px;
+    padding: 4px 20px 0;
+
+    color: #323232;
 }
 
-.main_description h1 {
-  font-family: "RobotoMedium", "Arial", sans-serif;
-  font-size: 24px;
-  line-height: 30px;
+.main_description h1
+{
+    font-family: 'RobotoMedium', 'Arial', sans-serif;
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 30px;
+
+    margin: 19px 0 0 0;
+    padding: 0;
 }
 
-.main_description li {
-  font-family: "RobotoRegular", "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 22px;
+.main_description ul
+{
+    font-size: 0;
+    line-height: 1;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.main_description li
+{
+    font-family: 'RobotoRegular', 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+
+    display: inline-block;
+
+    box-sizing: border-box;
+    width: 50%;
+    padding: 22px 0 0 56px;
+
+    vertical-align: top;
+}
+
+.main_description li:nth-child(2n)
+{
+    padding-left: 70px;
 }
 
 /* Новости */
-.blog h3 {
-  font-family: "RobotoMedium", "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 22px;
 
-  color: #323232;
+.news
+{
+    margin-bottom: 40px;
 }
 
-.blog a {
-  font-size: 24px;
-  line-height: 30px;
+.blog,
+.mail
+{
+    box-sizing: border-box;
+    width: 560px;
+    min-height: 220px;
+    margin: 0;
+    padding: 22px 20px;
+}
 
-  color: #323232;
+.blog
+{
+    float: left;
+
+    padding-right: 235px;
+}
+
+.blog h3
+{
+    font-family: 'RobotoMedium', 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 22px;
+
+    margin: 0 0 5px;
+
+    color: #323232;
+}
+
+.blog a
+{
+    font-size: 24px;
+    line-height: 30px;
+
+    text-decoration: underline;
+
+    color: #323232;
 }
 
 /* Рассылка */
-.mail {
-  font-family: "RobotoRegular", "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 24px;
 
-  color: #5a5a5a;
+.mail
+{
+    font-family: 'RobotoRegular', 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+
+    float: right;
+
+    box-sizing: border-box;
+    padding: 6px;
+
+    color: #5a5a5a;
 }
 
-/* Адрес на карте */
-.address_area h3, .address_area p {
-  font-family: "RobotoRegular", "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 20px;
+.mail_body
+{
+    font-size: 16px;
+    line-height: 22px;
 
-  color: #323232;
+    box-sizing: border-box;
+    min-height: 208px;
+    padding: 11px 11px 0 20px;
+
+    border-radius: 15px;
+    background-color: white;
+}
+.mail_body p
+{
+    margin: 16px 0 37px;
 }
 
-.address_area address, .address_area .phone {
-  font-size: 18px;
-  line-height: 24px;
-  font-style: normal;
-
-  color: #323232;
+.mail_body form
+{
+    font-size: 0;
+    line-height: 1;
 }
 
-/* Ссылки */
-.links a {
-  font-family: "RobotoRegular", "Arial", sans-serif;
-  font-size: 13px;
-  line-height: 18px;
+.mail_body input,
+.mail_body button
+{
+    display: inline-block;
+
+    vertical-align: top;
+
+    border: none;
+    box-shadow: none;
 }
-.links .heart {
-  font-family: "RobotoBold", "Arial", sans-serif;
+
+.mail_body input[type='email']
+{
+    font-family: 'RobotoRegular', 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+
+    box-sizing: border-box;
+    width: 368px;
+    margin: 0;
+    margin-right: 11px;
+    padding: 10px 13px;
+
+    border: 1px solid #b2b2b2;
+    border-radius: 5px;
+}
+
+.mail_body .btn_small
+{
+    font-family: 'RobotoBold', 'Arial', sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+
+    margin: 0 0;
+    padding: 0 19px 8px 19px;
+
+    background-image: linear-gradient( 0deg, rgb(231,74,53) 0%, rgb(242,104,67) 100% );
+    box-shadow: 0 2px 2px 0 rgba(172, 16, 0, .64);
+}
+
+/* Карта и адрес */
+
+.map
+{
+    box-sizing: border-box;
+    min-height: 429px;
+}
+
+.map .container
+{
+    position: relative;
+}
+
+.address_area
+{
+    position: absolute;
+    top: 62px;
+    right: 27px;
+
+    box-sizing: border-box;
+    width: 302px;
+    padding: 28px 25px;
+}
+
+.address_area h3,
+.address_area p
+{
+    font-family: 'RobotoRegular', 'Arial', sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+
+    margin: 0;
+    padding: 0;
+
+    color: #323232;
+}
+
+.address_area .phone,
+.address_area address
+{
+    font-size: 18px;
+    font-style: normal;
+    line-height: 24px;
+
+    margin-bottom: 20px;
+
+    color: #323232;
+}
+
+.address_area .phone
+{
+    margin-top: 3px;
+    margin-bottom: 2px;
+}
+
+.address_area a.btn
+{
+    margin-top: 25px;
+    margin-bottom: 2px;
+}
+
+/* Footer */
+
+.social
+{
+    float: left;
+
+    box-sizing: border-box;
+    width: 267px;
 }
 
 /* HTMLAcademy */
-.copyright p,
-.copyright a {
-  font-family: "RobotoRegular", "Arial", sans-serif;
-  font-size: 12px;
-  line-height: 18px;
+.copyright
+{
+  float: right;
 
-  color: #fefefe;
+  box-sizing: border-box;
+  width: 267px;
+  margin: 0;
+  padding: 20px 0 25px;
+  text-align: right;
 }
+
+.copyright a,
+.copyright p
+{
+    font-family: 'RobotoRegular', 'Arial', sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+
+    margin: 0;
+    padding: 0;
+
+    color: #fefefe;
+}
+
+.copyright .academy_logo {
+  margin-right: 82px;
+}
+
+.links
+{
+    float: left;
+
+    box-sizing: border-box;
+    width: 560px;
+}
+
+/* Ссылки */
+
+.links a
+{
+    font-family: 'RobotoRegular', 'Arial', sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.links .heart
+{
+    font-family: 'RobotoBold', 'Arial', sans-serif;
+}
+
+.links ul
+{
+    font-size: 0;
+    line-height: 1;
+
+    margin: 31px 7px 0 0;
+
+    list-style: none;
+}
+
+.links li
+{
+    font-family: 'RobotoRegular', 'Arial', sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+
+    display: inline-block;
+
+    box-sizing: border-box;
+    width: 50%;
+    margin: 3px 0 0 0;
+    padding: 0;
+
+    vertical-align: top;
+}
+
+.links li:nth-child(2n+1)
+{
+    padding-left: 115px;
+}
+
+
 
 /* Крошки */
+
 .breadcrumbs,
-.breadcrumbs a {
-  font-family: "RobotoRegular", "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 16px;
+.breadcrumbs a
+{
+    font-family: 'RobotoRegular', 'Arial', sans-serif;
+    font-size: 14px;
+    line-height: 16px;
 }
 
+
+/*           catalog.html            */
+
 /* Главный заголовок на catalog.html */
-main h1 {
-  font-size: 35px;
-  line-height: 41px;
+
+main h1
+{
+    font-size: 35px;
+    line-height: 41px;
 }
 
 /* Пагинатор */
+
 .pagination,
-.pagination a {
-  font-family: "RobotoMedium", "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 18px;
+.pagination a
+{
+    font-family: 'RobotoMedium', 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 18px;
 }
