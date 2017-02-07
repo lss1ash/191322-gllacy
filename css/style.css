@@ -662,8 +662,6 @@ a.btn_small
 {
     box-sizing: border-box;
     min-height: 429px;
-
-    outline: 1px solid red;
 }
 
 .map .container
@@ -680,8 +678,6 @@ a.btn_small
     box-sizing: border-box;
     width: 302px;
     padding: 28px 25px;
-
-    outline: 1px dotted blue;
 }
 
 .address_area h3,
@@ -728,6 +724,7 @@ a.btn_small
 {
     float: left;
 
+    box-sizing: border-box;
     width: 267px;
 }
 
@@ -735,13 +732,17 @@ a.btn_small
 {
     float: right;
 
+    box-sizing: border-box;
     width: 267px;
+    padding: 19px 0 0 77px;
+    margin: 0;
 }
 
 .links
 {
     float: left;
 
+    box-sizing: border-box;
     width: 560px;
 }
 
@@ -759,14 +760,42 @@ a.btn_small
     font-family: 'RobotoBold', 'Arial', sans-serif;
 }
 
-/* HTMLAcademy */
+.links ul {
+  font-size: 0;
+  line-height: 1;
 
+  margin: 31px 7px 0 0;
+
+  list-style: none;
+}
+
+.links li {
+  font-family: 'RobotoRegular', 'Arial', sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  display: inline-block;
+
+  box-sizing: border-box;
+  width: 50%;
+  padding: 0;
+  margin:3px 0 0 0;
+
+  vertical-align: top;
+}
+
+.links li:nth-child(2n+1) {
+    padding-left: 115px;
+}
+
+/* HTMLAcademy */
 .copyright a,
 .copyright p
 {
     font-family: 'RobotoRegular', 'Arial', sans-serif;
     font-size: 12px;
     line-height: 18px;
+    padding:0;
+    margin: 0;
 
     color: #fefefe;
 }
