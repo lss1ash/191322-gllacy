@@ -46,7 +46,7 @@ input[name='slides'],
     display: none;
 }
 
-/* Общие */
+/* Общие стили странички(-ек)*/
 
 body,
 html
@@ -66,21 +66,18 @@ body
     line-height: 18px;
 
     color: #fff;
-    /*  Для проверки по макету */
-    background: #849d8f url('../../gllacy/gllacy/preview/gllacy-catalog-1200.jpg') no-repeat 50% 0;
     background-color: #849d8f; /* Убрать в конце */
     background-size: 1200px auto;
+    /*  Для проверки по макету */
+
+    //background: #849d8f url('../../gllacy/gllacy/preview/gllacy-index-1200.jpg') no-repeat 50% 0;
 }
 
+/* Чтобы не было изображение больше контейнера*/
 img
 {
     max-width: 100%;
     height: auto;
-}
-
-.wrapper
-{
-    /* Тут будет нужный фон позже */
 }
 
 .container
@@ -181,9 +178,10 @@ a img
 }
 .main_nav .main_logo
 {
-    padding: 0;
-    line-height: 1;
     font-size: 0;
+    line-height: 1;
+
+    padding: 0;
 }
 
 .sub_nav a
@@ -309,18 +307,14 @@ header.index
 
 .slider
 {
+    position: relative;
+
     min-width: 680px;
     margin: 0 auto;
     margin-bottom: 41px;
     padding: 0;
 
     text-align: center;
-}
-
-.slider .three,
-.slider .two
-{
-    display: none;
 }
 
 .slider h2
@@ -332,6 +326,92 @@ header.index
 
     text-align: center;
 }
+
+/* Установим все возможные фоны сразу, чтобы картинки прогрузились... не сработало :\ */
+/*.wrapper
+{
+    background-image: url('../img/slide3.png'), url('../img/slide2.png'), url('../img/slide1.png');
+}*/
+
+/* Если выбран какой-то инпут радио, поставим на врапера изображение и цвет */
+input[id='slide1']:checked ~ .wrapper
+{
+    background: #849d8f url('../img/slide1.png') no-repeat 50% 0;
+}
+
+input[id='slide2']:checked ~ .wrapper
+{
+    background: #8996a6 url('../img/slide2.png') no-repeat 50% 0;
+}
+
+input[id='slide3']:checked ~ .wrapper
+{
+    background: #9d8b84 url('../img/slide3.png') no-repeat 50% 0;
+}
+
+/* Если выбран какой-то инпут радио, покажем нужный текст */
+input[id='slide1']:checked ~ .wrapper .slide.two,
+input[id='slide1']:checked ~ .wrapper .slide.three,
+input[id='slide2']:checked ~ .wrapper .slide.one,
+input[id='slide2']:checked ~ .wrapper .slide.three,
+input[id='slide3']:checked ~ .wrapper .slide.one,
+input[id='slide3']:checked ~ .wrapper .slide.two
+{
+    display: none;
+}
+
+input[id='slide1']:checked ~ .wrapper .slide.one,
+input[id='slide2']:checked ~ .wrapper .slide.two,
+input[id='slide3']:checked ~ .wrapper .slide.three
+{
+    display: block;
+}
+
+/* Кружочки для слайдера*/
+.slider_controls
+{
+    font-size: 0;
+    line-height: 1;
+
+    position: absolute;
+    bottom: 22px;
+    left: 0;
+
+    margin: 0;
+    padding: 0;
+}
+.radio_btn
+{
+    font-size: 0;
+    line-height: 1;
+
+    display: inline-block;
+
+    box-sizing: border-box;
+    width: 21px;
+    height: 21px;
+    margin: 0;
+    margin-right: 8px;
+    padding: 0;
+
+    cursor: pointer;
+
+    border: 2px solid white;
+    border-radius: 50%;
+    background-color: transparent;
+}
+.radio_btn:hover
+{
+    background-color: rgba(255,255,255,.4);
+}
+
+input[id='slide1']:checked ~ .wrapper .radio_btn.circle1,
+input[id='slide2']:checked ~ .wrapper .radio_btn.circle2,
+input[id='slide3']:checked ~ .wrapper .radio_btn.circle3
+{
+    background-color: white;
+}
+
 
 /* Кнопки */
 .btn
@@ -385,17 +465,22 @@ a.btn_small
     margin: 0;
     padding: 13px 19px;
 
+    color: #fff;
     border-radius: 15px;
 }
 
 .promo_left
 {
     float: left;
+
+    background: #4c0913 url('../img/bg_berry.jpg') repeat-y 0 0;
 }
 
 .promo_right
 {
     float: right;
+
+    background: #462b20 url('../img/bg_choco.jpg') repeat-y 0 0;
 }
 
 .promo h3
@@ -502,6 +587,8 @@ a.btn_small
     padding: 23px 20px 25px;
 
     color: #323232;
+    border-radius: 15px;
+    background: #ece0c6 url('../img/pattern_waffle.jpg') repeat 0 0;
 }
 
 .main_description h1
@@ -561,6 +648,8 @@ a.btn_small
     min-height: 220px;
     margin: 0;
     padding: 22px 20px;
+
+    color: #323232;
 }
 
 .blog
@@ -568,6 +657,9 @@ a.btn_small
     float: left;
 
     padding-right: 235px;
+
+    border-radius: 15px;
+    background: white url('../img/strawberry_blog.jpg') repeat-y 0 0;
 }
 
 .blog h3
@@ -578,8 +670,6 @@ a.btn_small
     line-height: 22px;
 
     margin: 0 0 5px;
-
-    color: #323232;
 }
 
 .blog a
@@ -589,7 +679,7 @@ a.btn_small
 
     text-decoration: underline;
 
-    color: #323232;
+    color: inherit;;
 }
 
 /* Рассылка */
@@ -606,6 +696,8 @@ a.btn_small
     padding: 6px;
 
     color: #5a5a5a;
+    border-radius: 15px;
+    background: white url('../img/pattern_mail.png') repeat 0 0;
 }
 
 .mail_body
@@ -615,7 +707,7 @@ a.btn_small
 
     box-sizing: border-box;
     min-height: 208px;
-    padding: 27px 11px;
+    padding: 27px 20px;
 
     border-radius: 15px;
     background-color: white;
@@ -646,26 +738,33 @@ a.btn_small
 {
     font-family: 'RobotoRegular', 'Arial', sans-serif;
     font-size: 16px;
-    line-height: 22px;
+    line-height: 24px;
 
     box-sizing: border-box;
-    width: 368px;
+    width: 360px;
     margin: 0;
-    margin-right: 11px;
+    margin-right: 8px;
     padding: 10px 13px;
 
     border: 1px solid #b2b2b2;
     border-radius: 5px;
 }
-/* .mail_body .btn_small настроен на btn и btn_small. Нкнопка немного не вписывается в макет,
-    однако сделана с учётом стайлгайда */
+
+/* Кнопка шире, чем в макете, потому что руководствовался стайлгайдом (паддинги различаются) */
+.mail_body button
+{
+    font-family: 'RobotoBold', 'Arial', sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+}
 
 /* Карта и адрес */
-
 .map
 {
     box-sizing: border-box;
     min-height: 429px;
+
+    background: #ede6cd url('../img/map_with_pin.jpg') no-repeat 50% 0;
 }
 
 .map .container
@@ -682,6 +781,10 @@ a.btn_small
     box-sizing: border-box;
     width: 302px;
     padding: 28px 25px;
+
+    color: #323232;
+    border-radius: 15px;
+    background-color: white;
 }
 
 .address_area h3,
@@ -694,20 +797,17 @@ a.btn_small
 
     margin: 0;
     padding: 0;
-
-    color: #323232;
 }
 
 .address_area .phone,
 .address_area address
 {
+    font-family: 'RobotoBold', 'Arial', sans-serif;
     font-size: 18px;
     font-style: normal;
     line-height: 24px;
 
     margin-bottom: 20px;
-
-    color: #323232;
 }
 
 .address_area .phone
@@ -718,8 +818,10 @@ a.btn_small
 
 .address_area a.btn
 {
-    margin-top: 25px;
     display: block; /* кнопка тянется на весь родительский контейнер */
+
+    margin-top: 25px;
+
     text-align: center;
 }
 
