@@ -647,9 +647,6 @@ a.btn_small
     position: absolute;
     top: 0;
     left: 0;
-
-    display: block;
-
     width: 61px;
     height: 61px;
 
@@ -1282,6 +1279,19 @@ main h1
     font-size: 14px;
     line-height: 16px;
 }
+
+.breadcrumbs a
+{
+    border-bottom: 1px solid rgba(255,255,255,.3);
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs a:active
+{
+    color: #ffbc9e;
+    border-bottom: 1px solid rgba(249,172,159,.3);
+}
+
 
 /* Фильтры */
 .filter_form
