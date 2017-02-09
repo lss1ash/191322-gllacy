@@ -233,7 +233,6 @@ a:active span.underlined
     font-family: 'RobotoBold', 'Arial', sans-serif;
 }
 
-.bottom_line,
 .top-line
 {
     min-height: 64px;
@@ -1216,11 +1215,40 @@ a.btn_small
 
 main h1
 {
+  font-family: 'RobotoBold', 'Arial', sans-serif;
     font-size: 35px;
     line-height: 41px;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+
 }
 
 /* Крошки */
+
+.breadcrumbs {
+  font-size: 0;
+  line-height: 1;
+  padding: 0;
+  margin: -17px 0 3px;
+}
+
+.breadcrumbs li {
+  display: inline-block;
+  position: relative;
+  margin-right: 18px;
+}
+
+.breadcrumbs li::after {
+  content: '»';
+  position: absolute;
+  top: 0px;
+  right: -10px;
+}
+
+.breadcrumbs li:last-child::after {
+  display: none;
+}
 
 .breadcrumbs,
 .breadcrumbs a
