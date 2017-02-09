@@ -66,11 +66,8 @@ body
     line-height: 18px;
 
     color: #fff;
-    background-color: #849d8f; /* Убрать в конце */
+    background-color: #849d8f; /* Для страниц, отличных от главной - без слайдера мороженок */
     background-size: 1200px auto;
-    /*  Для проверки по макету */
-
-    //background: #849d8f url('../../gllacy/gllacy/preview/gllacy-index-1200.jpg') no-repeat 50% 0;
 }
 
 /* Чтобы не было изображение больше контейнера*/
@@ -80,6 +77,7 @@ img
     height: auto;
 }
 
+/* Ограничим наш контент */
 .container
 {
     box-sizing: border-box;
@@ -88,6 +86,7 @@ img
     padding: 0 27px;
 }
 
+/* Распорка */
 .clearfix::after
 {
     display: table;
@@ -110,6 +109,7 @@ a:visited
     color: #fff;
 }
 
+
 /* На будущее a:hover, a:active { color: #ffbc9e; } */
 
 /* Для старых IE */
@@ -120,6 +120,7 @@ a img
 
 /* Шапка */
 
+/* Расположение навигации */
 .main_nav
 {
     float: left;
@@ -128,6 +129,14 @@ a img
     min-width: 560px;
     max-width: 853px;
     margin: 0;
+    padding: 0;
+}
+
+.main_nav .main_logo
+{
+    font-size: 0;
+    line-height: 1;
+
     padding: 0;
 }
 
@@ -162,26 +171,52 @@ a img
     margin-right: 0;
 }
 
+/* Стилизация ссылок навигации */
 .main_nav a
 {
     font-family: 'RobotoBold', 'Arial', sans-serif;
     font-size: 16px;
     line-height: 18px;
+    border-radius: 15px;
 
     display: block;
 
     padding: 7px 13px;
 
     color: #fff;
-    /*background-color: rgba(50,50,250,0.4);
-  border-radius: 15px;*/
 }
-.main_nav .main_logo
-{
-    font-size: 0;
-    line-height: 1;
 
-    padding: 0;
+.main_nav a:hover,
+.main_nav a.current:hover
+{
+    color: #333;
+    background-color: #f8f7f4;
+}
+
+.main_nav a:active
+{
+    color: #333;
+    background-color: #ededed;
+    box-shadow: inset  0 2px 1px 0 #696969;
+}
+
+.main_nav a.current
+{
+  color: #fff;
+  background-color: #d07058;
+}
+
+/* Подчёркивание через border */
+.main_nav span.underlined
+{
+    border-bottom: 1px solid rgba(255,255,255,.3);
+}
+
+a.current span.underlined,
+a:hover span.underlined,
+a:active span.underlined
+{
+    border: none;
 }
 
 .sub_nav a
@@ -334,7 +369,7 @@ a img
 .search:hover p
 {
     color: #323232;
-    background-color: white;
+    background-color: #f8f7f4;
 }
 
 .search p::before
@@ -525,6 +560,8 @@ a.btn_large
     margin: 0 auto;
     padding: 7px 40px 12px;
 
+    text-decoration: none;
+
     text-shadow: 0 2px 5px rgba(160, 32, 11, .76);
 }
 .btn_small,
@@ -535,6 +572,8 @@ a.btn_small
 
     margin: 0 0;
     padding: 9px 23px 13px;
+
+    text-decoration: none;
 }
 
 /* Промо (даром) */
@@ -662,6 +701,18 @@ a.btn_small
     font-family: 'RobotoMedium', 'Arial', sans-serif;
     font-size: 16px;
     line-height: 22px;
+}
+
+/* Прозрачное подчёркивание */
+.description span
+{
+    border-bottom: 1px solid rgba(255,255,255,.3);
+}
+
+.description:hover span
+{
+    color: #ffbc9e;
+    border-bottom: 1px solid rgba(249,172,159,.3);
 }
 
 /* Описание преимуществ (вафля) */
@@ -944,7 +995,7 @@ a.btn_small
 
 .address_area a.btn
 {
-    display: block; /* кнопка тянется на весь родительский контейнер */
+    display: block; /* кнопка тянется на весь родительский контейнер - по макету*/
 
     margin-top: 25px;
 
@@ -1057,10 +1108,28 @@ a.btn_small
     color: #fefefe;
 }
 
-.copyright .academy_logo
+.copyright a:link,
+.copyright a:visited
+{
+    border-bottom: 1px solid rgba(255,255,255,.3);
+}
+
+.copyright a:hover,
+.copyright a:active
+{
+    color: #ffbc9e;
+    border-bottom: 1px solid rgba(249,172,159,.3);
+}
+
+.copyright a.academy_logo:link,
+.copyright a.academy_logo:visited
 {
     margin-right: 82px;
+
+    border: none;
 }
+
+
 
 .links
 {
@@ -1072,14 +1141,24 @@ a.btn_small
 
 /* Ссылки */
 
-.links a
+.links a:link,
+.links a:visited
 {
     font-family: 'RobotoRegular', 'Arial', sans-serif;
     font-size: 13px;
     line-height: 18px;
+
+    border-bottom: 1px solid rgba(255,255,255,.3);
 }
 
-.links .heart
+.links a:hover,
+.links a:active
+{
+    color: #ffbc9e;
+    border-bottom: 1px solid rgba(249,172,159,.3);
+}
+
+.links a.heart
 {
     font-family: 'RobotoBold', 'Arial', sans-serif;
 
