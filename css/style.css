@@ -177,13 +177,13 @@ a img
     font-family: 'RobotoBold', 'Arial', sans-serif;
     font-size: 16px;
     line-height: 18px;
-    border-radius: 15px;
 
     display: block;
 
     padding: 7px 13px;
 
     color: #fff;
+    border-radius: 15px;
 }
 
 .main_nav a:hover,
@@ -202,8 +202,8 @@ a img
 
 .main_nav a.current
 {
-  color: #fff;
-  background-color: #d07058;
+    color: #fff;
+    background-color: #d07058;
 }
 
 /* Подчёркивание через border */
@@ -409,7 +409,7 @@ a:active span.underlined
 
 header.index
 {
-    margin-bottom: 253px; /* Большой отступ для главной */
+    margin-bottom: 275px; /* Большой отступ для главной */
 }
 
 /* Слайдер */
@@ -639,7 +639,23 @@ a.btn_small
     font-size: 0;
     line-height: 1;
 
-    margin-bottom: 39px;
+    margin-bottom: 1px;
+}
+
+.bestseller .catalog_item::before
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 61px;
+    height: 61px;
+
+    content: '';
+
+    background: url('../img/bestseller.png') no-repeat 0 0;
 }
 
 .catalog_item
@@ -650,6 +666,7 @@ a.btn_small
 
     width: 267px;
     margin-right: 26px;
+    margin-bottom: 38px;
     padding: 0;
 
     vertical-align: top;
@@ -1215,39 +1232,47 @@ a.btn_small
 
 main h1
 {
-  font-family: 'RobotoBold', 'Arial', sans-serif;
+    font-family: 'RobotoBold', 'Arial', sans-serif;
     font-size: 35px;
-    line-height: 41px;
     font-weight: normal;
+    line-height: 41px;
+
     margin: 0;
     padding: 0;
-
 }
 
 /* Крошки */
 
-.breadcrumbs {
-  font-size: 0;
-  line-height: 1;
-  padding: 0;
-  margin: -17px 0 3px;
+.breadcrumbs
+{
+    font-size: 0;
+    line-height: 1;
+
+    margin: -17px 0 3px;
+    padding: 0;
 }
 
-.breadcrumbs li {
-  display: inline-block;
-  position: relative;
-  margin-right: 18px;
+.breadcrumbs li
+{
+    position: relative;
+
+    display: inline-block;
+
+    margin-right: 18px;
 }
 
-.breadcrumbs li::after {
-  content: '»';
-  position: absolute;
-  top: 0px;
-  right: -10px;
+.breadcrumbs li::after
+{
+    position: absolute;
+    top: 0;
+    right: -10px;
+
+    content: '»';
 }
 
-.breadcrumbs li:last-child::after {
-  display: none;
+.breadcrumbs li:last-child::after
+{
+    display: none;
 }
 
 .breadcrumbs,
@@ -1256,6 +1281,26 @@ main h1
     font-family: 'RobotoRegular', 'Arial', sans-serif;
     font-size: 14px;
     line-height: 16px;
+}
+
+/* Фильтры */
+.filter_form
+{
+    font-size: 0;
+    line-height: 1;
+}
+
+.form_group
+{
+    font-family: 'RobotoMedium', 'Arial', sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+
+    display: inline-block;
+
+    color: #fff;
+    border-radius: 15px;
+    background-color: gray;
 }
 
 /* Пагинатор */
