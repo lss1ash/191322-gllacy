@@ -701,19 +701,13 @@ p.btn_small
 
     border-radius: 5px;
     background-color: rgba(255,255,255,.3);;
-}
-
-.catalog_item p.cost,
-.catalog_item p.description
-{
-    margin: 0;
-    padding: 0;
+    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, .12);
 }
 
 .catalog_item p.description
 {
     margin: 9px 0 0 0;
-
+    padding: 0;
     text-align: center;
 }
 
@@ -740,10 +734,12 @@ p.btn_small
     font-family: 'RobotoBold', 'Arial', sans-serif;
     font-size: 45px;
     line-height: 45px;
-
+    margin: 0;
+    padding: 0;
     position: absolute;
     top: 212px;
     left: 13px;
+    text-shadow: 0 2px 3px rgba(49, 50, 53, .5);
 }
 
 .catalog_item .kilo
