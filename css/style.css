@@ -86,6 +86,11 @@ img
     padding: 0 27px;
 }
 
+.container.wide
+{
+    padding: 0 14px; /* Нужен, чтобы за границу контейнера можно было подложку под товар подсветить */
+}
+
 /* Распорка */
 .clearfix::after
 {
@@ -564,7 +569,8 @@ a.btn_large
     text-shadow: 0 2px 5px rgba(160, 32, 11, .76);
 }
 .btn_small,
-a.btn_small
+a.btn_small,
+p.btn_small
 {
     font-size: 18px;
     line-height: 24px;
@@ -579,7 +585,7 @@ a.btn_small
 
 .promo
 {
-    margin-bottom: 40px;
+    margin-bottom: 35px;
 }
 
 .promo_left,
@@ -642,11 +648,14 @@ a.btn_small
     margin-bottom: 1px;
 }
 
+/* Хит */
 .bestseller .catalog_item::before
 {
     position: absolute;
-    top: 0;
-    left: 0;
+    z-index: 101; /* Чтобы при ховере не перекрывался */
+    top: 5px;
+    left: 13px;
+
     width: 61px;
     height: 61px;
 
@@ -661,15 +670,41 @@ a.btn_small
 
     display: inline-block;
 
-    width: 267px;
-    margin-right: 26px;
+    box-sizing: border-box;
+    width: 293px;
     margin-bottom: 38px;
     padding: 0;
+    padding-right: 13px;
+    padding-left: 13px;
 
     vertical-align: top;
 }
 
-.catalog_item p
+/* Будем подсвечивать прозрачной областью всю ссылку */
+.catalog_item > a
+{
+    display: block;
+    padding: 5px 0 0;
+    text-align: center;
+}
+
+.catalog_item:hover > a
+{
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+
+    box-sizing: border-box;
+    width: 293px;
+    padding: 5px 13px 0;
+
+    border-radius: 5px;
+    background-color: rgba(255,255,255,.3);;
+}
+
+.catalog_item p.cost,
+.catalog_item p.description
 {
     margin: 0;
     padding: 0;
@@ -687,20 +722,28 @@ a.btn_small
     margin-right: 0;
 }
 
+/* Кнопка быстрый просмотр */
 .catalog_item .btn
 {
     display: none;
-    /* Показывать будем при наведении на catalog_item */
 }
 
+.catalog_item:hover .btn
+{
+    display: inline-block;
+    margin: 10px auto 22px;
+}
+
+/* Ценник */
 .catalog_item .cost
 {
+    font-family: 'RobotoBold', 'Arial', sans-serif;
     font-size: 45px;
     line-height: 45px;
 
     position: absolute;
-    top: 205px;
-    left: 0;
+    top: 212px;
+    left: 13px;
 }
 
 .catalog_item .kilo
