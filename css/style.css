@@ -441,12 +441,22 @@ header.index
     text-align: center;
 }
 
-/*.wrapper
+/* Для плавной смены прогрузим изображения сразу*/
+
+.wrapper::before,
+.wrapper::after
 {
-    background-color: #849d8f;
-    background-image: url('../img/slide3.png'), url('../img/slide2.png'), url('../img/slide1.png');
-    backgrou
-}*/
+    content: '';
+    visibility: hidden;
+}
+
+.wrapper::before {
+  background-image: url('../img/slide2.png');
+}
+
+.wrapper::after {
+  background-image: url('../img/slide3.png');
+}
 
 /* Если выбран какой-то инпут радио, поставим на врапера изображение и цвет */
 input[id='slide1']:checked ~ .wrapper
