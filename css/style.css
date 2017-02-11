@@ -1,12 +1,14 @@
-/* Символ рубля */
 @font-face {
-			font-family: 'ruble';
-			src: url('../fonts/ruble/ruble.eot');
-			src: url('../fonts/ruble/ruble.ttf') format('truetype');
-			src: local('ruble'), url('../fonts/ruble/ruble.woff') format('woff'), url('../fonts/ruble/ruble.ttf') format('truetype');
-			font-weight: normal;
-			font-style: normal;
-		}
+    font-family: 'RobotoTest';
+    src: url('../fonts/Roboto-Bold/Roboto-Bold.eot');
+    src: url('../fonts/Roboto-Bold/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Bold/Roboto-Bold.woff') format('woff'),
+         url('../fonts/Roboto-Bold/Roboto-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
 /* Спрячу пока что окошки, менюшки и радиобатоны */
 
 .login_form,
@@ -726,6 +728,7 @@ p.btn_small
 /* Ценник */
 .catalog_item .cost
 {
+    font-family: 'RobotoTest', 'Arial', sans-serif;
     font-size: 45px;
     font-weight: 700;
     line-height: 45px;
@@ -741,12 +744,28 @@ p.btn_small
 }
 
 .catalog_item .rub {
-  font-family: 'ruble', sans-serif;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 44px;
-  margin-left: 6px;
+  font-family: 'RobotoTest', 'Arial', sans-serif;
+  font-weight: 700;
+
 }
+
+/*.catalog_item .rub::after {
+  content: '';
+  border: 3px solid white;
+  width: 3px;
+  position: absolute;
+  top:21px;
+  left:77px;
+  }
+
+.catalog_item .rub::before {
+    content: '';
+    border: 3px solid white;
+    width: 15px;
+    position: absolute;
+    top:28px;
+    left:77px;
+}*/
 
 .catalog_item .kilo
 {
