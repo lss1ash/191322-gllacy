@@ -1,32 +1,38 @@
-@font-face {
+@font-face
+{
     font-family: 'Roboto';
-    src: url('../fonts/Roboto-Bold/Roboto-Bold.eot');
-    src: url('../fonts/Roboto-Bold/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/Roboto-Bold/Roboto-Bold.woff2') format('woff2'),
-         url('../fonts/Roboto-Bold/Roboto-Bold.woff') format('woff'),
-         url('../fonts/Roboto-Bold/Roboto-Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
+
+    src: url('../fonts/Roboto-Bold/Roboto-Bold.eot');
+    src: url('../fonts/Roboto-Bold/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Roboto-Bold/Roboto-Bold.woff2') format('woff2'),
+    url('../fonts/Roboto-Bold/Roboto-Bold.woff') format('woff'),
+    url('../fonts/Roboto-Bold/Roboto-Bold.ttf') format('truetype');
 }
-@font-face {
+@font-face
+{
     font-family: 'Roboto';
-    src: url('../fonts/Roboto-Medium/Roboto-Medium.eot');
-    src: url('../fonts/Roboto-Medium/Roboto-Medium.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/Roboto-Medium/Roboto-Medium.woff2') format('woff2'),
-         url('../fonts/Roboto-Medium/Roboto-Medium.woff') format('woff'),
-         url('../fonts/Roboto-Medium/Roboto-Medium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
+
+    src: url('../fonts/Roboto-Medium/Roboto-Medium.eot');
+    src: url('../fonts/Roboto-Medium/Roboto-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Roboto-Medium/Roboto-Medium.woff2') format('woff2'),
+    url('../fonts/Roboto-Medium/Roboto-Medium.woff') format('woff'),
+    url('../fonts/Roboto-Medium/Roboto-Medium.ttf') format('truetype');
 }
-@font-face {
+@font-face
+{
     font-family: 'Roboto';
-    src: url('../fonts/Roboto-Regular/Roboto-Regular.eot');
-    src: url('../fonts/Roboto-Regular/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/Roboto-Regular/Roboto-Regular.woff2') format('woff2'),
-         url('../fonts/Roboto-Regular/Roboto-Regular.woff') format('woff'),
-         url('../fonts/Roboto-Regular/Roboto-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
+
+    src: url('../fonts/Roboto-Regular/Roboto-Regular.eot');
+    src: url('../fonts/Roboto-Regular/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Roboto-Regular/Roboto-Regular.woff2') format('woff2'),
+    url('../fonts/Roboto-Regular/Roboto-Regular.woff') format('woff'),
+    url('../fonts/Roboto-Regular/Roboto-Regular.ttf') format('truetype');
 }
 
 
@@ -687,37 +693,26 @@ p.btn_small
     width: 293px;
     margin-bottom: 38px;
     padding: 0;
-    padding-right: 13px;
-    padding-left: 13px;
 
+    text-align: center;
     vertical-align: top;
 }
 
-/* Будем подсвечивать прозрачной областью всю ссылку */
-.catalog_item > a
+/* Будем подсвечивать прозрачной областью ссылку и кнопку быстрый просмотр отдельно, чтобы не вываливалось все из потока */
+.catalog_item > a.visible
 {
     display: block;
 
-    padding: 5px 0 0;
+    padding: 5px 13px 0;
 
     text-align: center;
 }
 
-.catalog_item:hover > a
+.catalog_item:hover > a.visible
 {
-    position: absolute;
-    z-index: 100;
-    top: 0;
-    left: 0;
-
-    box-sizing: border-box;
-    width: 293px;
-    padding: 5px 13px 0;
-
-    border-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     background-color: rgba(255,255,255,.3);
-    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, .12);
-;
 }
 
 .catalog_item p.description
@@ -734,6 +729,20 @@ p.btn_small
 }
 
 /* Кнопка быстрый просмотр */
+.catalog_item p.over
+{
+    position: absolute;
+    z-index: 100;
+
+    width: 293px;
+    margin: 0;
+
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: rgba(255,255,255,.3);
+    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, .12);
+}
+
 .catalog_item .btn
 {
     display: none;
@@ -763,8 +772,9 @@ p.btn_small
     text-shadow: 0 2px 3px rgba(49, 50, 53, .5);
 }
 
-.catalog_item .rub {
-  margin-left: 4px;
+.catalog_item .rub
+{
+    margin-left: 4px;
 }
 
 .catalog_item .kilo
@@ -1007,6 +1017,7 @@ p.btn_small
     font-size: 18px;
     font-weight: 700;
     line-height: 24px;
+
     float: right;
 }
 
