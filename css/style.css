@@ -1,4 +1,12 @@
-
+/* Символ рубля */
+@font-face {
+			font-family: 'ruble';
+			src: url('../fonts/ruble/ruble.eot');
+			src: url('../fonts/ruble/ruble.ttf') format('truetype');
+			src: local('ruble'), url('../fonts/ruble/ruble.woff') format('woff'), url('../fonts/ruble/ruble.ttf') format('truetype');
+			font-weight: normal;
+			font-style: normal;
+		}
 /* Спрячу пока что окошки, менюшки и радиобатоны */
 
 .login_form,
@@ -730,6 +738,14 @@ p.btn_small
     padding: 0;
 
     text-shadow: 0 2px 3px rgba(49, 50, 53, .5);
+}
+
+.catalog_item .rub {
+  font-family: 'ruble', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 44px;
+  margin-left: 6px;
 }
 
 .catalog_item .kilo
