@@ -1,10 +1,31 @@
 @font-face {
-    font-family: 'RobotoTest';
+    font-family: 'Roboto';
     src: url('../fonts/Roboto-Bold/Roboto-Bold.eot');
     src: url('../fonts/Roboto-Bold/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Bold/Roboto-Bold.woff2') format('woff2'),
          url('../fonts/Roboto-Bold/Roboto-Bold.woff') format('woff'),
          url('../fonts/Roboto-Bold/Roboto-Bold.ttf') format('truetype');
     font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Medium/Roboto-Medium.eot');
+    src: url('../fonts/Roboto-Medium/Roboto-Medium.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Medium/Roboto-Medium.woff2') format('woff2'),
+         url('../fonts/Roboto-Medium/Roboto-Medium.woff') format('woff'),
+         url('../fonts/Roboto-Medium/Roboto-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular/Roboto-Regular.eot');
+    src: url('../fonts/Roboto-Regular/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Regular/Roboto-Regular.woff2') format('woff2'),
+         url('../fonts/Roboto-Regular/Roboto-Regular.woff') format('woff'),
+         url('../fonts/Roboto-Regular/Roboto-Regular.ttf') format('truetype');
+    font-weight: 400;
     font-style: normal;
 }
 
@@ -728,7 +749,6 @@ p.btn_small
 /* Ценник */
 .catalog_item .cost
 {
-    font-family: 'RobotoTest', 'Arial', sans-serif;
     font-size: 45px;
     font-weight: 700;
     line-height: 45px;
@@ -744,28 +764,8 @@ p.btn_small
 }
 
 .catalog_item .rub {
-  font-family: 'RobotoTest', 'Arial', sans-serif;
-  font-weight: 700;
-
+  margin-left: 4px;
 }
-
-/*.catalog_item .rub::after {
-  content: '';
-  border: 3px solid white;
-  width: 3px;
-  position: absolute;
-  top:21px;
-  left:77px;
-  }
-
-.catalog_item .rub::before {
-    content: '';
-    border: 3px solid white;
-    width: 15px;
-    position: absolute;
-    top:28px;
-    left:77px;
-}*/
 
 .catalog_item .kilo
 {
