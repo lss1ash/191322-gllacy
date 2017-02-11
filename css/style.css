@@ -1,4 +1,4 @@
-@font-face
+/*@font-face
 {
     font-family: 'RobotoRegular';
     font-weight: normal;
@@ -32,7 +32,7 @@
     src: url('../fonts/RobotoBold/RobotoBold.eot?#iefix')format('embedded-opentype'),
     url('../fonts/RobotoBold/RobotoBold.woff') format('woff'),
     url('../fonts/RobotoBold/RobotoBold.ttf') format('truetype');
-}
+}*/
 
 /* Спрячу пока что окошки, менюшки и радиобатоны */
 
@@ -441,7 +441,11 @@ header.index
     text-align: center;
 }
 
-/* Для плавной смены прогрузим изображения сразу*/
+/* Для плавной смены добавим транзишн и прогрузим изображения сразу через псевдоэлементы*/
+
+.wrapper {
+  transition: background-image 0.2s ease, background-color 0.2s ease;
+}
 
 .wrapper::before,
 .wrapper::after
@@ -741,7 +745,9 @@ p.btn_small
 /* Ценник */
 .catalog_item .cost
 {
-    font-family: 'RobotoBold', 'Arial', sans-serif;
+    //font-family: 'RobotoBold', 'Arial', sans-serif;
+    font-family: 'Roboto', 'Arial', sans-serif;
+    font-weight: 700;
     font-size: 45px;
     line-height: 45px;
     margin: 0;
@@ -760,7 +766,8 @@ p.btn_small
 
 .catalog_item .description
 {
-    font-family: 'RobotoMedium', 'Arial', sans-serif;
+    //font-family: 'RobotoMedium', 'Arial', sans-serif;
+    font-weight: 500;
     font-size: 16px;
     line-height: 22px;
 }
