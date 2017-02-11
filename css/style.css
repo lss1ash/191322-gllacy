@@ -1,38 +1,3 @@
-/*@font-face
-{
-    font-family: 'RobotoRegular';
-    font-weight: normal;
-    font-style: normal;
-
-    src: url('../fonts/RobotoRegular/RobotoRegular.eot');
-    src: url('../fonts/RobotoRegular/RobotoRegular.eot?#iefix')format('embedded-opentype'),
-    url('../fonts/RobotoRegular/RobotoRegular.woff') format('woff'),
-    url('../fonts/RobotoRegular/RobotoRegular.ttf') format('truetype');
-}
-
-@font-face
-{
-    font-family: 'RobotoMedium';
-    font-weight: normal;
-    font-style: normal;
-
-    src: url('../fonts/RobotoMedium/RobotoMedium.eot');
-    src: url('../fonts/RobotoMedium/RobotoMedium.eot?#iefix')format('embedded-opentype'),
-    url('../fonts/RobotoMedium/RobotoMedium.woff') format('woff'),
-    url('../fonts/RobotoMedium/RobotoMedium.ttf') format('truetype');
-}
-
-@font-face
-{
-    font-family: 'RobotoBold';
-    font-weight: normal;
-    font-style: normal;
-
-    src: url('../fonts/RobotoBold/RobotoBold.eot');
-    src: url('../fonts/RobotoBold/RobotoBold.eot?#iefix')format('embedded-opentype'),
-    url('../fonts/RobotoBold/RobotoBold.woff') format('woff'),
-    url('../fonts/RobotoBold/RobotoBold.ttf') format('truetype');
-}*/
 
 /* Спрячу пока что окошки, менюшки и радиобатоны */
 
@@ -59,9 +24,9 @@ html
 
 body
 {
-    font-family: 'RobotoBold', 'Arial', sans-serif;
+    font-family: 'Roboto', 'Arial', sans-serif;
     font-size: 16px;
-    font-weight: normal;
+    font-weight: 700;
     font-style: normal;
     line-height: 18px;
 
@@ -105,8 +70,8 @@ img
 a:link,
 a:visited
 {
-    font-family: 'RobotoMedium', 'Arial', sans-serif;
     font-size: 16px;
+    font-weight: 500;
     line-height: 18px;
 
     text-decoration: none;
@@ -179,8 +144,8 @@ a img
 /* Стилизация ссылок навигации */
 .main_nav a
 {
-    font-family: 'RobotoBold', 'Arial', sans-serif;
     font-size: 16px;
+    font-weight: 700;
     line-height: 18px;
 
     display: block;
@@ -226,8 +191,8 @@ a:active span.underlined
 
 .sub_nav a
 {
-    font-family: 'RobotoRegular', 'Arial', sans-serif;
     font-size: 14px;
+    font-weight: 400;
     line-height: 16px;
 
     color: #323232;
@@ -235,7 +200,7 @@ a:active span.underlined
 
 .sub_nav a.news
 {
-    font-family: 'RobotoBold', 'Arial', sans-serif;
+    font-weight: 700;
 }
 
 .top-line
@@ -269,7 +234,7 @@ a:active span.underlined
 {
     display: inline-block;
 
-    margin-left: 10px;
+    margin-left: 11px;
 
     vertical-align: top;
 }
@@ -277,8 +242,8 @@ a:active span.underlined
 .user_block p,
 .user_block a
 {
-    font-family: 'RobotoMedium', 'Arial', sans-serif;
     font-size: 14px;
+    font-weight: 500;
     line-height: 16px;
 
     position: relative;
@@ -379,7 +344,7 @@ a:active span.underlined
 .search p::before
 {
     top: 8px;
-    left: 8px;
+    left: 7px;
 
     width: 17px;
     height: 17px;
@@ -443,23 +408,27 @@ header.index
 
 /* Для плавной смены добавим транзишн и прогрузим изображения сразу через псевдоэлементы*/
 
-.wrapper {
-  transition: background-image 0.2s ease, background-color 0.2s ease;
+.wrapper
+{
+    transition: background-image .2s ease, background-color .2s ease;
 }
 
 .wrapper::before,
 .wrapper::after
 {
-    content: '';
     visibility: hidden;
+
+    content: '';
 }
 
-.wrapper::before {
-  background-image: url('../img/slide2.png');
+.wrapper::before
+{
+    background-image: url('../img/slide2.png');
 }
 
-.wrapper::after {
-  background-image: url('../img/slide3.png');
+.wrapper::after
+{
+    background-image: url('../img/slide3.png');
 }
 
 /* Если выбран какой-то инпут радио, поставим на врапера изображение и цвет */
@@ -632,7 +601,6 @@ p.btn_small
 .promo h3
 {
     font-size: 35px;
-    font-weight: normal;
     line-height: 41px;
 
     margin: 0;
@@ -698,7 +666,9 @@ p.btn_small
 .catalog_item > a
 {
     display: block;
+
     padding: 5px 0 0;
+
     text-align: center;
 }
 
@@ -714,14 +684,16 @@ p.btn_small
     padding: 5px 13px 0;
 
     border-radius: 5px;
-    background-color: rgba(255,255,255,.3);;
+    background-color: rgba(255,255,255,.3);
     box-shadow: 0 20px 20px 0 rgba(0, 0, 0, .12);
+;
 }
 
 .catalog_item p.description
 {
     margin: 9px 0 0 0;
     padding: 0;
+
     text-align: center;
 }
 
@@ -739,22 +711,24 @@ p.btn_small
 .catalog_item:hover .btn
 {
     display: inline-block;
+
     margin: 10px auto 22px;
 }
 
 /* Ценник */
 .catalog_item .cost
 {
-    //font-family: 'RobotoBold', 'Arial', sans-serif;
-    font-family: 'Roboto', 'Arial', sans-serif;
-    font-weight: 700;
     font-size: 45px;
+    font-weight: 700;
     line-height: 45px;
-    margin: 0;
-    padding: 0;
+
     position: absolute;
     top: 212px;
     left: 13px;
+
+    margin: 0;
+    padding: 0;
+
     text-shadow: 0 2px 3px rgba(49, 50, 53, .5);
 }
 
@@ -766,9 +740,8 @@ p.btn_small
 
 .catalog_item .description
 {
-    //font-family: 'RobotoMedium', 'Arial', sans-serif;
-    font-weight: 500;
     font-size: 16px;
+    font-weight: 500;
     line-height: 22px;
 }
 
@@ -801,9 +774,8 @@ p.btn_small
 
 .main_description h1
 {
-    font-family: 'RobotoMedium', 'Arial', sans-serif;
     font-size: 24px;
-    font-weight: normal;
+    font-weight: 500;
     line-height: 30px;
 
     margin: 0;
@@ -823,8 +795,8 @@ p.btn_small
 
 .main_description li
 {
-    font-family: 'RobotoRegular', 'Arial', sans-serif;
     font-size: 16px;
+    font-weight: 400;
     line-height: 22px;
 
     position: relative;
@@ -910,9 +882,8 @@ p.btn_small
 
 .blog h3
 {
-    font-family: 'RobotoMedium', 'Arial', sans-serif;
     font-size: 16px;
-    font-weight: normal;
+    font-weight: 500;
     line-height: 22px;
 
     margin: 0 0 5px;
@@ -932,8 +903,8 @@ p.btn_small
 
 .mail
 {
-    font-family: 'RobotoRegular', 'Arial', sans-serif;
     font-size: 16px;
+    font-weight: 400;
     line-height: 24px;
 
     float: right;
@@ -982,15 +953,14 @@ p.btn_small
 
 .mail_body input[type='email']
 {
-    font-family: 'RobotoRegular', 'Arial', sans-serif;
     font-size: 16px;
+    font-weight: 400;
     line-height: 24px;
 
     box-sizing: border-box;
-    width: 360px;
+    width: 355px;
     margin: 0;
-    margin-right: 8px;
-    padding: 10px 13px;
+    padding: 9px 13px;
 
     border: 1px solid #b2b2b2;
     border-radius: 5px;
@@ -999,9 +969,10 @@ p.btn_small
 /* Кнопка шире, чем в макете, потому что руководствовался стайлгайдом (паддинги различаются) */
 .mail_body button
 {
-    font-family: 'RobotoBold', 'Arial', sans-serif;
     font-size: 18px;
+    font-weight: 700;
     line-height: 24px;
+    float: right;
 }
 
 /* Карта и адрес */
@@ -1036,9 +1007,8 @@ p.btn_small
 .address_area h3,
 .address_area p
 {
-    font-family: 'RobotoRegular', 'Arial', sans-serif;
     font-size: 14px;
-    font-weight: normal;
+    font-weight: 400;
     line-height: 20px;
 
     margin: 0;
@@ -1048,8 +1018,8 @@ p.btn_small
 .address_area .phone,
 .address_area address
 {
-    font-family: 'RobotoBold', 'Arial', sans-serif;
     font-size: 18px;
+    font-weight: 700;
     font-style: normal;
     line-height: 24px;
 
@@ -1167,8 +1137,8 @@ p.btn_small
 .copyright a,
 .copyright p
 {
-    font-family: 'RobotoRegular', 'Arial', sans-serif;
     font-size: 12px;
+    font-weight: 400;
     line-height: 18px;
 
     margin: 0;
@@ -1213,8 +1183,8 @@ p.btn_small
 .links a:link,
 .links a:visited
 {
-    font-family: 'RobotoRegular', 'Arial', sans-serif;
     font-size: 13px;
+    font-weight: 400;
     line-height: 18px;
 
     border-bottom: 1px solid rgba(255,255,255,.3);
@@ -1229,7 +1199,7 @@ p.btn_small
 
 .links a.heart
 {
-    font-family: 'RobotoBold', 'Arial', sans-serif;
+    font-weight: 700;
 
     position: relative;
 }
@@ -1261,8 +1231,8 @@ p.btn_small
 
 .links li
 {
-    font-family: 'RobotoRegular', 'Arial', sans-serif;
     font-size: 13px;
+    font-weight: 400;
     line-height: 18px;
 
     display: inline-block;
@@ -1285,9 +1255,8 @@ p.btn_small
 
 main h1
 {
-    font-family: 'RobotoBold', 'Arial', sans-serif;
     font-size: 35px;
-    font-weight: normal;
+    font-weight: 700;
     line-height: 41px;
 
     margin: 0;
@@ -1331,8 +1300,8 @@ main h1
 .breadcrumbs,
 .breadcrumbs a
 {
-    font-family: 'RobotoRegular', 'Arial', sans-serif;
     font-size: 14px;
+    font-weight: 400;
     line-height: 16px;
 }
 
@@ -1358,8 +1327,8 @@ main h1
 
 .form_group
 {
-    font-family: 'RobotoMedium', 'Arial', sans-serif;
     font-size: 14px;
+    font-weight: 500;
     line-height: 16px;
 
     display: inline-block;
@@ -1374,7 +1343,7 @@ main h1
 .pagination,
 .pagination a
 {
-    font-family: 'RobotoMedium', 'Arial', sans-serif;
     font-size: 16px;
+    font-weight: 500;
     line-height: 18px;
 }
