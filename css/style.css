@@ -919,14 +919,13 @@ p.btn_small
     display: block;
 
     padding: 5px 13px 0;
-
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     text-align: center;
 }
 
 .catalog_item:hover > a.visible
 {
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
     background-color: rgba(255,255,255,.3);
 }
 
@@ -934,7 +933,9 @@ p.btn_small
 {
     margin: 9px 0 0 0;
     padding: 0;
-
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
     text-align: center;
 }
 
@@ -961,13 +962,13 @@ p.btn_small
 .catalog_item .btn
 {
     display: none;
+    margin: 10px auto 20px;
+    font-weight: 700;
 }
 
 .catalog_item:hover .btn
 {
     display: inline-block;
-
-    margin: 10px auto 22px;
 }
 
 /* Ценник */
@@ -999,23 +1000,20 @@ p.btn_small
     line-height: 45px;
 }
 
-.catalog_item .description
-{
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 22px;
-}
-
 /* Прозрачное подчёркивание */
 .description span
 {
     border-bottom: 1px solid rgba(255,255,255,.3);
 }
 
+/* По стайлгайду не меняем цвет ссылке и убираем выделение */
+a.visible:hover span,
 .description:hover span
 {
-    color: #ffbc9e;
-    border-bottom: 1px solid rgba(249,172,159,.3);
+    color: #fff;
+    border: none;
+    /*color: #ffbc9e;
+    border-bottom: 1px solid rgba(249,172,159,.3);*/
 }
 
 /* Описание преимуществ (вафля) */
