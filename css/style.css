@@ -442,6 +442,7 @@ ul.sub_nav a.sub_news
 .search_form
 {
     position: absolute;
+    z-index: 100;
     top: 37px;
     right: 0;
 
@@ -452,7 +453,6 @@ ul.sub_nav a.sub_news
     border-radius: 5px;
     background-color: #f8f7f4;
     box-shadow: 0 20px 20px 0 rgba(0, 0, 0, .40);
-    z-index: 100;
 }
 
 .search:hover .search_form
@@ -501,11 +501,11 @@ ul.sub_nav a.sub_news
 /* Всплывающая форма входа */
 .login_form
 {
-  z-index: 100;
     position: absolute;
+    z-index: 100;
     top: 37px;
     right: -3px;
-display: block;
+
     box-sizing: border-box;
     width: 277px;
     padding: 20px 18px;
@@ -514,6 +514,12 @@ display: block;
     background-color: #f8f7f4;
     box-shadow: 0 20px 20px 0 rgba(0, 0, 0, .40);
 }
+
+.login:hover .login_form
+{
+    display: block;
+}
+
 
 .login_form input
 {
@@ -534,27 +540,41 @@ display: block;
 
 .login_form button
 {
-  font-family: 'Roboto', 'Arial', sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 24px;
-  float: left;
+    font-family: 'Roboto', 'Arial', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+
+    float: left;
+
+    margin: 0;
+    padding: 10px 25px;
+
+    border-radius: 19px;
 }
 
-.login_form p {
-  padding: 0;
-  margin: 0;
-  float: left;
-  text-align: left;
+.login_form p
+{
+    float: right;
+
+    margin: 0;
+    padding: 0;
+
+    text-align: left;
 }
 
 .login_form a:link,
-.login_form a:visited {
-  color: #323232;
-  font-weight: 400;
-  text-decoration: underline;
-  font-size: 13px;
-  line-height: 24px;
+.login_form a:visited
+{
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 21px;
+
+    margin: 0 2px 0 0;
+
+    text-decoration: underline;
+
+    color: #323232;
 }
 
 
