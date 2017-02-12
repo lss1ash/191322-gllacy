@@ -134,7 +134,7 @@ a img
 
     box-sizing: border-box;
     min-width: 560px;
-    max-width: 853px;
+    max-width: 750px;
     margin: 0;
     padding: 0;
 }
@@ -339,7 +339,7 @@ ul.sub_nav a.sub_news
 
     float: right;
 
-    max-width: 293px;
+    max-width: 350px;
     padding-top: 23px;
     padding-bottom: 8px;
 
@@ -350,12 +350,17 @@ ul.sub_nav a.sub_news
 .user_block .login,
 .user_block .search
 {
+    position: relative;
+
     display: inline-block;
 
     margin-left: 11px;
+    padding: 0 0 10px;
 
     vertical-align: top;
 }
+
+
 
 .user_block p,
 .user_block a
@@ -363,8 +368,6 @@ ul.sub_nav a.sub_news
     font-size: 14px;
     font-weight: 500;
     line-height: 16px;
-
-    position: relative;
 
     display: block;
 
@@ -375,6 +378,89 @@ ul.sub_nav a.sub_news
     border-radius: 17px;
     background-color: rgba(255,255,255,.2);
 }
+
+
+/* Поиск */
+.user_block .search
+{
+    min-width: 80px; /* Чтобы было легче попасть в поле ввода */
+}
+
+.search p
+{
+    font-size: 0;
+
+    position: relative;
+
+    float: right;
+
+    box-sizing: border-box;
+    width: 32px;
+    height: 32px;
+
+    border-radius: 50%;
+}
+
+.login:hover p,
+.search:hover p
+{
+    color: #323232;
+    background-color: #f8f7f4;
+}
+
+.search p::before
+{
+    top: 7px;
+    left: 8px;
+
+    width: 17px;
+    height: 17px;
+
+    background-position: 0 -171px;
+}
+
+.search:hover p::before
+{
+    background-position: 0 -188px;
+}
+
+.search_form
+{
+    position: absolute;
+    top: 37px;
+    right: 0;
+
+    box-sizing: border-box;
+    width: 341px;
+    padding: 20px 15px;
+
+    border-radius: 5px;
+    background-color: #f8f7f4;
+    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, .40);
+}
+
+.search:hover .search_form
+{
+    display: block;
+}
+
+.search_form input
+{
+    font-family: 'Roboto', 'Arial', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding: 8px 14px;
+
+    border: 1px solid #b2b2b2;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
 /* Будем вешать иконки тут */
 .user_block p::before,
 .cart.filled > a::before
@@ -386,6 +472,28 @@ ul.sub_nav a.sub_news
     background-image: url('../img/icons_sprite.png');
 }
 
+/* Вход */
+.login p
+{
+    padding: 8px 16px 9px 43px;
+}
+
+.login p::before
+{
+    top: 6px;
+    left: 16px;
+
+    width: 21px;
+    height: 19px;
+
+    background-position: 0 -205px;
+}
+.login:hover p::before
+{
+    background-position: 0 -224px;
+}
+
+/* Корзина */
 .cart p
 {
     padding: 8px 34px 9px 44px;
@@ -421,62 +529,7 @@ ul.sub_nav a.sub_news
     background-position: 0 -150px;
 }
 
-.login p
-{
-    padding: 8px 16px 9px 43px;
-}
-
-.login p::before
-{
-    top: 6px;
-    left: 16px;
-
-    width: 21px;
-    height: 19px;
-
-    background-position: 0 -205px;
-}
-.login:hover p::before
-{
-    background-position: 0 -224px;
-}
-
-.search p
-{
-    font-size: 0;
-
-    box-sizing: border-box;
-    width: 32px;
-    height: 32px;
-
-    border-radius: 50%;
-}
-
-.login:hover p,
-.search:hover p
-{
-    color: #323232;
-    background-color: #f8f7f4;
-}
-
-.search p::before
-{
-    top: 7px;
-    left: 8px;
-
-    width: 17px;
-    height: 17px;
-
-    background-position: 0 -171px;
-}
-
-.search:hover p::before
-{
-    background-position: 0 -188px;
-}
-
 /* Вторая линия - информация о контактах */
-
 .contacts .time
 {
     font-size: 14px;
@@ -726,9 +779,10 @@ p.btn_small
 
 .promo p
 {
-  margin: 0 0 19px 0;
     font-size: 18px;
     line-height: 22px;
+
+    margin: 0 0 19px 0;
 }
 
 .promo a.btn_small
@@ -1080,6 +1134,7 @@ p.btn_small
 
 .mail_body input[type='email']
 {
+    font-family: 'Roboto', 'Arial', sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
@@ -1091,6 +1146,7 @@ p.btn_small
 
     border: 1px solid #b2b2b2;
     border-radius: 5px;
+    background-color: #fff;
 }
 
 /* Кнопка шире, чем в макете, потому что руководствовался стайлгайдом (паддинги различаются) */
