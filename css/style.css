@@ -152,6 +152,8 @@ a img
     font-size: 0;
     line-height: 1;
 
+    position: relative;
+
     margin: 0;
     padding: 0;
 
@@ -160,15 +162,17 @@ a img
 
 .main_nav li
 {
+    position: relative;
+
     display: inline-block;
 
-    margin: 22px 2px 0 0;
-    padding: 0;
+    margin: 23px 2px 0 0;
+    padding: 0 0 10px;
 
     vertical-align: top;
 }
 
-.main_nav li:first-child
+.main_nav li.main_logo:first-child
 {
     margin: 9px 11px 0 -1px;
 }
@@ -179,7 +183,7 @@ a img
 }
 
 /* Стилизация ссылок навигации */
-.main_nav a
+li.first_level > a
 {
     font-size: 16px;
     font-weight: 700;
@@ -193,28 +197,27 @@ a img
     border-radius: 15px;
 }
 
-.main_nav a:hover,
-.main_nav a.current:hover
+li.first_level:hover > a
 {
     color: #333;
     background-color: #f8f7f4;
 }
 
-.main_nav a:active
+li.first_level > a:active
 {
     color: #333;
     background-color: #ededed;
     box-shadow: inset  0 2px 1px 0 #696969;
 }
 
-.main_nav a.current
+li.first_level > a.current
 {
     color: #fff;
     background-color: #d07058;
 }
 
 /* Подчёркивание через border */
-.main_nav span.underlined
+li.first_level span.underlined
 {
     border-bottom: 1px solid rgba(255,255,255,.3);
 }
@@ -226,18 +229,96 @@ a:active span.underlined
     border: none;
 }
 
-.sub_nav a
+li.first_level ul.sub_nav
+{
+    position: absolute;
+    z-index: 100;
+    top: 39px;
+    left: -7px;
+
+    overflow: hidden;
+
+    margin: 0;
+    padding: 2px 0;
+
+    border-radius: 5px;
+    background-color: #f8f7f4;
+    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, .40);
+}
+
+li.first_level:hover ul.sub_nav
+{
+    display: block;
+}
+
+ul.sub_nav li
+/*,
+ul.sub_nav li:first-child,
+ul.sub_nav li:last-child */
+{
+    display: block;
+
+    margin: 0;
+    padding: 0 1px;
+}
+
+ul.sub_nav li:hover
+{
+    background-color: #fbded8;
+}
+
+ul.sub_nav li:active
+{
+    background-color: #f6b5a5;
+}
+
+ul.sub_nav li.current
+{
+    background-color: #d07058;
+}
+
+ul.sub_nav li.current a
+{
+    /* так нужно, иначе не наследуем цвет, если делать не через фон li, то не получим разделитель красивый */
+    color: #fff;
+}
+
+ul.sub_nav a
 {
     font-size: 14px;
     font-weight: 400;
     line-height: 16px;
 
+    display: block;
+
+    margin: 0 5px;
+    padding: 8px 15px 7px;
+
+    white-space: nowrap;
+
     color: #323232;
 }
 
-.sub_nav a.news
+ul.sub_nav a:link,
+ul.sub_nav a:visited,
+ul.sub_nav a:hover,
+ul.sub_nav a:active
+{
+    border: none;
+    background: transparent;
+}
+
+ul.sub_nav a.sub_news
 {
     font-weight: 700;
+
+    padding-bottom: 12px;
+
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: rgba(53,53,53,.2);
+    border-radius: 0;
+    background: transparent;
 }
 
 .top-line
@@ -259,7 +340,7 @@ a:active span.underlined
     float: right;
 
     max-width: 293px;
-    padding-top: 22px;
+    padding-top: 23px;
     padding-bottom: 8px;
 
     text-align: right;
@@ -331,7 +412,7 @@ a:active span.underlined
 
 .cart.filled a::before
 {
-    top: 7px;
+    top: 5px;
     left: 16px;
 
     width: 21px;
@@ -347,7 +428,7 @@ a:active span.underlined
 
 .login p::before
 {
-    top: 7px;
+    top: 6px;
     left: 16px;
 
     width: 21px;
@@ -380,8 +461,8 @@ a:active span.underlined
 
 .search p::before
 {
-    top: 8px;
-    left: 7px;
+    top: 7px;
+    left: 8px;
 
     width: 17px;
     height: 17px;
@@ -410,7 +491,7 @@ a:active span.underlined
     font-size: 22px;
     line-height: 24px;
 
-    margin: 2px 0 0 0;
+    margin: 4px 0 0 0;
     padding: 0;
 }
 
@@ -640,11 +721,12 @@ p.btn_small
     font-size: 35px;
     line-height: 41px;
 
-    margin: 0;
+    margin: 0 0 16px 0;
 }
 
 .promo p
 {
+  margin: 0 0 19px 0;
     font-size: 18px;
     line-height: 22px;
 }
@@ -763,7 +845,7 @@ p.btn_small
     line-height: 45px;
 
     position: absolute;
-    top: 212px;
+    top: 214px;
     left: 13px;
 
     margin: 0;
@@ -1082,7 +1164,7 @@ p.btn_small
 {
     display: block; /* кнопка тянется на весь родительский контейнер - по макету*/
 
-    margin-top: 25px;
+    margin-top: 24px;
 
     text-align: center;
 }
@@ -1175,7 +1257,7 @@ p.btn_small
     box-sizing: border-box;
     width: 267px;
     margin: 0;
-    padding: 20px 0 25px;
+    padding: 18px 0 25px;
 
     text-align: right;
 }
@@ -1253,7 +1335,7 @@ p.btn_small
 .links .heart::before
 {
     position: absolute;
-    top: 3px;
+    top: 2px;
     left: -22px;
 
     width: 15px;
@@ -1270,7 +1352,7 @@ p.btn_small
     font-size: 0;
     line-height: 1;
 
-    margin: 31px 7px 0 0;
+    margin: 30px 7px 0 0;
 
     list-style: none;
 }
