@@ -438,45 +438,6 @@ ul.sub_nav a.sub_news
     background-position: 0 -188px;
 }
 
-/* Всплывающая форма поиска */
-.search_form
-{
-    position: absolute;
-    z-index: 100;
-    top: 37px;
-    right: 0;
-
-    box-sizing: border-box;
-    width: 341px;
-    padding: 20px 15px;
-
-    border-radius: 5px;
-    background-color: #f8f7f4;
-    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, .40);
-}
-
-.search:hover .search_form
-{
-    display: block;
-}
-
-.search_form input
-{
-    font-family: 'Roboto', 'Arial', sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 24px;
-
-    box-sizing: border-box;
-    width: 100%;
-    margin: 0;
-    padding: 8px 14px;
-
-    border: 1px solid #b2b2b2;
-    border-radius: 5px;
-    background-color: #fff;
-}
-
 /* Вход */
 .login p
 {
@@ -498,29 +459,29 @@ ul.sub_nav a.sub_news
     background-position: 0 -224px;
 }
 
-/* Всплывающая форма входа */
+/* Всплывающие формы */
+
+/* Общие параметры*/
+.search_form,
 .login_form
 {
-    position: absolute;
-    z-index: 100;
-    top: 37px;
-    right: -3px;
-
+  position: absolute;
+  z-index: 100;
     box-sizing: border-box;
-    width: 277px;
-    padding: 20px 18px;
-
     border-radius: 5px;
     background-color: #f8f7f4;
     box-shadow: 0 20px 20px 0 rgba(0, 0, 0, .40);
 }
 
+/* Общее событие наведения мыши*/
+.search:hover .search_form,
 .login:hover .login_form
 {
     display: block;
 }
 
-
+/* Общие параметры инпутов */
+.search_form input,
 .login_form input
 {
     font-family: 'Roboto', 'Arial', sans-serif;
@@ -530,12 +491,38 @@ ul.sub_nav a.sub_news
 
     box-sizing: border-box;
     width: 100%;
-    margin: 0 0 22px;
+    margin: 0;
     padding: 8px 14px;
 
     border: 1px solid #b2b2b2;
     border-radius: 5px;
     background-color: #fff;
+}
+
+/* Частные параметры */
+
+/* Всплывающая форма поиска */
+.search_form
+{
+    top: 37px;
+    right: 0;
+    width: 341px;
+    padding: 20px 15px;
+}
+
+/* Всплывающая форма входа */
+.login_form
+{
+    top: 37px;
+    right: -3px;
+
+    width: 277px;
+    padding: 20px 18px;
+}
+
+.login_form input
+{
+    margin-bottom: 22px;
 }
 
 .login_form button
@@ -577,6 +564,11 @@ ul.sub_nav a.sub_news
     color: #323232;
 }
 
+.login_form a:hover,
+.login_form a:active
+{
+  color: #e84d37
+}
 
 /* Корзина */
 .cart p
