@@ -381,7 +381,9 @@ ul.sub_nav a.sub_news
 }
 
 /* Иконки в спрайте */
-.user_block > p::before,
+.search > p::before,
+.login > p::before,
+.cart > p::before,
 .cart.filled > a::before
 {
     position: absolute;
