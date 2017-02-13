@@ -465,9 +465,11 @@ ul.sub_nav a.sub_news
 .search_form,
 .login_form
 {
-  position: absolute;
-  z-index: 100;
+    position: absolute;
+    z-index: 100;
+
     box-sizing: border-box;
+
     border-radius: 5px;
     background-color: #f8f7f4;
     box-shadow: 0 20px 20px 0 rgba(0, 0, 0, .40);
@@ -506,6 +508,7 @@ ul.sub_nav a.sub_news
 {
     top: 37px;
     right: 0;
+
     width: 341px;
     padding: 20px 15px;
 }
@@ -567,7 +570,7 @@ ul.sub_nav a.sub_news
 .login_form a:hover,
 .login_form a:active
 {
-  color: #e84d37
+    color: #e84d37;
 }
 
 /* Корзина */
@@ -886,7 +889,7 @@ p.btn_small
 .bestseller .catalog_item::before
 {
     position: absolute;
-    z-index: 101; /* Чтобы при ховере не перекрывался */
+    z-index: 50; /* Чтобы при ховере не перекрывался */
     top: 5px;
     left: 13px;
 
@@ -919,9 +922,11 @@ p.btn_small
     display: block;
 
     padding: 5px 13px 0;
+
+    text-align: center;
+
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    text-align: center;
 }
 
 .catalog_item:hover > a.visible
@@ -931,11 +936,13 @@ p.btn_small
 
 .catalog_item p.description
 {
-    margin: 9px 0 0 0;
-    padding: 0;
     font-size: 16px;
     font-weight: 500;
     line-height: 22px;
+
+    margin: 9px 0 0 0;
+    padding: 0;
+
     text-align: center;
 }
 
@@ -949,6 +956,8 @@ p.btn_small
 {
     position: absolute;
     z-index: 100;
+    bottom: -76px;
+    left: 0;
 
     width: 293px;
     margin: 0;
@@ -961,9 +970,11 @@ p.btn_small
 
 .catalog_item .btn
 {
-    display: none;
-    margin: 10px auto 20px;
     font-weight: 700;
+
+    display: none;
+
+    margin: 10px auto 20px;
 }
 
 .catalog_item:hover .btn
@@ -1006,14 +1017,17 @@ p.btn_small
     border-bottom: 1px solid rgba(255,255,255,.3);
 }
 
-/* По стайлгайду не меняем цвет ссылке и убираем выделение */
-a.visible:hover span,
-.description:hover span
+/* По стайлгайду не меняем цвет ссылке и убираем подчеркивание при ховере на карточке */
+a.visible:hover span
 {
     color: #fff;
     border: none;
-    /*color: #ffbc9e;
-    border-bottom: 1px solid rgba(249,172,159,.3);*/
+}
+/* Но меняем цвет ссылке и ставим подчеркивание при ховере на карточке */
+p.description:hover span
+{
+  color: #ffbc9e;
+  border-bottom: 1px solid rgba(249,172,159,.3);
 }
 
 /* Описание преимуществ (вафля) */
@@ -1355,8 +1369,9 @@ a.visible:hover span,
     background: url('../img/icons_sprite.png') no-repeat 50% 50%;
 }
 
-.social a:hover {
-  border-color: rgba(255,255,255,.7);
+.social a:hover
+{
+    border-color: rgba(255,255,255,.7);
 }
 
 .social a:hover::before
