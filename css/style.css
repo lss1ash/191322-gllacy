@@ -889,7 +889,7 @@ p.btn_small
 .bestseller .catalog_item::before
 {
     position: absolute;
-    z-index: 50; /* Чтобы при ховере не перекрывался */
+    z-index: 9; /* Чтобы при ховере не перекрывался мороженкой */
     top: 5px;
     left: 13px;
 
@@ -899,6 +899,11 @@ p.btn_small
     content: '';
 
     background: url('../img/bestseller.png') no-repeat 0 0;
+}
+
+.bestseller .catalog_item:hover::before
+{
+    z-index: 16; /* Чтобы при ховере перекрывался подложкой */
 }
 
 .catalog_item
@@ -916,7 +921,7 @@ p.btn_small
     vertical-align: top;
 }
 
-/* Будем подсвечивать прозрачной областью ссылку и кнопку быстрый просмотр отдельно, чтобы не вываливалось все из потока */
+/* Видимая часть карточки товара */
 .catalog_item > a.visible
 {
     display: block;
@@ -924,14 +929,13 @@ p.btn_small
     padding: 5px 13px 0;
 
     text-align: center;
-
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
 }
 
+/* При наведении будем подсовывать подложку из-под кнопки (.btn) */
 .catalog_item:hover > a.visible
 {
-    background-color: rgba(255,255,255,.3);
+    position: relative;
+    z-index: 15;
 }
 
 .catalog_item p.description
@@ -951,36 +955,6 @@ p.btn_small
     margin-right: 0;
 }
 
-/* Кнопка быстрый просмотр */
-.catalog_item p.over
-{
-    position: absolute;
-    z-index: 100;
-    bottom: -76px;
-    left: 0;
-
-    width: 293px;
-    margin: 0;
-
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-    background-color: rgba(255,255,255,.3);
-    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, .12);
-}
-
-.catalog_item .btn
-{
-    font-weight: 700;
-
-    display: none;
-
-    margin: 10px auto 20px;
-}
-
-.catalog_item:hover .btn
-{
-    display: inline-block;
-}
 
 /* Ценник */
 .catalog_item .cost
@@ -1011,10 +985,42 @@ p.btn_small
     line-height: 45px;
 }
 
-/* Прозрачное подчёркивание */
-.description span
+/* Кнопка быстрый просмотр */
+.catalog_item p.over
 {
-    border-bottom: 1px solid rgba(255,255,255,.3);
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    bottom: -76px;
+    left: 0;
+
+    display: none;
+
+    width: 293px;
+    margin: 0;
+    padding: 0;
+
+    border-radius: 5px;
+    background-color: rgba(255,255,255,.3);
+    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, .12);
+}
+
+.catalog_item:hover p.over
+{
+    display: block;
+}
+
+.catalog_item .btn
+{
+    font-weight: 700;
+
+    position: absolute;
+    right: 26px;
+    bottom: 20px;
+    left: 26px;
+
+    display: inline-block;
 }
 
 /* По стайлгайду не меняем цвет ссылке и убираем подчеркивание при ховере на карточке */
@@ -1023,11 +1029,18 @@ a.visible:hover span
     color: #fff;
     border: none;
 }
+
+/* Прозрачное подчёркивание */
+.description span
+{
+    border-bottom: 1px solid rgba(255,255,255,.3);
+}
+
 /* Но меняем цвет ссылке и ставим подчеркивание при ховере на карточке */
 p.description:hover span
 {
-  color: #ffbc9e;
-  border-bottom: 1px solid rgba(249,172,159,.3);
+    color: #ffbc9e;
+    border-bottom: 1px solid rgba(249,172,159,.3);
 }
 
 /* Описание преимуществ (вафля) */
