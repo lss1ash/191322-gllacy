@@ -1354,13 +1354,19 @@ a.visible:hover span,
     border-radius: 50%;
     background-image: url('../img/icons_sprite.png');
 }
+
+.social a:hover {
+  border-color: rgba(255,255,255,.7);
+}
+
 .social a:hover::before
 {
     opacity: 1;
 }
+
 .social a:active::before
 {
-    top: 1px;
+    box-shadow: inset 0 2px 1px 0 #888;
 }
 
 .social a.social_btn_tw::before
