@@ -1590,7 +1590,7 @@ main h1
 {
     position: absolute;
     top: 0;
-    right: -10px;
+    right: -14px;
 
     content: '»';
 }
@@ -1645,21 +1645,112 @@ main h1
     outline: 1px solid red;
 }
 
-.form_group p {
-    margin: 0px 0 7px 16px;
+.form_group p
+{
+    margin: 0 0 7px 16px;
 }
 
-.form_group select {
-  background-color: rgba(248,247,244,.2);
-  border-radius: 15px;
-  color: inherit;
-  font-size: 16px;
-  line-height: 18px;
-  padding: 7px 15px 7px 10px;
+.form_group select,
+.form_group label
+{
+    font-size: 16px;
+    line-height: 18px;
+
+    color: inherit;
 }
+
+.form_group select
+{
+    padding: 7px 15px 7px 10px;
+
+    border-radius: 15px;
+    background-color: rgba(248,247,244,.2);
+}
+
+.form_group input
+{
+    display: none;
+}
+
+.radio_group
+{
+    margin: 0;
+    padding: 8px 7px 7px 8px;
+
+    border: none;
+    border-radius: 15px;
+    background-color: rgba(248,247,244,.2);
+}
+
+.radio_group label,
+.checkbox_group label
+{
+    position: relative;
+
+    float: left;
+
+    margin: 0;
+    padding: 0 10px 0 39px;
+}
+
+/* Общие стили для радиобатона */
+.radio_group label::before,
+.radio_group input:checked + label::after
+{
+    position: absolute;
+
+    display: block;
+
+    box-sizing: border-box;
+
+    content: '';
+
+    border-radius: 50%;
+}
+
+/* Рисуем обводку радиобатона */
+.radio_group label::before
+{
+    top: 0;
+    left: 8px;
+
+    width: 20px;
+    height: 20px;
+
+    border: 1px solid #f8f7f4;
+}
+
+/* Рисуем обводку радиобатона при наведении и заблокированной*/
+.radio_group label:hover::before
+{
+    border-width: 2px;
+}
+
+.radio_group input:disabled + label::before
+{
+    border-color: rgba(248,247,244,.4);
+}
+
+/* Рисуем кружочек в центре радиобатона */
+.radio_group input:checked + label::after
+{
+    top: 4px;
+    left: 12px;
+
+    width: 12px;
+    height: 12px;
+
+    background-color: #f8f7f4;
+}
+
+/* Рисуем кружочек в центре радиобатона для отключенной кнопки */
+.radio_group input:checked:disabled + label::after
+{
+    background-color: rgba(248,247,244,.4);
+}
+
 
 /* Пагинатор */
-
 .pagination,
 .pagination a
 {

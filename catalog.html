@@ -165,7 +165,7 @@
               </select>
             </div>
 
-            <div class="form_group">
+            <div class="form_group range_group">
               <p>Цена: <span class="cost_min">100 руб.</span> – <span class="cost_max">500 руб.</span></p>
               <input type="range" name="range1" min="0" max="1000" step="100" value="100">
               <input type="range" name="range2" min="0" max="1000" step="100" value="500">
@@ -173,21 +173,19 @@
 
             <div class="form_group">
               <p>Жирность:</p>
-              <label>
-                <input type="radio" name="fat" value="zero">0%
-              </label>
-              <label>
-                <input type="radio" name="fat" value="ten" checked>до 10%
-              </label>
-              <label>
-                <input type="radio" name="fat" value="thirty">до 30%
-              </label>
-              <label>
-                <input type="radio" name="fat" value="fatty">выше 30%
-              </label>
+              <fieldset class="radio_group clearfix">
+                  <input type="radio" name="fat" id="zero" value="zero">
+                  <label for="zero">0%</label>
+                  <input type="radio" name="fat" id="ten" value="ten" checked>
+                  <label for="ten">до 10%</label>
+                  <input type="radio" name="fat" id="thirty" value="thirty">
+                  <label for="thirty">до 30%</label>
+                  <input type="radio" name="fat" id="fatty" value="fatty">
+                  <label for="fatty">выше 30%</label>
+              </fieldset>
             </div>
 
-            <div class="form_group">
+            <div class="form_group checkbox_group">
               <p>Наполнители:</p>
               <label>
                 <input type="checkbox" name="choco" checked>шоколадные
