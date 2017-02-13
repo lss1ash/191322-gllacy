@@ -1352,7 +1352,7 @@ a.visible:hover span,
 
     opacity: .8;
     border-radius: 50%;
-    background-image: url('../img/icons_sprite.png');
+    background: url('../img/icons_sprite.png') no-repeat 50% 50%;
 }
 
 .social a:hover {
