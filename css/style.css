@@ -1086,23 +1086,23 @@ a.visible:hover span,
 
 .main_description li.ice_cream::before
 {
-    background-position: 0 -245px;
+    background-position: 0 -244px;
 }
 .main_description li.leaf::before
 {
-    background-position: 0 -294px;
+    background-position: 0 -293px;
 }
 .main_description li.cow::before
 {
     left: 12px;
 
-    background-position: 0 -343px;
+    background-position: 0 -342px;
 }
 .main_description li.termo::before
 {
     left: 12px;
 
-    background-position: 0 -392px;
+    background-position: 0 -391px;
 }
 
 .main_description li:nth-child(2n)
