@@ -844,14 +844,16 @@ p.btn_small
 {
     float: left;
 
-    background: #4c0913 url('../img/bg_berry.jpg') repeat-y 0 0;
+    background: #4c0913 url('../img/bg_berry.jpg') no-repeat center;
+    background-size: cover;
 }
 
 .promo_right
 {
     float: right;
 
-    background: #462b20 url('../img/bg_choco.jpg') repeat-y 0 0;
+    background: #462b20 url('../img/bg_choco.jpg') no-repeat center;
+    background-size: cover;
 }
 
 .promo h3
@@ -1845,10 +1847,43 @@ main h1
 }
 
 /* Пагинатор */
-.pagination,
-.pagination a
+.pagination
 {
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 18px;
+    font-size: 0;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.pagination li
+{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+}
+
+.pagination a,
+.pagination a:visited
+{
+  display: block;
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+  padding: 4px 9px;
+  margin-right: 1px;
+box-sizing: border-box;
+
+background-color: rgba(255,255,255,.2);
+}
+
+.pagination a:hover
+{
+color:#fff;
+background-color: rgba(255,255,255,.2);
 }
