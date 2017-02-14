@@ -1621,13 +1621,14 @@ main h1
 }
 
 
-/* Фильтры */
+/* Форма фильтрации */
 .filter_form
 {
     font-size: 0;
     line-height: 1;
 }
 
+/* Общие стили секций формы */
 .form_group
 {
     font-size: 14px;
@@ -1636,13 +1637,12 @@ main h1
 
     display: inline-block;
 
-    margin: 0 15px 0 0;
+    margin: 0 15px 15px 0;
     padding: 0;
 
     vertical-align: top;
 
     color: #fff;
-    outline: 1px solid red;
 }
 
 .form_group p
@@ -1650,9 +1650,11 @@ main h1
     margin: 0 0 7px 16px;
 }
 
+/* Зададим шрифт и цвет */
 .form_group select,
 .form_group label
 {
+    font-family: 'Roboto', 'Arial', sans-serif;
     font-size: 16px;
     line-height: 18px;
 
@@ -1661,27 +1663,41 @@ main h1
 
 .form_group select
 {
-    padding: 7px 15px 7px 10px;
+    padding: 5px 15px 7px 10px;
 
-    border-radius: 15px;
+    border-radius: 30px;
     background-color: rgba(248,247,244,.2);
 }
 
+/* Заглушка!!!!!!!!!!!!!ы */
+.range_group {
+  min-width: 218px;
+}
+
+/* Скроем инпуты */
 .form_group input
 {
     display: none;
 }
 
-.radio_group
+/* Опишем общие свойства групп */
+.radio_group,
+.checkbox_group
 {
     margin: 0;
-    padding: 8px 7px 7px 8px;
+    padding: 8px 7px 8px 8px;
 
     border: none;
-    border-radius: 15px;
+    border-radius: 30px;
     background-color: rgba(248,247,244,.2);
 }
 
+/* Скорректируем для чекбоксов */
+/*.checkbox_group {
+  padding: 8px 7px 8px 8px;
+}*/
+
+/* Общие свойства для лэйблов */
 .radio_group label,
 .checkbox_group label
 {
@@ -1693,9 +1709,16 @@ main h1
     padding: 0 10px 0 39px;
 }
 
-/* Общие стили для радиобатона */
+/* Скорректируем для чекбоксов */
+.checkbox_group label {
+      padding: 0 12px 0 41px;
+}
+
+/* Общие стили для радиобатона и чекбокса */
 .radio_group label::before,
-.radio_group input:checked + label::after
+.radio_group input:checked + label::after,
+.checkbox_group label::before,
+.checkbox_group input:checked + label::after
 {
     position: absolute;
 
@@ -1708,10 +1731,11 @@ main h1
     border-radius: 50%;
 }
 
-/* Рисуем обводку радиобатона */
-.radio_group label::before
+/* Рисуем обводку радиобатона и чекбокса */
+.radio_group label::before,
+.checkbox_group label::before
 {
-    top: 0;
+    top: -1px;
     left: 8px;
 
     width: 20px;
@@ -1720,13 +1744,20 @@ main h1
     border: 1px solid #f8f7f4;
 }
 
-/* Рисуем обводку радиобатона при наведении и заблокированной*/
-.radio_group label:hover::before
+/* У чекбоксов свой радиус */
+.checkbox_group label::before {
+  border-radius: 4px;
+}
+
+/* Рисуем обводку при наведении и блокировке */
+.radio_group label:hover::before,
+.checkbox_group label:hover::before
 {
     border-width: 2px;
 }
 
-.radio_group input:disabled + label::before
+.radio_group input:disabled + label::before,
+.checkbox_group input:disabled + label::before
 {
     border-color: rgba(248,247,244,.4);
 }
@@ -1734,7 +1765,7 @@ main h1
 /* Рисуем кружочек в центре радиобатона */
 .radio_group input:checked + label::after
 {
-    top: 4px;
+    top: 3px;
     left: 12px;
 
     width: 12px;
@@ -1743,10 +1774,31 @@ main h1
     background-color: #f8f7f4;
 }
 
-/* Рисуем кружочек в центре радиобатона для отключенной кнопки */
+/* Сменим цвет кружочка в центре радиобатона для отключенной кнопки */
 .radio_group input:checked:disabled + label::after
 {
     background-color: rgba(248,247,244,.4);
+}
+
+/* Рисуем галочку в центре чекбокса */
+.checkbox_group input:checked + label::after
+{
+    top: 5px;
+    left: 12px;
+
+    width: 11px;
+    height: 6px;
+
+    border-radius: 0;
+    border-left: solid 2px #f8f7f4;
+    border-bottom: solid 2px #f8f7f4;
+    transform: rotate(-45deg);
+}
+
+/* Сменим цвет галочки в центре чекбокса для отключенной кнопки */
+.checkbox_group input:checked:disabled + label::after
+{
+    border-color: rgba(248,247,244,.4);
 }
 
 
