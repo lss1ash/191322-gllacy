@@ -885,7 +885,7 @@ p.btn_small
     font-size: 0;
     line-height: 1;
 
-    margin-bottom: 1px;
+    margin-bottom: 4px;
 }
 
 /* Хит */
@@ -917,7 +917,7 @@ p.btn_small
 
     box-sizing: border-box;
     width: 293px;
-    margin-bottom: 38px;
+    margin-bottom: 33px;
     padding: 0;
 
     text-align: center;
@@ -1019,11 +1019,14 @@ p.btn_small
     font-weight: 700;
 
     position: absolute;
-    right: 26px;
-    bottom: 20px;
-    left: 26px;
+    right: 45px;
+    bottom: 22px;
+    left: 45px;
 
     display: inline-block;
+
+    padding-right: 5px;
+    padding-left: 5px;
 
     vertical-align: top;
 }
@@ -1626,6 +1629,8 @@ main h1
 {
     font-size: 0;
     line-height: 1;
+
+    margin-bottom: 22px;
 }
 
 /* Общие стили секций формы */
@@ -1657,6 +1662,7 @@ main h1
     font-family: 'Roboto', 'Arial', sans-serif;
     font-size: 16px;
     line-height: 18px;
+    border: none;
 
     color: inherit;
 }
@@ -1670,8 +1676,9 @@ main h1
 }
 
 /* Заглушка!!!!!!!!!!!!!ы */
-.range_group {
-  min-width: 218px;
+.range_group
+{
+    min-width: 218px;
 }
 
 /* Скроем инпуты */
@@ -1710,8 +1717,9 @@ main h1
 }
 
 /* Скорректируем для чекбоксов */
-.checkbox_group label {
-      padding: 0 12px 0 41px;
+.checkbox_group label
+{
+    padding: 0 12px 0 41px;
 }
 
 /* Общие стили для радиобатона и чекбокса */
@@ -1745,8 +1753,9 @@ main h1
 }
 
 /* У чекбоксов свой радиус */
-.checkbox_group label::before {
-  border-radius: 4px;
+.checkbox_group label::before
+{
+    border-radius: 4px;
 }
 
 /* Рисуем обводку при наведении и блокировке */
@@ -1789,10 +1798,11 @@ main h1
     width: 11px;
     height: 6px;
 
-    border-radius: 0;
-    border-left: solid 2px #f8f7f4;
-    border-bottom: solid 2px #f8f7f4;
     transform: rotate(-45deg);
+
+    border-bottom: solid 2px #f8f7f4;
+    border-left: solid 2px #f8f7f4;
+    border-radius: 0;
 }
 
 /* Сменим цвет галочки в центре чекбокса для отключенной кнопки */
