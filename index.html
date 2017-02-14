@@ -13,7 +13,7 @@
 
   <body>
 
-    <input type="radio" name="slides" id="slide1" value="">
+    <input type="radio" name="slides" id="slide1" value="" checked>
     <input type="radio" name="slides" id="slide2" value="">
     <input type="radio" name="slides" id="slide3" value="">
 
@@ -28,15 +28,15 @@
             <nav class="main_nav">
 
               <ul>
-                <li>
+                <li class="main_logo">
                   <img src="img/logo.png" width="154" height="64" alt="Логотип GllacyShop">
                 </li>
-                <li>
-                  <a href="#">Каталог</a>
+                <li class="first_level">
+                  <a href="#"><span class="underlined">Каталог</span></a>
 
                   <ul class="sub_nav">
                     <li>
-                      <a class="news" href="#">Новинки</a>
+                      <a class="sub_news" href="#">Новинки</a>
                     </li>
                     <li>
                       <a href="catalog.html">Сливочное</a>
@@ -53,11 +53,11 @@
                   </ul>
 
                 </li>
-                <li>
-                  <a href="#">Доставка и оплата</a>
+                <li class="first_level">
+                  <a href="#"><span class="underlined">Доставка и оплата</span></a>
                 </li>
-                <li>
-                  <a href="#">О Компании</a>
+                <li class="first_level">
+                  <a href="#"><span class="underlined">О Компании</span></a>
                 </li>
               </ul>
 
@@ -80,7 +80,7 @@
                   <input type="password" name="password" value="" placeholder="Пароль" required>
                   <button class="btn btn_small" type="submit">Войти</button>
                   <p>
-                    <a href="#">Забыли пароль?</a><br>
+                    <a href="#">Забыли пароль?</a>
                     <a href="#">Новая регистрация</a>
                   </p>
                 </form>
@@ -132,17 +132,15 @@
             </div>
 
             <div class="slider_controls">
-              <label class="radio_btn" for="slide1"></label>
-              <label class="radio_btn" for="slide2"></label>
-              <label class="radio_btn" for="slide3"></label>
+              <label class="radio_btn circle1" for="slide1"></label>
+              <label class="radio_btn circle2" for="slide2"></label>
+              <label class="radio_btn circle3" for="slide3"></label>
             </div>
 
           </section>
 
           <!-- Разметка промо-акций -->
           <section class="promo clearfix">
-            <!-- Планировал общие стили описать в .promo > div -->
-            <!-- А фоны добавить через .promo_left и .promo_right -->
             <div class="promo_left">
               <h3>Малинка даром!</h3>
               <p>При покупке 2 кг любого фруктового мороженого добавим в ваш заказ банку малинового варенья бесплатно.</p>
@@ -156,49 +154,61 @@
             </div>
 
           </section>
+        </div>
 
-          <!-- Разметка хитов -->
+        <!-- Разметка хитов -->
+        <div class="container wide">
           <section class="bestseller">
-            <!-- Чтобы лишние классы не выдумывать, планировал ХИТ ставить через bestseller -->
+
             <article class="catalog_item">
-              <a href="#">
+              <a href="#" class="visible">
                 <img src="img/citrus.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-                <p class="cost">310<span class="rub">Р</span><span class="kilo">/кг</span></p>
-                <p class="description">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
-                <p class="btn btn_small">Быстрый просмотр</p>
+                <p class="cost">310<span class="rub">&#x20BD;</span><span class="kilo">/кг</span></p>
+                <p class="description"><span>Сливочное с апельсиновым джемом и цитрусовой стружкой</span></p>
               </a>
+              <p class="over">
+                <a href="#" class="btn btn_small">Быстрый просмотр</a>
+              </p>
             </article>
 
             <article class="catalog_item">
-              <a href="#">
+              <a href="#" class="visible">
                 <img src="img/coffee.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
-                <p class="cost">380<span class="rub">Р</span><span class="kilo">/кг</span></p>
-                <p class="description">Сливочно-кофейное с кусочками шоколада</p>
-                <p class="btn btn_small">Быстрый просмотр</p>
+                <p class="cost">380<span class="rub">&#x20BD;</span><span class="kilo">/кг</span></p>
+                <p class="description"><span>Сливочно-кофейное с кусочками шоколада</span></p>
               </a>
+              <p class="over">
+                <a href="#" class="btn btn_small">Быстрый просмотр</a>
+              </p>
             </article>
 
             <article class="catalog_item">
-              <a href="#">
+              <a href="#" class="visible">
                 <img src="img/strawberry.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
-                <p class="cost">355<span class="rub">Р</span><span class="kilo">/кг</span></p>
-                <p class="description">Сливочно-клубничное с присыпкой из белого шоколада</p>
-                <p class="btn btn_small">Быстрый просмотр</p>
+                <p class="cost">355<span class="rub">&#x20BD;</span><span class="kilo">/кг</span></p>
+                <p class="description"><span>Сливочно-клубничное с присыпкой из белого шоколада</span></p>
               </a>
+              <p class="over">
+                <a href="#" class="btn btn_small">Быстрый просмотр</a>
+              </p>
             </article>
 
             <article class="catalog_item">
-              <a href="#">
+              <a href="#" class="visible">
                 <img src="img/caramel.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
-                <p class="cost">415<span class="rub">Р</span><span class="kilo">/кг</span></p>
-                <p class="description">Сливочное крем-брюле с карамельной подливкой</p>
-                <p class="btn btn_small">Быстрый просмотр</p>
+                <p class="cost">415<span class="rub">&#x20BD;</span><span class="kilo">/кг</span></p>
+                <p class="description"><span>Сливочное крем-брюле с карамельной подливкой</span></p>
               </a>
+              <p class="over">
+                <a href="#" class="btn btn_small">Быстрый просмотр</a>
+              </p>
             </article>
 
           </section>
+        </div>
 
-          <!-- Разметка блока с описанием преимуществ компании -->
+        <!-- Разметка блока с описанием преимуществ компании -->
+        <div class="container">
           <section class="main_description">
             <!-- Наиболее значимая часть сайта, отражает всю суть страницы, поэтому h1 -->
             <h1>Магазин Глейси — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h1>
