@@ -1173,7 +1173,8 @@ p.description:hover span
     padding-right: 235px;
 
     border-radius: 15px;
-    background: white url('../img/strawberry_blog.jpg') repeat-y 0 0;
+    background: white url('../img/strawberry_blog.jpg') no-repeat center;
+    background-size: cover;
 }
 
 .blog h3
@@ -1851,39 +1852,57 @@ main h1
 {
     font-size: 0;
     line-height: 1;
+
     margin: 0;
     padding: 0;
+
     list-style: none;
 }
 
 .pagination li
 {
     display: inline-block;
+
     margin: 0;
     padding: 0;
+
     vertical-align: top;
 }
 
 .pagination a,
 .pagination a:visited
 {
-  display: block;
-  width: 27px;
-  height: 27px;
-  border-radius: 50%;
-  background-color: transparent;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 18px;
-  padding: 4px 9px;
-  margin-right: 1px;
-box-sizing: border-box;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18px;
 
-background-color: rgba(255,255,255,.2);
+    display: block;
+
+    box-sizing: border-box;
+    width: 27px;
+    height: 27px;
+    margin-right: 1px;
+    padding: 5px 9px;
+
+    border-radius: 50%;
+    background-color: transparent;
+    background-color: transparent;
 }
 
 .pagination a:hover
 {
-color:#fff;
-background-color: rgba(255,255,255,.2);
+    color: #fff;
+    background-color: rgba(255,255,255,.2);
+}
+
+.pagination a:active,
+.pagination .current
+{
+    color: #000;
+    background-color: #fff;
+}
+
+.pagination .prev,
+.pagination .next {
+  /* Стрелочки сюда ! */
 }
