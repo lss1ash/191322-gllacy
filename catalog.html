@@ -157,18 +157,24 @@
 
             <div class="form_group">
               <p>Сортировка:</p>
-              <select name="select">
-                <option value="popular_first" selected>по популярности</option>
-                <option value="expensive_first">сначала недорогие</option>
-                <option value="cheap_first">сначала дорогие</option>
-                <option value="fat_first">по жирности</option>
-              </select>
+              <div class="select_arrow">
+                <select name="select">
+                  <option value="popular_first" selected>по популярности</option>
+                  <option value="expensive_first">сначала недорогие</option>
+                  <option value="cheap_first">сначала дорогие</option>
+                  <option value="fat_first">по жирности</option>
+                </select>
+              </div>
             </div>
 
-            <div class="form_group range_group">
+            <div class="form_group">
               <p>Цена: <span class="cost_min">100 руб.</span> – <span class="cost_max">500 руб.</span></p>
-              <input type="range" name="range1" min="0" max="1000" step="100" value="100">
-              <input type="range" name="range2" min="0" max="1000" step="100" value="500">
+              <fieldset class="range_group">
+                <input type="range" name="range_min" id="range1" min="0" max="1000" step="100" value="100">
+                <div class="range_min"></div>
+                <input type="range" name="range_max" id="range2" min="0" max="1000" step="100" value="500">
+                <div class="range_max"></div>
+              </fieldset>
             </div>
 
             <div class="form_group">
