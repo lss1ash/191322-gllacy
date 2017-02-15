@@ -491,7 +491,8 @@ ul.sub_nav a.sub_news
     font-family: 'Roboto', 'Arial', sans-serif;
     font-size: 14px;
     font-weight: 400;
-    line-height: 24px;
+    /* Высота строки = шрифту, чтобы в ИЕ не смещалось относительно центра инпута */
+    line-height: 14px;
 
     box-sizing: border-box;
     width: 100%;
@@ -1255,7 +1256,9 @@ p.description:hover span
     font-family: 'Roboto', 'Arial', sans-serif;
     font-size: 16px;
     font-weight: 400;
-    line-height: 24px;
+
+    /* для IE */
+    line-height: 16px;
 
     box-sizing: border-box;
     width: 355px;
