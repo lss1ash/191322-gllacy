@@ -887,7 +887,7 @@ p.btn_small
     font-size: 0;
     line-height: 1;
 
-    margin-bottom: 4px;
+    margin-bottom: 48px;
 }
 
 /* Хит */
@@ -981,6 +981,8 @@ p.btn_small
 
 .catalog_item .rub
 {
+  /* Так знак больше похож на макетный */
+    font-size: 44px;
     margin-left: 4px;
 }
 
@@ -1688,6 +1690,20 @@ main h1
     background-color: #fff;
 }
 
+/* Спрячем стрелочку у селекта */
+.form_group select
+{
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
+.form_group select::-ms-expand
+{
+    display: none;
+}
+
+/* Навесим свою стрелочку */
+
 /* Заглушка!!!!!!!!!!!!!ы */
 .range_group
 {
@@ -1853,10 +1869,12 @@ main h1
     font-size: 0;
     line-height: 1;
 
-    margin: 0;
+    margin: 0 0 32px;
     padding: 0;
 
     list-style: none;
+
+    text-align: right;
 }
 
 .pagination li
@@ -1879,10 +1897,10 @@ main h1
     display: block;
 
     box-sizing: border-box;
-    width: 27px;
-    height: 27px;
-    margin-right: 1px;
-    padding: 5px 9px;
+    width: 25px;
+    height: 25px;
+    margin-right: 4px;
+    padding: 4px 8px;
 
     border-radius: 50%;
     background-color: transparent;
@@ -1902,7 +1920,73 @@ main h1
     background-color: #fff;
 }
 
-.pagination .prev,
-.pagination .next {
-  /* Стрелочки сюда ! */
+/* Стрелочки вперед-назад ! */
+.pagination a.prev,
+.pagination a.next
+{
+    position: relative;
+}
+
+.pagination a.next
+{
+    margin-right: -6px;
+}
+
+/* Сами стрелочки в виде рамок ! */
+.pagination a.prev::after,
+.pagination a.next::after
+{
+    position: absolute;
+    top: 8px;
+    left: 8px;
+
+    display: block;
+
+    width: 7px;
+    height: 7px;
+
+    content: '';
+    transform: rotate(45deg);
+
+    border-width: 2px;
+    border-color: #fff;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-radius: 0;
+    background: transparent;
+}
+
+/* Перевернем правую стрелочку */
+.pagination a.next::after
+{
+    transform: rotate(-135deg);
+}
+
+/* Отключенные стрелочки */
+.pagination a.next.disabled,
+.pagination a.prev.disabled
+{
+    opacity: .2;
+}
+
+.pagination a.next.disabled:hover,
+.pagination a.prev.disabled:hover,
+.pagination a.next.disabled:active,
+.pagination a.prev.disabled:active
+{
+    background: none;
+}
+
+/* Контрастный цвет при нажатии */
+.pagination a.next:active::after,
+.pagination a.prev:active::after
+{
+    border-color: #000;
+}
+
+/* Но не для отключенной кнопки */
+.pagination a.next.disabled:active::after,
+.pagination a.prev.disabled:active::after
+{
+    border-color: #fff;
 }
