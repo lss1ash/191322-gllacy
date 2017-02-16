@@ -36,19 +36,6 @@
     url('../fonts/Roboto-Regular/Roboto-Regular.ttf') format('truetype');
 }
 
-
-/* Спрячу пока что окошки, менюшки и радиобатоны */
-
-.login_form,
-.modal,
-.search_form,
-.sub_nav,
-input[name='slides'],
-.cart_window
-{
-    display: none;
-}
-
 /* Общие стили странички(-ек)*/
 
 body,
@@ -121,6 +108,12 @@ a:active
     color: #ffbc9e;
 }
 
+
+/* Инпуты слайдов скроем */
+input[name='slides']
+{
+    display: none;
+}
 
 /* Для старых IE */
 a img
@@ -245,6 +238,7 @@ a:active span.underlined
     border: none;
 }
 
+
 /* Всплывающее подменю в главном меню */
 li.first_level ul.sub_nav
 {
@@ -254,7 +248,7 @@ li.first_level ul.sub_nav
     left: -7px;
 
     overflow: hidden;
-
+    display: none;
     margin: 0;
     padding: 2px 0;
 
@@ -472,7 +466,7 @@ ul.sub_nav a.sub_news
     z-index: 100;
 
     box-sizing: border-box;
-
+    display: none;
     border-radius: 5px;
     background-color: #f8f7f4;
     box-shadow: 0 20px 20px 0 rgba(0, 0, 0, .40);
@@ -2208,18 +2202,21 @@ main h1
 }
 
 /* Модальное окно обратной связи */
-.modal {
-  position:absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: auto;
-  background-color: rgba(0,0,0,.3);
+.modal
+{
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: none;
+    background: rgba(0,0,0,.3);
 }
 
-.modal .contact {
-  position: fixed;
-  top: 0;
-}
+/*.modal .contact
+{
+    position: fixed;
+    top: 0;
+}*/
