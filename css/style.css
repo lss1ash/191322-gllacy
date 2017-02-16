@@ -496,7 +496,7 @@ ul.sub_nav a.sub_news
     box-sizing: border-box;
     width: 100%;
     margin: 0;
-    padding: 8px 14px;
+    padding: 12px 14px;
 
     border: 1px solid #b2b2b2;
     border-radius: 5px;
@@ -527,7 +527,7 @@ ul.sub_nav a.sub_news
 
 .login_form input
 {
-    margin-bottom: 22px;
+    margin-bottom: 21px;
 }
 
 .login_form button
@@ -1016,6 +1016,11 @@ p.btn_small
     margin-bottom: 48px;
 }
 
+.bestseller {
+  margin-bottom: 5px;
+}
+
+
 /* Хит */
 .bestseller .catalog_item::before
 {
@@ -1388,7 +1393,7 @@ p.description:hover span
     box-sizing: border-box;
     width: 355px;
     margin: 0;
-    padding: 9px 13px;
+    padding: 11px 13px;
 
     border: 1px solid #b2b2b2;
     border-radius: 5px;
@@ -2213,7 +2218,7 @@ main h1
     right: 0;
     bottom: 0;
     left: 0;
-    /*display: none;*/
+    display: none;
 
     background: rgba(0,0,0,.3);
 }
