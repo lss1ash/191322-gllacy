@@ -247,8 +247,9 @@ li.first_level ul.sub_nav
     top: 39px;
     left: -7px;
 
-    overflow: hidden;
     display: none;
+    overflow: hidden;
+
     margin: 0;
     padding: 2px 0;
 
@@ -465,8 +466,10 @@ ul.sub_nav a.sub_news
     position: absolute;
     z-index: 100;
 
-    box-sizing: border-box;
     display: none;
+
+    box-sizing: border-box;
+
     border-radius: 5px;
     background-color: #f8f7f4;
     box-shadow: 0 20px 20px 0 rgba(0, 0, 0, .40);
@@ -2210,13 +2213,89 @@ main h1
     right: 0;
     bottom: 0;
     left: 0;
+    /*display: none;*/
 
-    display: none;
     background: rgba(0,0,0,.3);
 }
 
-/*.modal .contact
+.modal .contact
 {
-    position: fixed;
-    top: 0;
-}*/
+    position: relative;
+    top: calc(50vh - 200px);
+
+    box-sizing: border-box;
+    width: 478px;
+    margin: 0 auto;
+    padding: 16px 25px;
+
+    border-radius: 10px;
+    background-color: #f8f7f4;
+}
+
+.contact h3
+{
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 28px;
+
+    margin: 0 0 19px;
+    padding: 0;
+
+    color: #323232;
+}
+
+.contact input,
+.contact textarea
+{
+    font-family: 'Roboto', 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    /* Высота строки = шрифту, чтобы в ИЕ не смещалось относительно центра инпута */
+    line-height: 16px;
+
+    box-sizing: border-box;
+    width: 267px;
+    margin: 0 0 21px;
+    padding: 11px 14px;
+
+    border: 1px solid #b2b2b2;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.contact textarea
+{
+    width: 100%;
+
+    resize: none;
+}
+
+.contact .btn_wrp {
+  text-align: right;
+}
+.contact .btn
+{
+    display: inline-block;
+    font-family: 'Roboto', 'Arial', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+
+    margin-bottom: 10px;
+}
+
+.contact::after,
+.contact::before {
+  position: absolute;
+  content: '';
+  top: 22px;
+  right: 11px;
+  width: 23px;
+  height: 1px;
+  border-top: 2px solid #000;
+  transform: rotate(45deg);
+}
+
+.contact::before {
+  transform: rotate(-45deg);
+}

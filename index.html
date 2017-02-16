@@ -303,12 +303,14 @@
     <!-- Модальное окно обратной связи -->
     <div class="modal">
 
-      <form class="contact" action="https://echo.htmlacademy.ru" method="post">
+      <form class="contact clearfix" action="https://echo.htmlacademy.ru" method="post">
         <h3>Мы обязательно Вам ответим!</h3>
         <input type="text" name="name" value="" placeholder="Как Вас зовут?" required>
         <input type="email" name="email" value="" placeholder="Ваша почта для ответа?" required>
         <textarea name="message" rows="8" cols="80" placeholder="Напишите что-нибудь..." required></textarea>
-        <button class="btn btn_small" type="submit">Отправить</button>
+        <div class="btn_wrp">
+          <button class="btn btn_small" type="submit">Отправить</button>
+        </div>
       </form>
 
     </div>
