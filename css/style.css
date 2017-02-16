@@ -163,6 +163,8 @@ a img
 
     position: relative;
 
+    float: left;
+
     margin: 0;
     padding: 0;
 
@@ -181,9 +183,14 @@ a img
     vertical-align: top;
 }
 
-.main_nav li.main_logo:first-child
+.main_nav .main_logo
 {
+    display: inline-block;
+    float: left;
+
     margin: 9px 11px 0 -1px;
+
+    vertical-align: top;
 }
 
 .main_nav li:last-child
@@ -1016,8 +1023,9 @@ p.btn_small
     margin-bottom: 48px;
 }
 
-.bestseller {
-  margin-bottom: 5px;
+.bestseller
+{
+    margin-bottom: 5px;
 }
 
 
@@ -2041,6 +2049,8 @@ main h1
     width: 11px;
     height: 6px;
 
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
     transform: rotate(-45deg);
 
     border-bottom: solid 2px #f8f7f4;
@@ -2059,7 +2069,7 @@ main h1
 {
     font-weight: 500;
 
-    padding: 6px 27px 6px;
+    padding: 7px 27px 7px;
 
     border: 2px solid #fff;
 }
@@ -2164,6 +2174,8 @@ main h1
     height: 7px;
 
     content: '';
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
     transform: rotate(45deg);
 
     border-width: 2px;
@@ -2177,6 +2189,8 @@ main h1
 /* Перевернем правую стрелочку */
 .pagination a.next::after
 {
+    -webkit-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
     transform: rotate(-135deg);
 }
 
@@ -2218,6 +2232,7 @@ main h1
     right: 0;
     bottom: 0;
     left: 0;
+
     display: none;
 
     background: rgba(0,0,0,.3);
@@ -2275,32 +2290,43 @@ main h1
     resize: none;
 }
 
-.contact .btn_wrp {
-  text-align: right;
+.contact .btn_wrp
+{
+    text-align: right;
 }
 .contact .btn
 {
-    display: inline-block;
     font-family: 'Roboto', 'Arial', sans-serif;
     font-size: 18px;
     font-weight: 700;
     line-height: 24px;
 
+    display: inline-block;
+
     margin-bottom: 10px;
 }
 
 .contact::after,
-.contact::before {
-  position: absolute;
-  content: '';
-  top: 22px;
-  right: 11px;
-  width: 23px;
-  height: 1px;
-  border-top: 2px solid #000;
-  transform: rotate(45deg);
+.contact::before
+{
+    position: absolute;
+    top: 22px;
+    right: 11px;
+
+    width: 23px;
+    height: 1px;
+
+    content: '';
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+
+    border-top: 2px solid #000;
 }
 
-.contact::before {
-  transform: rotate(-45deg);
+.contact::before
+{
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
 }
