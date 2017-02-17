@@ -482,7 +482,7 @@ ul.sub_nav a.sub_news
     box-shadow: 0 20px 20px 0 rgba(0, 0, 0, .40);
 }
 
-/* Общее событие наведения мыши*/
+/* Общее событие наведения мыши */
 .search:hover .search_form,
 .login:hover .login_form,
 .cart.filled:hover .cart_window
@@ -518,32 +518,6 @@ ul.sub_nav a.sub_news
     border: 2px solid #b2b2b2;
 }
 
-/* Плейсхолдер форматируем */
-.user_block input::-webkit-input-placeholder
-{
-    font-weight: 400;
-
-    color: #999;
-}
-.user_block input::-moz-placeholder
-{
-    font-weight: 400;
-
-    color: #999;
-}
-.user_block input:-moz-placeholder
-{
-    font-weight: 400;
-
-    color: #999;
-}
-.user_block input:-ms-input-placeholder
-{
-    font-weight: 400;
-
-    color: #999;
-}
-
 /* Общие параметры для внешних подсказок к инпутам */
 
 .outer_placeholder
@@ -553,10 +527,42 @@ ul.sub_nav a.sub_news
     position: relative;
 }
 
+/* Плейсхолдеры форматируем тут! Для разных блоков */
+.user_block input::-webkit-input-placeholder,
+.mail_body input::-webkit-input-placeholder
+{
+    font-weight: 400;
+
+    color: #999;
+}
+.user_block input::-moz-placeholder,
+.mail_body input::-moz-placeholder
+{
+    font-weight: 400;
+
+    color: #999;
+}
+.user_block input:-moz-placeholder,
+.mail_body input:-moz-placeholder
+{
+    font-weight: 400;
+
+    color: #999;
+}
+.user_block input:-ms-input-placeholder,
+.mail_body input:-ms-input-placeholder
+{
+    font-weight: 400;
+
+    color: #999;
+}
+
 /* Курсор в поле ввода */
 
 .user_block input:focus + .outer_placeholder::after,
-.user_block input:valid + .outer_placeholder::after
+.user_block input:valid + .outer_placeholder::after,
+.mail_body input:focus + .outer_placeholder::after,
+.mail_body input:valid + .outer_placeholder::after
 {
   position: absolute;
   top: -56px;
@@ -571,33 +577,38 @@ ul.sub_nav a.sub_news
 
 /* Заполнили поле, курсор вне поля */
 
-.user_block input:valid + .outer_placeholder::after
+.user_block input:valid + .outer_placeholder::after,
+.mail_body input:valid + .outer_placeholder::after
 {
   color: #999;
 }
 
-
 /* Рамка - курсор в поле */
-.user_block input:focus
+.user_block input:focus,
+.mail_body input:focus
 {
     padding: 11px 13px;
 
     border: 2px solid rgba(46,136,228,.52);
 }
 
-.user_block input:focus::-webkit-input-placeholder
+.user_block input:focus::-webkit-input-placeholder,
+.mail_body input:focus::-webkit-input-placeholder
 {
     color: transparent;
 }
-.user_block input:focus::-moz-placeholder
+.user_block input:focus::-moz-placeholder,
+.mail_body input:focus::-moz-placeholder
 {
     color: transparent;
 }
-.user_block input:focus:-moz-placeholder
+.user_block input:focus:-moz-placeholder,
+.mail_body input:focus:-moz-placeholder
 {
     color: transparent;
 }
-.user_block input:focus:-ms-input-placeholder
+.user_block input:focus:-ms-input-placeholder,
+.mail_body input:focus:-ms-input-placeholder
 {
     color: transparent;
 }
@@ -1472,7 +1483,8 @@ p.description:hover span
 }
 
 .mail_body input,
-.mail_body button
+.mail_body button,
+.mail_body .outer_placeholder
 {
     display: inline-block;
 
@@ -1482,13 +1494,16 @@ p.description:hover span
     box-shadow: none;
 }
 
-.mail_body input[type='email']
+/* Опишем инпут */
+
+.mail_body input
 {
     font-family: 'Roboto', 'Arial', sans-serif;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 700;
     /* для IE */
     line-height: 16px;
+    color: #323232;
 
     box-sizing: border-box;
     width: 355px;
@@ -1500,7 +1515,25 @@ p.description:hover span
     background-color: #fff;
 }
 
-/* Кнопка шире, чем в макете, потому что руководствовался стайлгайдом (паддинги различаются) */
+/* Рамка при наведении */
+.mail_body input:hover
+{
+    padding: 10px 12px;
+
+    border: 2px solid #b2b2b2;
+}
+
+/* Плейсхолдер везде одинаков, описан в .user_block
+   Поменяю только координаты - т.к. здесь инлайн блок и контейнер встал справа, а не за полем */
+
+.mail_body input:focus + .outer_placeholder::after,
+.mail_body input:valid + .outer_placeholder::after
+{
+  top: -14px;
+  left: -341px;
+}
+
+/* Опишем кнопку */
 .mail_body button
 {
     font-size: 18px;
@@ -2326,7 +2359,7 @@ main h1
     bottom: 0;
     left: 0;
 
-    display: none;
+    /*display: none;*/
 
     background: rgba(0,0,0,.3);
 }
