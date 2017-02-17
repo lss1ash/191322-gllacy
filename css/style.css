@@ -555,7 +555,8 @@ ul.sub_nav a.sub_news
 
 /* Курсор в поле ввода */
 
-.user_block input:focus + .outer_placeholder::after
+.user_block input:focus + .outer_placeholder::after,
+.user_block input:valid + .outer_placeholder::after
 {
   position: absolute;
   top: -56px;
@@ -567,6 +568,14 @@ ul.sub_nav a.sub_news
   white-space: nowrap;
   content: attr(data-placeholder);
 }
+
+/* Заполнили поле, курсор вне поля */
+
+.user_block input:valid + .outer_placeholder::after
+{
+  color: #999;
+}
+
 
 /* Рамка - курсор в поле */
 .user_block input:focus
@@ -1902,8 +1911,8 @@ main h1
 .form_group select
 {
     font-weight: 500;
-
-    padding: 8px 32px 10px 14px;
+    line-height: 16px;
+    padding: 9px 32px 11px 14px;
 
     border-radius: 30px;
     background-color: rgba(248,247,244,.2);
