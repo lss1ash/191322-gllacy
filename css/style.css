@@ -1554,7 +1554,7 @@ p.description:hover span
 .map
 {
     box-sizing: border-box;
-    min-height: 429px;
+    height: 429px;
 
     background: #ede6cd url('../img/map_with_pin.jpg') no-repeat 50% 0;
 }
@@ -1577,6 +1577,7 @@ p.description:hover span
     color: #323232;
     border-radius: 15px;
     background-color: white;
+    z-index: 1000;
 }
 
 .address_area h3,
