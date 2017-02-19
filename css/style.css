@@ -529,28 +529,36 @@ ul.sub_nav a.sub_news
 
 /* Плейсхолдеры форматируем тут! Для разных блоков */
 .user_block input::-webkit-input-placeholder,
-.mail_body input::-webkit-input-placeholder
+.mail_body input::-webkit-input-placeholder,
+.contact input::-webkit-input-placeholder,
+.contact textarea::-webkit-input-placeholder
 {
     font-weight: 400;
 
     color: #999;
 }
 .user_block input::-moz-placeholder,
-.mail_body input::-moz-placeholder
+.mail_body input::-moz-placeholder,
+.contact input::-moz-placeholder,
+.contact textarea::-moz-placeholder
 {
     font-weight: 400;
 
     color: #999;
 }
 .user_block input:-moz-placeholder,
-.mail_body input:-moz-placeholder
+.mail_body input:-moz-placeholder,
+.contact input:-moz-placeholder,
+.contact textarea:-moz-placeholder
 {
     font-weight: 400;
 
     color: #999;
 }
 .user_block input:-ms-input-placeholder,
-.mail_body input:-ms-input-placeholder
+.mail_body input:-ms-input-placeholder,
+.contact input:-ms-input-placeholder,
+.contact textarea:-ms-input-placeholder
 {
     font-weight: 400;
 
@@ -562,7 +570,11 @@ ul.sub_nav a.sub_news
 .user_block input:focus + .outer_placeholder::after,
 .user_block input:valid + .outer_placeholder::after,
 .mail_body input:focus + .outer_placeholder::after,
-.mail_body input:valid + .outer_placeholder::after
+.mail_body input:valid + .outer_placeholder::after,
+.contact input:focus + .outer_placeholder::after,
+.contact input:valid + .outer_placeholder::after,
+.contact textarea:focus + .outer_placeholder::after,
+.contact textarea:valid + .outer_placeholder::after
 {
   position: absolute;
   top: -56px;
@@ -578,7 +590,9 @@ ul.sub_nav a.sub_news
 /* Заполнили поле, курсор вне поля */
 
 .user_block input:valid + .outer_placeholder::after,
-.mail_body input:valid + .outer_placeholder::after
+.mail_body input:valid + .outer_placeholder::after,
+.contact input:valid + .outer_placeholder::after,
+.contact textarea:valid + .outer_placeholder::after
 {
   color: #999;
 }
@@ -593,22 +607,30 @@ ul.sub_nav a.sub_news
 }
 
 .user_block input:focus::-webkit-input-placeholder,
-.mail_body input:focus::-webkit-input-placeholder
+.mail_body input:focus::-webkit-input-placeholder,
+.contact input:focus::-webkit-input-placeholder,
+.contact textarea:focus::-webkit-input-placeholder
 {
     color: transparent;
 }
 .user_block input:focus::-moz-placeholder,
-.mail_body input:focus::-moz-placeholder
+.mail_body input:focus::-moz-placeholder,
+.contact input:focus::-moz-placeholder,
+.contact textarea:focus::-moz-placeholder
 {
     color: transparent;
 }
 .user_block input:focus:-moz-placeholder,
-.mail_body input:focus:-moz-placeholder
+.mail_body input:focus:-moz-placeholder,
+.contact input:focus:-moz-placeholder,
+.contact textarea:focus:-moz-placeholder
 {
     color: transparent;
 }
 .user_block input:focus:-ms-input-placeholder,
-.mail_body input:focus:-ms-input-placeholder
+.mail_body input:focus:-ms-input-placeholder,
+.contact input:focus:-ms-input-placeholder,
+.contact textarea:focus:-ms-input-placeholder
 {
     color: transparent;
 }
@@ -2395,18 +2417,56 @@ main h1
 {
     font-family: 'Roboto', 'Arial', sans-serif;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 700;
     /* Высота строки = шрифту, чтобы в ИЕ не смещалось относительно центра инпута */
     line-height: 16px;
 
     box-sizing: border-box;
     width: 267px;
-    margin: 0 0 21px;
+    margin: 0;
     padding: 11px 14px;
+    color: #323232;
 
     border: 1px solid #b2b2b2;
     border-radius: 5px;
     background-color: #fff;
+}
+
+/* Общие параметры полей и плейсхолдеров заданы выше (в описании полей user_block...) */
+.contact .outer_placeholder {
+  margin-bottom: 21px;
+}
+
+/* Рамка при наведении */
+.contact input:hover,
+.contact textarea:hover
+{
+    padding: 10px 13px;
+
+    border: 2px solid #b2b2b2;
+}
+
+/* Рамка - курсор в поле */
+.contact input:focus,
+.contact textarea:focus
+{
+    padding: 10px 13px;
+
+    border: 2px solid rgba(46,136,228,.52);
+}
+
+/* Скорректируем координату подсказки инпута*/
+.contact input:valid + .outer_placeholder::after,
+.contact input:focus + .outer_placeholder::after
+{
+  top: -60px;
+}
+
+/* Скорректируем координату подсказки текста*/
+.contact textarea:valid + .outer_placeholder::after,
+.contact textarea:focus + .outer_placeholder::after
+{
+  top: -173px;
 }
 
 .contact textarea
