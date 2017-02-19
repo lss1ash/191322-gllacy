@@ -403,6 +403,10 @@ ul.sub_nav a.sub_news
     min-width: 80px; /* Чтобы было легче попасть в поле ввода */
 }
 
+.search .field_placeholder {
+  margin-bottom: 0;
+}
+
 .search p
 {
     font-size: 0;
@@ -518,15 +522,6 @@ ul.sub_nav a.sub_news
     border: 2px solid #b2b2b2;
 }
 
-/* Общие параметры для внешних подсказок к инпутам */
-
-.outer_placeholder
-{
-    margin: 0;
-    padding: 0;
-    position: relative;
-}
-
 /* Плейсхолдеры форматируем тут! Для разных блоков */
 .user_block input::-webkit-input-placeholder,
 .mail_body input::-webkit-input-placeholder,
@@ -565,41 +560,37 @@ ul.sub_nav a.sub_news
     color: #999;
 }
 
-/* Курсор в поле ввода */
+/* Общее описание появляющейся подсказки-плейсхолдера */
+.field_placeholder {
+  margin: 0 0 21px;
+  padding: 0;
+  position: relative;
+}
 
-.user_block input:focus + .outer_placeholder::after,
-.user_block input:valid + .outer_placeholder::after,
-.mail_body input:focus + .outer_placeholder::after,
-.mail_body input:valid + .outer_placeholder::after,
-.contact input:focus + .outer_placeholder::after,
-.contact input:valid + .outer_placeholder::after,
-.contact textarea:focus + .outer_placeholder::after,
-.contact textarea:valid + .outer_placeholder::after
-{
+label.placeholder {
   position: absolute;
-  top: -56px;
+  top: -15px;
   left: 15px;
   color: #5b9ddf;
-  display: block;
   font-size: 11px;
   font-weight: 400;
   white-space: nowrap;
-  content: attr(data-placeholder);
+  display: none;
 }
 
-/* Заполнили поле, курсор вне поля */
-
-.user_block input:valid + .outer_placeholder::after,
-.mail_body input:valid + .outer_placeholder::after,
-.contact input:valid + .outer_placeholder::after,
-.contact textarea:valid + .outer_placeholder::after
-{
+textarea:valid + label.placeholder,
+input:valid + label.placeholder {
   color: #999;
+  display: block;
+}
+
+textarea:focus + label.placeholder,
+input:focus + label.placeholder {
+  display: block;
 }
 
 /* Рамка - курсор в поле */
-.user_block input:focus,
-.mail_body input:focus
+.user_block input:focus
 {
     padding: 11px 13px;
 
@@ -655,11 +646,6 @@ ul.sub_nav a.sub_news
 
     min-width: 277px;
     padding: 20px 18px;
-}
-
-.login_form .outer_placeholder
-{
-    margin-bottom: 21px;
 }
 
 .login_form button
@@ -1493,6 +1479,7 @@ p.description:hover span
     border-radius: 15px;
     background-color: white;
 }
+
 .mail_body p
 {
     margin: 0 0 37px;
@@ -1505,8 +1492,7 @@ p.description:hover span
 }
 
 .mail_body input,
-.mail_body button,
-.mail_body .outer_placeholder
+.mail_body button
 {
     display: inline-block;
 
@@ -1514,6 +1500,10 @@ p.description:hover span
 
     border: none;
     box-shadow: none;
+}
+
+.mail_body .field_placeholder {
+  margin-bottom: 0;
 }
 
 /* Опишем инпут */
@@ -1545,14 +1535,11 @@ p.description:hover span
     border: 2px solid #b2b2b2;
 }
 
-/* Плейсхолдер везде одинаков, описан в .user_block
-   Поменяю только координаты - т.к. здесь инлайн блок и контейнер встал справа, а не за полем */
-
-.mail_body input:focus + .outer_placeholder::after,
-.mail_body input:valid + .outer_placeholder::after
+.mail_body input:focus
 {
-  top: -14px;
-  left: -341px;
+    padding: 10px 12px;
+
+    border: 2px solid rgba(46,136,228,.52);
 }
 
 /* Опишем кнопку */
@@ -2381,7 +2368,7 @@ main h1
     bottom: 0;
     left: 0;
 
-    /*display: none;*/
+    display: none;
 
     background: rgba(0,0,0,.3);
 }
@@ -2432,11 +2419,6 @@ main h1
     background-color: #fff;
 }
 
-/* Общие параметры полей и плейсхолдеров заданы выше (в описании полей user_block...) */
-.contact .outer_placeholder {
-  margin-bottom: 21px;
-}
-
 /* Рамка при наведении */
 .contact input:hover,
 .contact textarea:hover
@@ -2453,20 +2435,6 @@ main h1
     padding: 10px 13px;
 
     border: 2px solid rgba(46,136,228,.52);
-}
-
-/* Скорректируем координату подсказки инпута*/
-.contact input:valid + .outer_placeholder::after,
-.contact input:focus + .outer_placeholder::after
-{
-  top: -60px;
-}
-
-/* Скорректируем координату подсказки текста*/
-.contact textarea:valid + .outer_placeholder::after,
-.contact textarea:focus + .outer_placeholder::after
-{
-  top: -173px;
 }
 
 .contact textarea
