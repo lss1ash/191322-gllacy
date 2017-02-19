@@ -403,8 +403,9 @@ ul.sub_nav a.sub_news
     min-width: 80px; /* Чтобы было легче попасть в поле ввода */
 }
 
-.search .field_placeholder {
-  margin-bottom: 0;
+.search .field_placeholder
+{
+    margin-bottom: 0;
 }
 
 .search p
@@ -561,32 +562,42 @@ ul.sub_nav a.sub_news
 }
 
 /* Общее описание появляющейся подсказки-плейсхолдера */
-.field_placeholder {
-  margin: 0 0 21px;
-  padding: 0;
-  position: relative;
+.field_placeholder
+{
+    position: relative;
+
+    margin: 0 0 21px;
+    padding: 0;
 }
 
-label.placeholder {
-  position: absolute;
-  top: -15px;
-  left: 15px;
-  color: #5b9ddf;
-  font-size: 11px;
-  font-weight: 400;
-  white-space: nowrap;
-  display: none;
+label.placeholder
+{
+    font-size: 11px;
+    font-weight: 400;
+
+    position: absolute;
+    top: -15px;
+    left: 15px;
+
+    display: none;
+
+    white-space: nowrap;
+
+    color: #5b9ddf;
 }
 
 textarea:valid + label.placeholder,
-input:valid + label.placeholder {
-  color: #999;
-  display: block;
+input:valid + label.placeholder
+{
+    display: block;
+
+    color: #999;
 }
 
 textarea:focus + label.placeholder,
-input:focus + label.placeholder {
-  display: block;
+input:focus + label.placeholder
+{
+    display: block;
 }
 
 /* Рамка - курсор в поле */
@@ -761,6 +772,9 @@ input:focus + label.placeholder {
 .cart_window td:nth-of-type(1)
 {
     padding: 0 3px;
+
+    text-align: center;
+    vertical-align: middle;
 }
 
 .cart_window td:nth-of-type(2)
@@ -808,27 +822,12 @@ input:focus + label.placeholder {
 /* Крестик закрыть*/
 .cart_window .remove
 {
-    width: 10px;
-    height: 1px;
+    font-size: 16px;
+    line-height: 16px;
 
-    background-color: #323232;
+    color: #323232;
 }
 
-.cart_window .remove::before
-{
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    display: block;
-
-    width: 4px;
-    height: 1px;
-
-    content: '';
-
-    border-color: #323232;
-}
 .checkout p
 {
     font-family: 'Roboto','Arial',sans-serif;
@@ -1502,8 +1501,9 @@ p.description:hover span
     box-shadow: none;
 }
 
-.mail_body .field_placeholder {
-  margin-bottom: 0;
+.mail_body .field_placeholder
+{
+    margin-bottom: 0;
 }
 
 /* Опишем инпут */
@@ -1515,13 +1515,13 @@ p.description:hover span
     font-weight: 700;
     /* для IE */
     line-height: 16px;
-    color: #323232;
 
     box-sizing: border-box;
     width: 355px;
     margin: 0;
     padding: 11px 13px;
 
+    color: #323232;
     border: 1px solid #b2b2b2;
     border-radius: 5px;
     background-color: #fff;
@@ -1953,15 +1953,21 @@ main h1
 .form_group select
 {
     font-weight: 500;
-    line-height: 16px;
-    padding: 9px 32px 11px 14px;
+    line-height: 20px;
+
+    width: 191px;
+    height: 36px;
+
+    box-sizing: border-box;
+    padding: 7px 32px 9px 14px;
 
     border-radius: 30px;
     background-color: rgba(248,247,244,.2);
 }
 
 .form_group select:hover,
-.form_group select:active
+.form_group select:active,
+.form_group select:focus
 {
     color: #323232;
     background-color: #fff;
@@ -1979,11 +1985,17 @@ main h1
     display: none;
 }
 
+/* Размер селекта */
+.form_group .select_wrapper {
+  padding: 0;
+  margin: 0;
+}
+
 /* Навесим свою стрелочку */
-.form_group .select_arrow::before
+.form_group .select_wrapper::before
 {
     position: absolute;
-    top: 37px;
+    top: 38px;
     right: 12px;
 
     display: block;
@@ -1996,6 +2008,11 @@ main h1
     border-top: 5px solid #fff;
     border-right: 4px solid transparent;
     border-left: 4px solid transparent;
+}
+
+.form_group .select_wrapper:hover::before
+{
+    border-top-color: #323232;
 }
 
 /* Скроем инпуты */
@@ -2412,8 +2429,8 @@ main h1
     width: 267px;
     margin: 0;
     padding: 11px 14px;
-    color: #323232;
 
+    color: #323232;
     border: 1px solid #b2b2b2;
     border-radius: 5px;
     background-color: #fff;
