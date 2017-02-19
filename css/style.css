@@ -1567,6 +1567,7 @@ p.description:hover span
 .address_area
 {
     position: absolute;
+    z-index: 1000;
     top: 62px;
     right: 27px;
 
@@ -1577,7 +1578,6 @@ p.description:hover span
     color: #323232;
     border-radius: 15px;
     background-color: white;
-    z-index: 1000;
 }
 
 .address_area h3,
@@ -2384,9 +2384,14 @@ main h1
     bottom: 0;
     left: 0;
 
-    display: none;
+    display: block;
 
     background: rgba(0,0,0,.3);
+}
+
+.modal_hidden
+{
+    display: none;
 }
 
 .modal .contact
@@ -2476,9 +2481,11 @@ main h1
     margin-bottom: 10px;
 }
 
-.contact::after,
-.contact::before
+.modal_close,
+.modal_close::before
 {
+    font-size: 0;
+
     position: absolute;
     top: 22px;
     right: 11px;
@@ -2491,12 +2498,17 @@ main h1
         -ms-transform: rotate(45deg);
             transform: rotate(45deg);
 
+    border: none;
     border-top: 2px solid #000;
+    background: transparent;
 }
 
-.contact::before
+.modal_close::before
 {
-    -webkit-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-            transform: rotate(-45deg);
+  top: -1px;
+  left: -1px;
+
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
 }
