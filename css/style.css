@@ -2379,6 +2379,27 @@ main h1
     border-color: #fff;
 }
 
+/* Анимация для модального окна */
+@keyframes bounce
+{
+    0%
+    {
+        transform: translateY(-2000px);
+    }
+    70%
+    {
+        transform: translateY(30px);
+    }
+    90%
+    {
+        transform: translateY(-10px);
+    }
+    100%
+    {
+        transform: translateY(0px);
+    }
+}
+
 /* Модальное окно обратной связи */
 .modal
 {
@@ -2397,6 +2418,11 @@ main h1
 .modal_hidden
 {
     display: none;
+}
+
+.modal_animated
+{
+    animation: bounce .6s;
 }
 
 .modal .contact
@@ -2510,7 +2536,7 @@ main h1
     position: absolute;
     z-index: 9;
     top: 11px;
-    right: 0px;
+    right: 0;
 
     width: 23px;
     height: 1px;
