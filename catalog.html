@@ -8,7 +8,7 @@
     <!-- Альтернативный вариант
       <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
     -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
 
   <body>
@@ -21,11 +21,10 @@
         <section class="top_line clearfix">
 
           <nav class="main_nav">
-
+            <div class="main_logo">
+              <a href="index.html"><img src="img/logo.png" width="154" height="64" alt="Логотип GllacyShop"></a>
+            </div>
             <ul>
-              <li class="main_logo">
-                <a href="index.html"><img src="img/logo.png" width="154" height="64" alt="Логотип GllacyShop"></a>
-              </li>
               <li class="first_level">
                 <a href="#" class="current"><span class="underlined">Каталог</span></a>
 
@@ -64,15 +63,24 @@
             <div class="search">
                 <p>Поиск</p>
                 <form class="search_form" action="https://echo.htmlacademy.ru" method="get">
-                  <input type="search" name="search" value="" placeholder="Что ищем?" required>
+                  <div class="field_placeholder">
+                    <input type="search" name="search" id="search" value="" placeholder="Что ищем?" required>
+                    <label for="search" class="placeholder">Что ищем?</label>
+                  </div>
                 </form>
             </div>
 
             <div class="login">
               <p>Вход</p>
               <form class="login_form" action="https://echo.htmlacademy.ru" method="post">
-                <input type="email" name="email" value="" placeholder="Электронная почта" required>
-                <input type="password" name="password" value="" placeholder="Пароль" required>
+                <div class="field_placeholder">
+                  <input type="email" name="email" id="login_email" value="" placeholder="Электронная почта" required>
+                  <label for="login_email" class="placeholder">Электронная почта</label>
+                </div>
+                <div class="field_placeholder">
+                  <input type="password" name="password" id="login_password" value="" placeholder="Пароль" required>
+                  <label for="login_password" class="placeholder">Пароль</label>
+                </div>
                 <button class="btn btn_small" type="submit">Войти</button>
                 <p>
                   <a href="#">Забыли пароль?</a>
@@ -90,17 +98,17 @@
               <table>
 
                 <tr>
-                  <td><a class="remove" href="#"></a></td>
+                  <td><a class="remove" href="#">×</a></td>
                   <td><a href="#"><img src="img/citrus.png" width="33" height="33" alt="Пломбир с апельсиновым джемом"></a></td>
-                  <td><a href="#">Пломбир с апельсиновым джемом</a></td>
+                  <td>Пломбир с апельсиновым джемом</td>
                   <td>1,5 кг х <span>200 руб.</span></td>
                   <td>300 руб.</td>
                 </tr>
 
                 <tr>
-                  <td><a class="remove" href="#"></a></td>
+                  <td><a class="remove" href="#">×</a></td>
                   <td><a href="#"><img src="img/strawberry.png" width="33" height="33"  alt="Клубничный пломбир с присыпкой из белого шоколада"></a></td>
-                  <td><a href="#">Клубничный пломбир с присыпкой из белого шоколада</a></td>
+                  <td>Клубничный пломбир с присыпкой из белого шоколада</td>
                   <td>1,5 кг х <span>300 руб.</span></td>
                   <td>450 руб.</td>
                 </tr>
@@ -157,18 +165,24 @@
 
             <div class="form_group">
               <p>Сортировка:</p>
-              <select name="select">
-                <option value="popular_first" selected>по популярности</option>
-                <option value="expensive_first">сначала недорогие</option>
-                <option value="cheap_first">сначала дорогие</option>
-                <option value="fat_first">по жирности</option>
-              </select>
+              <div class="select_wrapper">
+                <select name="select">
+                  <option value="popular_first" selected>по популярности</option>
+                  <option value="expensive_first">сначала недорогие</option>
+                  <option value="cheap_first">сначала дорогие</option>
+                  <option value="fat_first">по жирности</option>
+                </select>
+              </div>
             </div>
 
-            <div class="form_group range_group">
+            <div class="form_group">
               <p>Цена: <span class="cost_min">100 руб.</span> – <span class="cost_max">500 руб.</span></p>
-              <input type="range" name="range1" min="0" max="1000" step="100" value="100">
-              <input type="range" name="range2" min="0" max="1000" step="100" value="500">
+              <fieldset class="range_group">
+                <input type="range" name="range_min" id="range1" min="0" max="1000" step="100" value="100">
+                <div class="range_min"></div>
+                <input type="range" name="range_max" id="range2" min="0" max="1000" step="100" value="500">
+                <div class="range_max"></div>
+              </fieldset>
             </div>
 
             <div class="form_group">
@@ -398,8 +412,8 @@
         <div class="links">
           <ul>
             <li><a href="#" class="heart">Для поставщиков</a></li>
-            <li><a href="#">О производстве</a></li>
             <li><a href="#">Наши документы</a></li>
+            <li><a href="#">О производстве</a></li>
             <li><a href="#">Экологические стандарты</a></li>
           </ul>
         </div>

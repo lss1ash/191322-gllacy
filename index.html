@@ -8,7 +8,7 @@
     <!-- Альтернативный вариант
       <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
     -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
 
   <body>
@@ -25,12 +25,11 @@
 
           <section class="top_line clearfix">
 
-            <nav class="main_nav">
-
+            <nav class="main_nav clearfix">
+              <div class="main_logo">
+                <img src="img/logo.png" width="154" height="64" alt="Логотип GllacyShop">
+              </div>
               <ul>
-                <li class="main_logo">
-                  <img src="img/logo.png" width="154" height="64" alt="Логотип GllacyShop">
-                </li>
                 <li class="first_level">
                   <a href="#"><span class="underlined">Каталог</span></a>
 
@@ -69,15 +68,24 @@
               <div class="search">
                   <p>Поиск</p>
                   <form class="search_form" action="https://echo.htmlacademy.ru" method="get">
-                    <input type="search" name="search" value="" placeholder="Что ищем?" required>
+                    <div class="field_placeholder">
+                      <input type="search" name="search" id="search" value="" placeholder="Что ищем?" required>
+                      <label for="search" class="placeholder">Что ищем?</label>
+                    </div>
                   </form>
               </div>
 
               <div class="login">
                 <p>Вход</p>
                 <form class="login_form" action="https://echo.htmlacademy.ru" method="post">
-                  <input type="email" name="email" value="" placeholder="Электронная почта" required>
-                  <input type="password" name="password" value="" placeholder="Пароль" required>
+                  <div class="field_placeholder">
+                    <input type="email" name="email" id="login_email" value="" placeholder="Электронная почта" required>
+                    <label for="login_email" class="placeholder">Электронная почта</label>
+                  </div>
+                  <div class="field_placeholder">
+                    <input type="password" name="password" id="login_password" value="" placeholder="Пароль" required>
+                    <label for="login_password" class="placeholder">Пароль</label>
+                  </div>
                   <button class="btn btn_small" type="submit">Войти</button>
                   <p>
                     <a href="#">Забыли пароль?</a>
@@ -233,8 +241,11 @@
               <div class="mail_body">
                 <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
                 <form action="https://echo.htmlacademy.ru" method="post">
-                  <input type="email" name="email" value="" placeholder="Электронная почта" required>
-                  <button class="btn btn_small" type="submit">Отправить</button>
+                  <div class="field_placeholder">
+                    <input type="email" name="email" id="subscribe_email" value="" placeholder="Электронная почта" required>
+                    <label for="subscribe_email" class="placeholder">Электронная почта</label>
+                    <button class="btn btn_small" type="submit">Отправить</button>
+                  </div>
                 </form>
               </div>
             </div>
@@ -244,7 +255,7 @@
         </div>
 
         <!-- Блок карты и адреса -->
-        <section class="map">
+        <section class="map" id="yandex_map">
 
           <div class="container">
 
@@ -259,7 +270,7 @@
               <h3>Для заказов по телефону:</h3>
               <p class="phone">8 812 450-25-25</p>
               <p>(с 10 до 20 ежедневно)</p>
-              <a class="btn btn_small" href="#">Форма обратной связи</a>
+              <a class="btn btn_small feedback" href="#">Форма обратной связи</a>
 
             </div>
 
@@ -301,18 +312,33 @@
     </div>
 
     <!-- Модальное окно обратной связи -->
-    <div class="modal">
+    <div class="modal modal_hidden">
 
-      <form class="contact" action="https://echo.htmlacademy.ru" method="post">
+      <form class="contact clearfix" action="https://echo.htmlacademy.ru" method="post">
+        <button class="modal_close" type="button" title="Закрыть">Закрыть</button>
         <h3>Мы обязательно Вам ответим!</h3>
-        <input type="text" name="name" value="" placeholder="Как Вас зовут?" required>
-        <input type="email" name="email" value="" placeholder="Ваша почта для ответа?" required>
-        <textarea name="message" rows="8" cols="80" placeholder="Напишите что-нибудь..." required></textarea>
-        <button class="btn btn_small" type="submit">Отправить</button>
+        <div class="field_placeholder">
+          <input type="text" name="name" id="contact_name" value="" placeholder="Как Вас зовут?" required>
+          <label for="contact_name" class="placeholder">Как Вас зовут?</label>
+        </div>
+        <div class="field_placeholder">
+          <input type="email" name="email" id="contact_email" value="" placeholder="Ваша почта для ответа?" required>
+          <label for="contact_email" class="placeholder">Ваша почта для ответа?</label>
+        </div>
+        <div class="field_placeholder">
+          <textarea name="message" rows="8" cols="80" id="contact_message" placeholder="Напишите что-нибудь..." required></textarea>
+          <label for="contact_message" class="placeholder">Напишите что-нибудь...</label>
+        </div>
+        <div class="btn_wrp">
+          <button class="btn btn_small" type="submit">Отправить</button>
+        </div>
       </form>
 
     </div>
 
+  <script src="js/script.min.js"></script>
+  <!-- Карта Yandex -->
+  <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=KpsVFLH7xtGyF8L8I0DcAf4FHY8aJQQ2&amp;width=100%25&amp;height=429&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true&amp;id=yandex_map"></script>
   </body>
 
 </html>

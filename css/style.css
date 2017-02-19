@@ -36,19 +36,6 @@
     url('../fonts/Roboto-Regular/Roboto-Regular.ttf') format('truetype');
 }
 
-
-/* Спрячу пока что окошки, менюшки и радиобатоны */
-
-.login_form,
-.modal,
-.search_form,
-.sub_nav,
-input[name='slides'],
-.cart_window
-{
-    display: none;
-}
-
 /* Общие стили странички(-ек)*/
 
 body,
@@ -122,6 +109,12 @@ a:active
 }
 
 
+/* Инпуты слайдов скроем */
+input[name='slides']
+{
+    display: none;
+}
+
 /* Для старых IE */
 a img
 {
@@ -170,6 +163,8 @@ a img
 
     position: relative;
 
+    float: left;
+
     margin: 0;
     padding: 0;
 
@@ -188,9 +183,14 @@ a img
     vertical-align: top;
 }
 
-.main_nav li.main_logo:first-child
+.main_nav .main_logo
 {
+    display: inline-block;
+    float: left;
+
     margin: 9px 11px 0 -1px;
+
+    vertical-align: top;
 }
 
 .main_nav li:last-child
@@ -245,6 +245,7 @@ a:active span.underlined
     border: none;
 }
 
+
 /* Всплывающее подменю в главном меню */
 li.first_level ul.sub_nav
 {
@@ -253,6 +254,7 @@ li.first_level ul.sub_nav
     top: 39px;
     left: -7px;
 
+    display: none;
     overflow: hidden;
 
     margin: 0;
@@ -401,6 +403,11 @@ ul.sub_nav a.sub_news
     min-width: 80px; /* Чтобы было легче попасть в поле ввода */
 }
 
+.search .field_placeholder
+{
+    margin-bottom: 0;
+}
+
 .search p
 {
     font-size: 0;
@@ -465,10 +472,13 @@ ul.sub_nav a.sub_news
 
 /* Общие параметры*/
 .search_form,
-.login_form
+.login_form,
+.cart_window
 {
     position: absolute;
     z-index: 100;
+
+    display: none;
 
     box-sizing: border-box;
 
@@ -477,30 +487,154 @@ ul.sub_nav a.sub_news
     box-shadow: 0 20px 20px 0 rgba(0, 0, 0, .40);
 }
 
-/* Общее событие наведения мыши*/
+/* Общее событие наведения мыши */
 .search:hover .search_form,
-.login:hover .login_form
+.login:hover .login_form,
+.cart.filled:hover .cart_window
 {
     display: block;
 }
 
 /* Общие параметры инпутов */
-.search_form input,
-.login_form input
+.user_block input
 {
     font-family: 'Roboto', 'Arial', sans-serif;
     font-size: 14px;
-    font-weight: 400;
-    line-height: 24px;
+    font-weight: 700;
+    /* Высота строки = шрифту, чтобы в ИЕ не смещалось относительно центра инпута */
+    line-height: 14px;
 
     box-sizing: border-box;
     width: 100%;
     margin: 0;
-    padding: 8px 14px;
+    padding: 12px 14px;
 
+    color: #323232;
     border: 1px solid #b2b2b2;
     border-radius: 5px;
     background-color: #fff;
+}
+
+/* Рамка при наведении */
+.user_block input:hover
+{
+    padding: 11px 13px;
+
+    border: 2px solid #b2b2b2;
+}
+
+/* Плейсхолдеры форматируем тут! Для разных блоков */
+.user_block input::-webkit-input-placeholder,
+.mail_body input::-webkit-input-placeholder,
+.contact input::-webkit-input-placeholder,
+.contact textarea::-webkit-input-placeholder
+{
+    font-weight: 400;
+
+    color: #999;
+}
+.user_block input::-moz-placeholder,
+.mail_body input::-moz-placeholder,
+.contact input::-moz-placeholder,
+.contact textarea::-moz-placeholder
+{
+    font-weight: 400;
+
+    color: #999;
+}
+.user_block input:-moz-placeholder,
+.mail_body input:-moz-placeholder,
+.contact input:-moz-placeholder,
+.contact textarea:-moz-placeholder
+{
+    font-weight: 400;
+
+    color: #999;
+}
+.user_block input:-ms-input-placeholder,
+.mail_body input:-ms-input-placeholder,
+.contact input:-ms-input-placeholder,
+.contact textarea:-ms-input-placeholder
+{
+    font-weight: 400;
+
+    color: #999;
+}
+
+/* Общее описание появляющейся подсказки-плейсхолдера */
+.field_placeholder
+{
+    position: relative;
+
+    margin: 0 0 21px;
+    padding: 0;
+}
+
+label.placeholder
+{
+    font-size: 11px;
+    font-weight: 400;
+
+    position: absolute;
+    top: -15px;
+    left: 15px;
+
+    display: none;
+
+    white-space: nowrap;
+
+    color: #5b9ddf;
+}
+
+textarea:valid + label.placeholder,
+input:valid + label.placeholder
+{
+    display: block;
+
+    color: #999;
+}
+
+textarea:focus + label.placeholder,
+input:focus + label.placeholder
+{
+    display: block;
+}
+
+/* Рамка - курсор в поле */
+.user_block input:focus
+{
+    padding: 11px 13px;
+
+    border: 2px solid rgba(46,136,228,.52);
+}
+
+.user_block input:focus::-webkit-input-placeholder,
+.mail_body input:focus::-webkit-input-placeholder,
+.contact input:focus::-webkit-input-placeholder,
+.contact textarea:focus::-webkit-input-placeholder
+{
+    color: transparent;
+}
+.user_block input:focus::-moz-placeholder,
+.mail_body input:focus::-moz-placeholder,
+.contact input:focus::-moz-placeholder,
+.contact textarea:focus::-moz-placeholder
+{
+    color: transparent;
+}
+.user_block input:focus:-moz-placeholder,
+.mail_body input:focus:-moz-placeholder,
+.contact input:focus:-moz-placeholder,
+.contact textarea:focus:-moz-placeholder
+{
+    color: transparent;
+}
+.user_block input:focus:-ms-input-placeholder,
+.mail_body input:focus:-ms-input-placeholder,
+.contact input:focus:-ms-input-placeholder,
+.contact textarea:focus:-ms-input-placeholder
+{
+    color: transparent;
 }
 
 /* Частные параметры */
@@ -511,7 +645,7 @@ ul.sub_nav a.sub_news
     top: 37px;
     right: 0;
 
-    width: 341px;
+    min-width: 341px;
     padding: 20px 15px;
 }
 
@@ -521,13 +655,8 @@ ul.sub_nav a.sub_news
     top: 37px;
     right: -3px;
 
-    width: 277px;
+    min-width: 277px;
     padding: 20px 18px;
-}
-
-.login_form input
-{
-    margin-bottom: 22px;
 }
 
 .login_form button
@@ -611,6 +740,123 @@ ul.sub_nav a.sub_news
     background-position: 0 -150px;
 }
 
+/* Товары в корзине */
+.cart_window
+{
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+
+    top: 37px;
+    right: 0;
+
+    min-width: 540px;
+    padding: 16px 15px 20px;
+
+    color: #323232;
+}
+
+.cart_window span
+{
+    color: #999;
+}
+
+.cart_window td
+{
+    position: relative;
+
+    text-align: left;
+    vertical-align: top;
+
+    /*padding-top: 10px;*/
+}
+
+.cart_window td:nth-of-type(1)
+{
+    padding: 4px 3px;
+
+    text-align: center;
+}
+
+.cart_window td:nth-of-type(2)
+{
+    width: 40px;
+    padding: 0 2px 15px 0;
+
+    text-align: right;
+}
+
+.cart_window td:nth-of-type(3)
+{
+    width: 220px;
+    padding: 10px 9px 0 7px;
+}
+
+.cart_window td:nth-of-type(4)
+{
+    width: 110px;
+    padding: 9px 5px 0 3px;
+
+    text-align: right;
+}
+
+.cart_window td:nth-of-type(5)
+{
+    width: 72px;
+    padding: 8px 0 0 8px;
+
+    text-align: center;
+}
+
+.cart_window .checkout
+{
+    margin-top: 3px;
+    padding-top: 8px;
+
+    border-top: 1px solid #cacac7;
+}
+
+/* Крестик закрыть*/
+.cart_window .remove
+{
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 23px;
+
+    color: #323232;
+}
+
+.checkout p
+{
+    font-family: 'Roboto','Arial',sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 18px;
+
+    padding: 6px 0 13px;
+
+    text-align: right;
+
+    color: #323232;
+}
+
+.checkout .btn
+{
+    font-family: 'Roboto', 'Arial', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+
+    display: inline-block;
+
+    margin: 0;
+    padding: 10px 14px;
+
+    text-align: right;
+
+    border-radius: 19px;
+}
+
 /* Вторая линия - информация о контактах */
 .contacts .time
 {
@@ -659,12 +905,7 @@ header.index
     text-align: center;
 }
 
-/* Для плавной смены добавим транзишн и прогрузим изображения сразу через псевдоэлементы*/
-
-.wrapper
-{
-    transition: background-image .2s ease, background-color .2s ease;
-}
+/* Прогрузим изображения сразу через псевдоэлементы*/
 
 .wrapper::before,
 .wrapper::after
@@ -887,8 +1128,14 @@ p.btn_small
     font-size: 0;
     line-height: 1;
 
-    margin-bottom: 4px;
+    margin-bottom: 48px;
 }
+
+.bestseller
+{
+    margin-bottom: 5px;
+}
+
 
 /* Хит */
 .bestseller .catalog_item::before
@@ -981,6 +1228,9 @@ p.btn_small
 
 .catalog_item .rub
 {
+    /* Так знак больше похож на макетный */
+    font-size: 44px;
+
     margin-left: 4px;
 }
 
@@ -1226,6 +1476,7 @@ p.description:hover span
     border-radius: 15px;
     background-color: white;
 }
+
 .mail_body p
 {
     margin: 0 0 37px;
@@ -1248,24 +1499,48 @@ p.description:hover span
     box-shadow: none;
 }
 
-.mail_body input[type='email']
+.mail_body .field_placeholder
+{
+    margin-bottom: 0;
+}
+
+/* Опишем инпут */
+
+.mail_body input
 {
     font-family: 'Roboto', 'Arial', sans-serif;
     font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
+    font-weight: 700;
+    /* для IE */
+    line-height: 16px;
 
     box-sizing: border-box;
     width: 355px;
     margin: 0;
-    padding: 9px 13px;
+    padding: 11px 13px;
 
+    color: #323232;
     border: 1px solid #b2b2b2;
     border-radius: 5px;
     background-color: #fff;
 }
 
-/* Кнопка шире, чем в макете, потому что руководствовался стайлгайдом (паддинги различаются) */
+/* Рамка при наведении */
+.mail_body input:hover
+{
+    padding: 10px 12px;
+
+    border: 2px solid #b2b2b2;
+}
+
+.mail_body input:focus
+{
+    padding: 10px 12px;
+
+    border: 2px solid rgba(46,136,228,.52);
+}
+
+/* Опишем кнопку */
 .mail_body button
 {
     font-size: 18px;
@@ -1279,7 +1554,7 @@ p.description:hover span
 .map
 {
     box-sizing: border-box;
-    min-height: 429px;
+    height: 429px;
 
     background: #ede6cd url('../img/map_with_pin.jpg') no-repeat 50% 0;
 }
@@ -1292,6 +1567,7 @@ p.description:hover span
 .address_area
 {
     position: absolute;
+    z-index: 1000;
     top: 62px;
     right: 27px;
 
@@ -1633,7 +1909,7 @@ main h1
     font-size: 0;
     line-height: 1;
 
-    margin-bottom: 19px;
+    margin-bottom: 21px;
 }
 
 /* Общие стили секций формы */
@@ -1643,9 +1919,11 @@ main h1
     font-weight: 500;
     line-height: 16px;
 
+    position: relative;
+
     display: inline-block;
 
-    margin: 0 15px 17px 0;
+    margin: 0 15px 14px 0;
     padding: 0;
 
     vertical-align: bottom;
@@ -1673,25 +1951,67 @@ main h1
 
 .form_group select
 {
-    padding: 5px 15px 7px 10px;
+    font-weight: 500;
+    line-height: 20px;
+
+    box-sizing: border-box;
+    width: 191px;
+    height: 36px;
+    padding: 7px 32px 9px 14px;
 
     border-radius: 30px;
     background-color: rgba(248,247,244,.2);
 }
 
 .form_group select:hover,
-.form_group select:active
+.form_group select:active,
+.form_group select:focus
 {
-    font-weight: 500;
-
     color: #323232;
     background-color: #fff;
 }
 
-/* Заглушка!!!!!!!!!!!!!ы */
-.range_group
+/* Спрячем стрелочку у селекта */
+.form_group select
 {
-    min-width: 218px;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
+.form_group select::-ms-expand
+{
+    display: none;
+}
+
+/* Размер селекта */
+.form_group .select_wrapper
+{
+    margin: 0;
+    padding: 0;
+}
+
+/* Навесим свою стрелочку */
+.form_group .select_wrapper::before
+{
+    position: absolute;
+    top: 38px;
+    right: 12px;
+
+    display: block;
+
+    width: 0;
+    height: 0;
+
+    content: '';
+
+    border-top: 5px solid #fff;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}
+
+.form_group .select_wrapper:hover::before
+{
+    border-top-color: #323232;
 }
 
 /* Скроем инпуты */
@@ -1701,12 +2021,13 @@ main h1
 }
 
 /* Опишем общие свойства групп */
+.range_group,
 .radio_group,
 .checkbox_group,
 .form_group button
 {
     margin: 0;
-    padding: 8px 7px 8px 8px;
+    padding: 9px 7px 9px 8px;
 
     border: none;
     border-radius: 30px;
@@ -1746,6 +2067,78 @@ main h1
     content: '';
 
     border-radius: 50%;
+}
+
+/* Рисуем range */
+/* Минимальная высота и ширина вместо текста */
+.range_group
+{
+    position: relative;
+
+    width: 220px;
+    height: 36px;
+    padding: 0;
+}
+
+/* Основная ось ползунка */
+.range_group::before
+{
+    position: absolute;
+    top: 15px;
+    left: 17px;
+
+    display: block;
+
+    width: 188px;
+    height: 4px;
+
+    content: '';
+
+    background-color: rgba(248,247,244,.5);
+}
+/* Выбранный диапазон (между ползунками) */
+.range_group::after
+{
+    position: absolute;
+    top: 15px;
+    left: 37px;
+
+    display: block;
+
+    width: 98px;
+    height: 4px;
+
+    content: '';
+
+    background-color: rgba(248,247,244,1);
+}
+
+/* Сами ползунки */
+.range_min,
+.range_max
+{
+    position: absolute;
+    z-index: 10;
+    top: 7px;
+
+    width: 20px;
+    height: 20px;
+
+    cursor: pointer;
+
+    border-radius: 50%;
+    background-color: #f8f7f4;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .1);
+}
+
+/* Позиции ползунков */
+.range_min
+{
+    left: 37px;
+}
+.range_max
+{
+    left: 135px;
 }
 
 /* Рисуем обводку радиобатона и чекбокса */
@@ -1807,7 +2200,9 @@ main h1
     width: 11px;
     height: 6px;
 
-    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
 
     border-bottom: solid 2px #f8f7f4;
     border-left: solid 2px #f8f7f4;
@@ -1825,7 +2220,7 @@ main h1
 {
     font-weight: 500;
 
-    padding: 6px 27px 6px;
+    padding: 7px 27px 7px;
 
     border: 2px solid #fff;
 }
@@ -1853,10 +2248,12 @@ main h1
     font-size: 0;
     line-height: 1;
 
-    margin: 0;
+    margin: 0 0 32px;
     padding: 0;
 
     list-style: none;
+
+    text-align: right;
 }
 
 .pagination li
@@ -1879,10 +2276,10 @@ main h1
     display: block;
 
     box-sizing: border-box;
-    width: 27px;
-    height: 27px;
-    margin-right: 1px;
-    padding: 5px 9px;
+    width: 25px;
+    height: 25px;
+    margin-right: 4px;
+    padding: 4px 8px;
 
     border-radius: 50%;
     background-color: transparent;
@@ -1902,7 +2299,216 @@ main h1
     background-color: #fff;
 }
 
-.pagination .prev,
-.pagination .next {
-  /* Стрелочки сюда ! */
+/* Стрелочки вперед-назад ! */
+.pagination a.prev,
+.pagination a.next
+{
+    position: relative;
+}
+
+.pagination a.next
+{
+    margin-right: -6px;
+}
+
+/* Сами стрелочки в виде рамок ! */
+.pagination a.prev::after,
+.pagination a.next::after
+{
+    position: absolute;
+    top: 8px;
+    left: 8px;
+
+    display: block;
+
+    width: 7px;
+    height: 7px;
+
+    content: '';
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+
+    border-width: 2px;
+    border-color: #fff;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-radius: 0;
+    background: transparent;
+}
+
+/* Перевернем правую стрелочку */
+.pagination a.next::after
+{
+    -webkit-transform: rotate(-135deg);
+        -ms-transform: rotate(-135deg);
+            transform: rotate(-135deg);
+}
+
+/* Отключенные стрелочки */
+.pagination a.next.disabled,
+.pagination a.prev.disabled
+{
+    opacity: .2;
+}
+
+.pagination a.next.disabled:hover,
+.pagination a.prev.disabled:hover,
+.pagination a.next.disabled:active,
+.pagination a.prev.disabled:active
+{
+    background: none;
+}
+
+/* Контрастный цвет при нажатии */
+.pagination a.next:active::after,
+.pagination a.prev:active::after
+{
+    border-color: #000;
+}
+
+/* Но не для отключенной кнопки */
+.pagination a.next.disabled:active::after,
+.pagination a.prev.disabled:active::after
+{
+    border-color: #fff;
+}
+
+/* Модальное окно обратной связи */
+.modal
+{
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: block;
+
+    background: rgba(0,0,0,.3);
+}
+
+.modal_hidden
+{
+    display: none;
+}
+
+.modal .contact
+{
+    position: relative;
+    top: calc(50vh - 200px);
+
+    box-sizing: border-box;
+    width: 478px;
+    margin: 0 auto;
+    padding: 16px 25px;
+
+    border-radius: 10px;
+    background-color: #f8f7f4;
+}
+
+.contact h3
+{
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 28px;
+
+    margin: 0 0 19px;
+    padding: 0;
+
+    color: #323232;
+}
+
+.contact input,
+.contact textarea
+{
+    font-family: 'Roboto', 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    /* Высота строки = шрифту, чтобы в ИЕ не смещалось относительно центра инпута */
+    line-height: 16px;
+
+    box-sizing: border-box;
+    width: 267px;
+    margin: 0;
+    padding: 11px 14px;
+
+    color: #323232;
+    border: 1px solid #b2b2b2;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+/* Рамка при наведении */
+.contact input:hover,
+.contact textarea:hover
+{
+    padding: 10px 13px;
+
+    border: 2px solid #b2b2b2;
+}
+
+/* Рамка - курсор в поле */
+.contact input:focus,
+.contact textarea:focus
+{
+    padding: 10px 13px;
+
+    border: 2px solid rgba(46,136,228,.52);
+}
+
+.contact textarea
+{
+    width: 100%;
+
+    resize: none;
+}
+
+.contact .btn_wrp
+{
+    text-align: right;
+}
+.contact .btn
+{
+    font-family: 'Roboto', 'Arial', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+
+    display: inline-block;
+
+    margin-bottom: 10px;
+}
+
+.modal_close,
+.modal_close::before
+{
+    font-size: 0;
+
+    position: absolute;
+    top: 22px;
+    right: 11px;
+
+    width: 23px;
+    height: 1px;
+
+    content: '';
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+
+    border: none;
+    border-top: 2px solid #000;
+    background: transparent;
+}
+
+.modal_close::before
+{
+  top: -1px;
+  left: -1px;
+
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
 }
