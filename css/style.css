@@ -1557,6 +1557,7 @@ p.description:hover span
     height: 429px;
 
     background: #ede6cd url('../img/map_with_pin.jpg') no-repeat 50% 0;
+    background-size: cover;
 }
 
 .map .container
@@ -1618,6 +1619,10 @@ p.description:hover span
 }
 
 /* Footer */
+footer.bordered .container
+{
+    border-top: 1px solid rgba(255,255,255,.3);
+}
 
 .social
 {
@@ -2481,14 +2486,31 @@ main h1
     margin-bottom: 10px;
 }
 
-.modal_close,
-.modal_close::before
+.modal_close
 {
     font-size: 0;
 
     position: absolute;
-    top: 22px;
-    right: 11px;
+    z-index: 10;
+    top: 14px;
+    right: 13px;
+
+    width: 23px;
+    height: 23px;
+
+    cursor: pointer;
+
+    border: none;
+    background: transparent;
+}
+
+.modal_close::after,
+.modal_close::before
+{
+    position: absolute;
+    z-index: 9;
+    top: 11px;
+    right: 0px;
 
     width: 23px;
     height: 1px;
@@ -2498,17 +2520,12 @@ main h1
         -ms-transform: rotate(45deg);
             transform: rotate(45deg);
 
-    border: none;
     border-top: 2px solid #000;
-    background: transparent;
 }
 
 .modal_close::before
 {
-  top: -1px;
-  left: -1px;
-
-    -webkit-transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
-            transform: rotate(90deg);
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
 }
